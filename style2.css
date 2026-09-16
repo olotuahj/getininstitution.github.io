@@ -738,7 +738,9 @@ footer hr {
 
          /* what-we-do */
          #what-we-do {
-           font-size: 38px;
+           font-size: 42px;
+           padding-top: 1.5rem;
+           padding-bottom: 2.5rem;
          }
 
          /* program-paragraph2 */

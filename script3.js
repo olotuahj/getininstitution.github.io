@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('MobileMenu');
     const closeMenu = document.getElementById('closeMenu');
+    const aboutPage = document.getElementById('aboutpage'); 
 
     // open menu
     hamburger.addEventListener('click', () => {
@@ -11,6 +12,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // close menu
     closeMenu.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+    });
+
+    // close menu
+    aboutPage.addEventListener('scroll', () => {
         mobileMenu.classList.remove('active');
     });
 

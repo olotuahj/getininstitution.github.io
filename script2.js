@@ -3,7 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('MobileMenu');
     const closeMenu = document.getElementById('closeMenu');
-
+    const aboutPage = document.getElementById('aboutpage'); 
+ 
     // open menu
     hamburger.addEventListener('click', () => {
         mobileMenu.classList.add('active');
@@ -13,7 +14,12 @@ document.addEventListener('DOMContentLoaded', () => {
     closeMenu.addEventListener('click', () => {
         mobileMenu.classList.remove('active');
     });
-
+    
+    // close menu
+    aboutPage.addEventListener('scroll', () => {
+        mobileMenu.classList.remove('active');
+    });
+ 
        // Fade-up AND Fade-left animations
     const faders = document.querySelectorAll('.fade-up, .fade-left');
 

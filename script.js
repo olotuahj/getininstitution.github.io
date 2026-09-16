@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('MobileMenu');
     const closeMenu = document.getElementById('closeMenu');
+    const mainPage = document.getElementById('mainPage');
 
     // open menu
     hamburger.addEventListener('click', () => {
@@ -13,6 +14,11 @@ document.addEventListener('DOMContentLoaded', () => {
     closeMenu.addEventListener('click', () => {
         mobileMenu.classList.remove('active');
     });
+
+    // close menu
+    mainPage.addEventListener('scroll', () => {
+        mobileMenu.classList.remove('active');
+    })
 
         // smooth scroll to About CAB
         aboutCab.scrollIntoView({

@@ -1,3 +1,5 @@
+
+
 /* ================= RESET ================= */
 * {
     padding: 0;
@@ -244,7 +246,7 @@
     background-position: center;
     width: 100%;
     max-width: 1300px;
-    height: 500px;
+    height: 700px;
     margin-bottom: 2.5rem;
 
 }
@@ -510,6 +512,7 @@ footer hr {
        align-items: center;
        justify-content: center;
        gap: 12px;
+       margin-top: 2rem;
        background-color: #f1d63c;
 }
 
@@ -998,6 +1001,7 @@ footer hr {
        align-items: center;
        justify-content: center;
        gap: 12px;
+       width: 270px;
 }
 
       .video:hover,
@@ -1026,7 +1030,7 @@ footer hr {
         font-weight: 600;
         letter-spacing: 0.5px;
         transition: color 0.3s;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
      }
 
       .video:hover .watch-video{
@@ -2014,7 +2018,7 @@ footer hr {
       .team-Box {
         width: 100%;
         max-width: 1195px;
-        height: 160px;
+        height: 260px;
         display: flex;
         justify-content: space-between;
         position: relative;
@@ -2026,9 +2030,9 @@ footer hr {
     /* team-Box h1 */
     .team-Box h1 {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 3.3rem;
+        font-size: 3.6rem;
         color: #fff;
-        padding-left: 3rem;
+        padding-left: 2rem;
     }
 
     /* team-image */
@@ -2037,7 +2041,7 @@ footer hr {
         background-size: cover;
         background-repeat: no-repeat;
         width: 500px;    
-        height: 160px;   
+        height: 260px;   
     }
 }
 
@@ -2057,13 +2061,12 @@ footer hr {
 
 /* Tablet & Mobile */
 @media (max-width: 779px) {
-
-    /* team-Box */
+     /* team-Box */
     .team-Box {
         display: flex;
         flex-direction: column-reverse; 
     background-color: #2e65dd;
-    height: 300px;
+    height: 500px;
     color: #fff;
     gap: 3.5rem;
     }
@@ -2078,7 +2081,7 @@ footer hr {
    /* team-image  */
     .team-image {
         width: 100%;
-        height: 200px;
+        height: 2000px;
         background-image: url("images/ChatGPT\ Image\ Mar\ 17\,\ 2026\,\ 06_30_44\ AM.png");
         background-size: cover;
         background-position: center;
