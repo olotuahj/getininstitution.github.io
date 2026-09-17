@@ -1,0 +1,243 @@
+
+/* ========== RESET ========== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ========== BODY ========== */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #2e65dd;
+    color: #ffffff;
+
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 30px 20px;
+}
+
+
+/* ========== MAIN CONTAINER ========== */
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* ========== HEADING ========== */
+
+h1 {
+    font-size: clamp(2rem, 6vw, 5.5rem);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+
+
+/* ========== SUBTITLE ========== */
+
+.subtitle {
+    font-size: clamp(0.85rem, 2.5vw, 1.8rem);
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 1.6;
+    margin-bottom: 65px;
+}
+
+
+/* ========== COUNTDOWN SECTION ========== */
+
+.countdown-section h2 {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    font-weight: 700;
+    margin-bottom: 45px;
+}
+
+
+/* ========== COUNTDOWN CONTAINER ========== */
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+    width: 100%;
+    max-width: 700px;
+}
+
+
+/* ========== TIME BOXES ========== */
+
+.time-box {
+    flex: 1;
+    min-width: 0;
+
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    border-radius: 18px;
+
+    padding: 25px 10px 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Timer numbers */
+
+.time-box span {
+    font-size: clamp(2rem, 6vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+
+/* Timer labels */
+
+.time-box p {
+    font-size: clamp(0.65rem, 1.8vw, 1.2rem);
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+
+
+/* ========== COLONS ========== */
+
+.colon {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+
+/* ========== FOOTER ========== */
+
+footer {
+    margin-top: 200px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+
+/* Crown icon */
+
+footer i {
+    font-size: 3.5rem;
+}
+
+
+/* Developer credit */
+
+footer p {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-weight: 600;
+}
+
+
+/* ========== TABLET ========== */
+
+@media (max-width: 768px) {
+
+    .subtitle {
+        margin-bottom: 50px;
+    }
+
+    .countdown-section h2 {
+        margin-bottom: 30px;
+    }
+
+    .countdown {
+        gap: 10px;
+    }
+
+    .time-box {
+        padding: 20px 5px;
+        border-radius: 14px;
+    }
+
+    .colon {
+        font-size: 1.5rem;
+    }
+
+    footer {
+        margin-top: 130px;
+    }
+}
+
+
+/* ========== MOBILE ========== */
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 30px 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+        letter-spacing: 0;
+    }
+
+    .subtitle {
+        font-size: 0.85rem;
+        margin-bottom: 45px;
+    }
+
+    .countdown-section h2 {
+        font-size: 1.6rem;
+    }
+
+    .countdown {
+        gap: 6px;
+    }
+
+    .time-box {
+        padding: 18px 3px;
+        border-radius: 10px;
+    }
+
+    .time-box span {
+        font-size: 2rem;
+    }
+
+    .time-box p {
+        font-size: 0.55rem;
+        letter-spacing: 1px;
+    }
+
+    .colon {
+        font-size: 1.2rem;
+    }
+
+    footer {
+        margin-top: 100px;
+    }
+
+    footer i {
+        font-size: 2.8rem;
+    }
+
+    footer p {
+        font-size: 1rem;
+    }
+}
