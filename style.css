@@ -19,7 +19,7 @@
 .top-bar {
     width: 100%;
     max-width: 1200px;
-    background-color: #0a89f1;
+    background-color: #369aeb;
     padding: 1.5rem 5rem 1.5rem 1rem;
     color: #fff;
     height: 6rem;
@@ -101,7 +101,7 @@
     font-size: 2rem;
     background: none;
     border: none;
-    color: #fff;
+    color: #171b3b;
     cursor: pointer;
 }
 
@@ -273,6 +273,11 @@
     object-fit: contain;
 }
 
+ #CAB-conferences{
+    border-radius: 15px;
+ }
+
+
 /* ================= caption-1 ================= */
 #caption-1 {
     text-align: center;
@@ -404,9 +409,12 @@
 
 .event-img {
     width: 300px;
-    height: 300px;
-    object-fit: contain; 
+    height: 200px;
+    object-fit: cover;
     display: block;
+    margin: 3rem auto 0;
+    padding-bottom: 0;
+    border-radius: 15px;
 }
 
 #CAB-conferences {
@@ -440,18 +448,18 @@
     justify-content: center;
 }
 
-
-
 #Mentor-Mentee,
 #Media-Engagement {
     font-weight: normal;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    min-height: 3rem;    
+    min-height: 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
-   font-size: 1.7rem;
-    margin-top: -3rem;
+    font-size: 1.7rem;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
 #event1-paragraph,
@@ -857,11 +865,12 @@ footer hr {
     }
 
     /* footer */
+/* footer */
 .footer {
-     color: #fff;
-     background-color: #1e5be0;
-     font-family: Arial, sans-serif;
-     height: 950px;
+    color: #fff;
+    background-color: #000;
+    font-family: Arial, sans-serif;
+    height: 950px;
 }
 
 /* second-row */
@@ -1029,7 +1038,6 @@ footer hr {
     #caption-3 {
       font-size: 2rem;
       padding-top: 1rem;
-      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
       font-weight: normal;
     }
 
@@ -1097,7 +1105,7 @@ footer hr {
 }
 
 /* ================= TABLET & DESKTOP ================= */
-@media (min-width: 780px) {
+@media (min-width: 768px) {
     /* WhyChooseUs-content */
       .WhyChooseUs-content {
         margin-bottom: 4rem;
@@ -1314,7 +1322,7 @@ footer hr {
      color: #fff;
      background-color: #1e5be0;
      font-family: Arial, sans-serif;
-     height: 700px;
+     height: 550px;
 }
 
 /* second-row */
@@ -1323,13 +1331,18 @@ footer hr {
     flex-direction: column;
 }
 
+hr{
+    color: white;
+    font-weight: 700;
+}
+
 /* footer-paragraph */
 #footer-paragraph {
     font-size: 24px;
     letter-spacing: 0.5px;
     line-height: 2.5rem;
      word-spacing: 0.1em;
-     padding: 10rem 40px 20px;
+     padding: 16px 40px 20px;
 }
 
 /*  Reach Out header */
@@ -1510,6 +1523,16 @@ footer hr {
         font-size: 2rem;
     }
 
+    .event-img,
+    #CAB-conferences{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    border-radius: 15px;
+}
+
+
     .About-CAB {
         display: flex;
         width: 100%;
@@ -1564,14 +1587,14 @@ footer hr {
      color: #fff;
      background-color: #000;
      font-family: Arial, sans-serif;
-     height: 650px;
+     height: 450px;
 }
 
 /* second-row */
 .second-row {
     display: flex;
     flex-direction: row;
-    padding: 200px 90px 30px 50px;
+    padding: 16px 90px 30px 50px;
     justify-content: space-between;
     align-items: flex-start;
     gap: 5rem;
@@ -1688,32 +1711,6 @@ footer hr {
 }
 
 /* ================= MOBILE ================= */
-@media (max-width: 655px) {
-    /* CAB-conferences */
-    #CAB-conferences{
-        margin: 20px auto;
-    }
-
-    /* Mentor-image */
-    #Mentor-image{
-        margin: 0 auto;
-        padding-bottom: 30px;
-    }
-
-    /*event1-paragraph */
-    #event1-paragraph,
-    #event2-paragraph{
-        margin: 0 auto;
-        padding-top: 0.5rem;
-    }
-
-    .event-img{
-        padding-bottom: 35px;
-    }
-    
-}
-
-/* ================= MOBILE ================= */
 @media (min-width: 500px) and (max-width: 700px) {
     /* footer */
     .footer{
@@ -1801,4 +1798,599 @@ footer hr {
         line-height: 1.45;
         text-align: center;
     }
+}
+
+/* Footer - all screen sizes */
+.footer {
+    background-color: #000;
+    color: #fff;
+}
+
+
+/* ================= TABLET: WHY CHOOSE GETIN ================= */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    /* Hide the slide count and arrow buttons */
+    .slide-indicator {
+        display: none !important;
+    }
+
+    /* Horizontal scrolling container */
+    .fig1-3 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: stretch;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        gap: 8rem;
+        width: 100%;
+        padding: 0 5rem 1.5rem;
+
+        box-sizing: border-box;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Keep all three cards side by side */
+    .fig1-content,
+    .fig2-content,
+    .fig3-content {
+        flex: 0 0 320px;
+        width: 320px;
+        min-width: 320px;
+        height: auto;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #fig1-img1,
+    #fig2-img2,
+    #fig3-img3 {
+        width: 100%;
+        height: 240px;
+        max-width: 100%;
+
+        object-fit: cover;
+        display: block;
+        margin-top: 1rem;
+    }
+
+   #img-paragraph,
+#img-paragraph2,
+#img-paragraph3 {
+    width: 100%;
+    max-width: 100%;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    text-align: center;
+    padding: 1rem 0 1.5rem;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+    /* Feature headings */
+    #caption-1,
+    #caption-2,
+    #caption-3 {
+        width: 100%;
+        font-size: 1.5rem;
+        text-align: center;
+
+        margin-top: 0.5rem;
+        padding-top: 0.5rem;
+    }
+}
+
+
+/* ================= DESKTOP LOGO ================= */
+@media (min-width: 1025px) {
+
+    #logo {
+        width: 180px;
+        height: auto;
+        object-fit: contain;
+        display: block;
+        
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+         margin-left: 50px;
+    }
+
+    #login{
+        display: inline-block;
+        text-decoration: none;
+        font-size: 1.2rem;
+        padding: 10px 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+        color: #000;
+        font-weight: normal;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: large;
+        transition: all 0.3s ease;
+}
+
+#login:hover {
+    color: #000;
+    background-color: #ffd400;
+}
+
+#login:focus {
+     color: #000;
+    background-color: #fff;
+    outline: 2px solid #ffd400;
+    outline-offset: 3px;
+}
+}
+
+/* ================= TABLET LOGO ================= */
+@media (min-width: 768px) and (max-width:1024px ) {
+
+    #logo {
+        width: 180px;
+        height: auto;
+        object-fit: contain;
+        display: block;
+        
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+         margin-left: 50px;
+    }
+
+    .event-imagecontent{
+        gap: 8rem;
+    }
+}
+
+/* ================= MOBILE LOGO ================= */
+@media (max-width: 767px) {
+
+    #logo {
+        width: 160px;
+        height: auto;
+        object-fit: contain;
+        display: block;
+        
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+         margin-left: 9px;
+    }
+
+    .hamburger{
+        margin-left: 11rem;
+    }
+
+}
+
+/* MOBILE EVENT SPACING */
+@media (max-width: 767px) {
+     .fig1-3 {
+   gap: 2rem;
+    }
+
+    #CAB-conferences,
+    #Mentor-image,
+    #Publicity-image {
+        display: block;
+        width: 300px;
+        max-width: 100%;
+        height: 200px;
+        object-fit: cover;
+        margin: 1.5rem auto 0;
+        padding: 0;
+        border-radius: 15px;
+    }
+
+    #conferences-caption,
+    #Mentor-Mentee,
+    #Media-Engagement {
+        min-height: 3rem;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #event1-paragraph,
+    #event2-paragraph,
+    #event3-paragraph {
+        width: 300px;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0.5rem 0 0;
+        text-align: center;
+        line-height: 1.7;
+        box-sizing: border-box;
+    }
+    
+    .About-CAB {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        padding: 0;
+        gap: 0;
+        justify-content: flex-start;
+        align-items: stretch;
+        overflow: hidden;
+    }
+
+    /* Image container */
+    .aboutCab-image {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        flex: none;
+    }
+
+    /* About CAB image */
+    #AboutCAB-img {
+        display: block;
+        width: 100%;
+        max-width: none;
+        height: 330px;
+        object-fit: cover;
+       object-position: center top;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Text content below image */
+    .About-CAB .fade-left {
+        width: 100%;
+        padding: 1.4rem;
+        flex: none;
+    }
+
+    #discovercab-p{
+        margin: 0 auto;
+    }
+
+    #discover-cab{
+        margin-top: 1rem;
+    }
+}
+
+/* ================= SMALLER PHONES LOGO ================= */
+@media (max-width: 400px) {
+    #logo {
+        width: 140px;
+        height: auto;
+        object-fit: contain;
+        display: block;
+        
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+         margin-left: 5px;
+    }
+
+    .hamburger{
+        margin-left: 9rem;
+    }
+    #CAB-conferences,
+    #Mentor-image,
+    #Publicity-image {
+        display: block;
+        width: 300px;
+        max-width: 100%;
+        height: 200px;
+        object-fit: cover;
+        margin: 1.5rem auto 0;
+        padding: 0;
+        border-radius: 15px;
+    }
+
+    #conferences-caption,
+    #Mentor-Mentee,
+    #Media-Engagement {
+        min-height: 3rem;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 1.55rem;
+    }
+
+    #event1-paragraph,
+    #event2-paragraph,
+    #event3-paragraph {
+        width: 300px;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0.5rem 0 0;
+        text-align: center;
+        line-height: 1.7;
+        box-sizing: border-box;
+        font-size: 1.3rem;
+    }
+
+     .About-CAB {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        padding: 0;
+        gap: 0;
+        justify-content: flex-start;
+        align-items: stretch;
+        overflow: hidden;
+    }
+
+    /* Image container */
+    .aboutCab-image {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        flex: none;
+    }
+
+    /* About CAB image */
+    #AboutCAB-img {
+        display: block;
+        width: 100%;
+        max-width: none;
+        height: 250px;
+        object-fit: cover;
+        object-position: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Text content below image */
+    .About-CAB .fade-left {
+        width: 100%;
+        padding: 1.4rem;
+        flex: none;
+    }
+
+}
+
+
+/* MOBILE VIEW */
+@media (max-width: 767px) {
+
+    #fig1-img1,
+    #fig2-img2,
+    #fig3-img3 {
+        width: 310px;
+        max-width: 100%;
+        height: 300px;
+
+        object-fit: cover;
+        display: block;
+
+        border-radius: 15px;
+        overflow: hidden;
+        margin-top: 1rem;
+    }
+
+   /* Feature headings */
+    #caption-1,
+    #caption-2,
+    #caption-3 {
+        width: 100%;
+        font-size: 1.5rem;
+        text-align: center;
+
+        margin-top: 0.5rem;
+        padding-top: 0.5rem;
+    }
+}
+
+.figcaption{
+      color: #eef10b;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+/* ================= TABLET LOGO ================= */
+@media (min-width: 768px) and (max-width:780px ) {
+    #Why-choose-us{
+        margin-bottom: 2rem;
+      }
+
+        .About-CAB {
+        display: flex;
+        flex-direction: row;
+
+        width: 100%;
+        height: 400px;
+
+        padding: 0;
+        margin: 0;
+
+        gap: 0;
+
+        background-color: #1e5be0;
+    }
+
+    /* LEFT 50% — IMAGE */
+    .aboutCab-image {
+        width: 50%;
+        height: 100%;
+        flex: 0 0 50%;
+        margin: 0;
+        padding: 0;
+    }
+
+    #AboutCAB-img {
+        width: 100%;
+        height: 100%;
+
+        max-width: none;
+        max-height: none;
+
+        object-fit: cover;
+        object-position: center;
+
+        display: block;
+    }
+
+    /* RIGHT 50% — CONTENT */
+    .fade-left {
+        width: 50%;
+        height: 100%;
+        flex: 0 0 50%;
+
+        padding: 2.5rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #aboutCAB-header {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        text-align: left;
+    }
+
+    #discovercab-p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+        text-align: left;
+    }
+
+    #discover-cab {
+        width: 200px;
+        height: 45px;
+        margin-left: 0;
+        font-size: 1.1rem;
+    }
+
+    /* footer */
+.footer {
+     color: #fff;
+     background-color: #000;
+     font-family: Arial, sans-serif;
+     height: 550px;
+}
+
+/* second-row */
+.second-row {
+    display: flex;
+    flex-direction: column;
+}
+
+hr{
+    color: white;
+    font-weight: 700;
+}
+
+/* footer-paragraph */
+#footer-paragraph {
+    font-size: 24px;
+    letter-spacing: 0.5px;
+    line-height: 2.5rem;
+     word-spacing: 0.1em;
+     padding: 16px 40px 20px;
+}
+
+/*  Reach Out header */
+#Reach-Out {
+             font-weight: normal;
+       font-family: Arial, sans-serif;
+       padding-left: 40px;
+       margin-top: 2rem;
+       text-transform: uppercase;
+}
+
+/* Reach Out mail  */
+.mail {
+    display: flex;
+    font-size: 1.2rem;
+    align-items: center;
+    gap: 0.5rem; 
+    color: #fff;
+    font-family: Arial, sans-serif;
+    padding-left: 40px;
+    margin-top: 1rem; 
+}
+
+/*  Reach Out telephone  */
+#telephone {
+     display: flex;
+    align-items: center;
+    gap: 0.5rem; 
+    color: #fff;
+    font-family: Arial, sans-serif;
+    padding-left: 40px;
+    margin-top: 1rem; 
+    font-size: 1.2rem;
+}
+
+/*  phone  */
+.phone-circle {
+             width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Popular-links */
+#Popular-links {
+     font-size: 2rem;
+     font-family: Arial, sans-serif;
+     padding: 40px 0px 20px 50px;
+}
+
+/* footer-links */
+.footer-links {
+    font-family: Arial, sans-serif;
+    font-weight: normal;
+    display: flex;
+    flex-direction: row;
+    padding: 0px 40px 10px;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.footer-links li {
+    list-style: none;
+}
+
+.footer-links a {
+     text-decoration: none;
+    color: #fff;
+    transition: 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.9px;
+    padding: 3.5px;
+    transition: all 0.3s ease;
+    border-radius: 7px;
+    display: inline-block;
+}
+
+footer hr {
+    border: none;           
+    height: 1px;               
+    background-color: rgba(255, 255, 255, 0.4);
+}
 }

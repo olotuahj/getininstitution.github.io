@@ -41,7 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     faders.forEach(fader => appearOnScroll.observe(fader));
 
-    // SLIDER
+// ================= SLIDER =================
+
 const slides = document.querySelectorAll(
     ".fig1-content, .fig2-content, .fig3-content"
 );
@@ -54,38 +55,61 @@ let currentSlide = 0;
 
 function showSlide(index) {
 
-    // run slider only on desktop
-    if (window.innerWidth < 780) {
-        slides.forEach(slide => slide.style.display = "flex");
+    // Tablet and mobile: show all cards for horizontal scrolling
+    if (window.innerWidth <= 1024) {
+        slides.forEach(slide => {
+            slide.style.display = "flex";
+        });
+
         return;
     }
 
+    // Desktop: show one card at a time
     slides.forEach(slide => {
         slide.style.display = "none";
     });
 
     slides[index].style.display = "flex";
 
-    slideCount.textContent = `0${index + 1} of 0${slides.length}`;
+    if (slideCount) {
+        slideCount.textContent =
+            `0${index + 1} of 0${slides.length}`;
+    }
 
-    backBtn.disabled = index === 0;
-    nextBtn.disabled = index === slides.length - 1;
+    if (backBtn) {
+        backBtn.disabled = index === 0;
+    }
+
+    if (nextBtn) {
+        nextBtn.disabled = index === slides.length - 1;
+    }
 }
 
-nextBtn.addEventListener("click", () => {
-    if (currentSlide < slides.length - 1) {
-        currentSlide++;
-        showSlide(currentSlide);
-    }
-});
+// Next button
+if (nextBtn) {
+    nextBtn.addEventListener("click", () => {
+        if (currentSlide < slides.length - 1) {
+            currentSlide++;
+            showSlide(currentSlide);
+        }
+    });
+}
 
-backBtn.addEventListener("click", () => {
-    if (currentSlide > 0) {
-        currentSlide--;
-        showSlide(currentSlide);
-    }
-});
+// Back button
+if (backBtn) {
+    backBtn.addEventListener("click", () => {
+        if (currentSlide > 0) {
+            currentSlide--;
+            showSlide(currentSlide);
+        }
+    });
+}
 
-// initial
+// Run when page loads
 showSlide(currentSlide);
+
+// Update when screen is resized
+window.addEventListener("resize", () => {
+    showSlide(currentSlide);
+});
 
