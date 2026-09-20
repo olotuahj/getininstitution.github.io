@@ -2628,4 +2628,21 @@ footer hr {
         font-size: 1.4rem;
         text-align: center;
     }
+
+        #img-paragraph,
+    #img-paragraph2,
+    #img-paragraph3 {
+        width: 100%;
+        max-width: 310px;
+        padding-top: 0.6rem;
+        padding-bottom: 0;
+        margin: 0;
+        line-height: 1.6;
+        word-spacing: normal;
+        text-align: center;
+    }
+
+    .events-content{
+        margin-top: 1rem;
+    }
 }
