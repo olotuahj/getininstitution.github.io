@@ -291,7 +291,7 @@
 }
 
 #img-paragraph {
-    padding-top: 1.5rem;
+    padding-top: 1rem;
     word-spacing: 1.4px;
     width: 290px;
     text-align: center;
@@ -319,7 +319,7 @@
 }
 
 #img-paragraph2 {
-        padding-top: 1.5rem;
+        padding-top: 1rem;
     word-spacing: 1.4px;
     width: 290px;
     text-align: center;
@@ -347,7 +347,7 @@
 }
 
 #img-paragraph3 {
-     padding-top: 1.5rem;
+     padding-top: 1rem;
     word-spacing: 1.4px;
     width: 290px;
     text-align: center;
@@ -2578,9 +2578,6 @@ footer hr {
 }
 }
 
-
-
-/* ================= SMALL MOBILE FIX ================= */
 @media (max-width: 400px) {
 
     .fig1-3 {
