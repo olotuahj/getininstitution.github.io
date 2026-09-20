@@ -2627,6 +2627,7 @@ footer hr {
         padding-top: 0;
         font-size: 1.4rem;
         max-width: 310px;
+        width: 90%;
         text-align: center;
     }
 
@@ -2645,5 +2646,11 @@ footer hr {
 
     .events-content{
         margin-top: 1rem;
+    }
+
+    #conferences-caption, 
+    #Mentor-Mentee, 
+    #Media-Engagement {
+         max-width: 300px;
     }
 }
