@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Under Construction | Global Ethos International Institute</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f9fc;
+            color: #0d2448;
+            min-height: 100vh;
+        }
+
+        /* HEADER */
+        header {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            padding: 25px 50px;
+            min-height: 160px;
+            background-color: #369aeb;
+
+        }
+
+        .logo {
+            width: 155px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .brand-name {
+            color: white;
+        }
+
+        .brand-name h1 {
+            font-family: Georgia, serif;
+            font-size: 42px;
+            line-height: 1;
+        }
+
+        .brand-name h2 {
+            font-family: Georgia, serif;
+            font-size: 30px;
+            font-weight: normal;
+        }
+
+        .brand-name p {
+            margin-top: 8px;
+            font-size: 17px;
+            font-style: italic;
+        }
+
+        /* MAIN */
+        main {
+            min-height: calc(100vh - 160px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 30px 20px;
+
+            background:
+                radial-gradient(
+                    circle at 0% 50%,
+                    #d9eafa,
+                    transparent 35%
+                ),
+                radial-gradient(
+                    circle at 100% 50%,
+                    #d9eafa,
+                    transparent 35%
+                ),
+                #f5f9fc;
+        }
+
+        /* CONSTRUCTION ICON */
+        .construction-icon {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .warning-sign {
+            width: 185px;
+            height: 185px;
+            flex-shrink: 0;
+        }
+
+        .warning-bar {
+            width: 220px;
+            height: 44px;
+            border-radius: 5px;
+
+            background: repeating-linear-gradient(
+                125deg,
+                #ffb900 0px,
+                #ffb900 25px,
+                #252525 25px,
+                #252525 50px
+            );
+        }
+
+        /* HEADING */
+        .main-heading {
+            font-size: clamp(38px, 5.5vw, 82px);
+            font-weight: 900;
+            text-transform: uppercase;
+            line-height: 1.1;
+            margin-bottom: 25px;
+            color: #ffb900;
+            text-shadow:
+                2px 2px 0 #0d2448,
+                -1px -1px 0 #0d2448;
+        }
+
+        .main-heading span {
+            color: #173970;
+        }
+
+        /* MESSAGE */
+        .message {
+            font-size: clamp(18px, 2.8vw, 34px);
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+
+        .deadline {
+            color: #0755b8;
+            font-size: clamp(25px, 3.5vw, 48px);
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .return-message {
+            font-size: clamp(17px, 2.3vw, 28px);
+            margin-bottom: 35px;
+        }
+
+        /* COUNTDOWN */
+        .countdown {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 18px;
+            flex-wrap: wrap;
+            margin-bottom: 35px;
+        }
+
+        .time-box {
+            background: #0755b8;
+            color: white;
+            width: 172px;
+            min-height: 120px;
+            border-radius: 18px;
+            padding: 15px 10px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            box-shadow: 0 5px 12px #0d244820;
+        }
+
+        .time-box span {
+            font-size: 55px;
+            font-weight: bold;
+            line-height: 1.1;
+        }
+
+        .time-box small {
+            font-size: 17px;
+            margin-top: 8px;
+            text-transform: uppercase;
+        }
+
+        .colon {
+            font-size: 40px;
+            font-weight: bold;
+            color: #0755b8;
+        }
+
+        /* HOME BUTTON */
+        .home-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+
+            background: #ffbd00;
+            color: #0d2448;
+
+            padding: 18px 35px;
+            border-radius: 12px;
+
+            text-decoration: none;
+            font-size: 22px;
+            font-weight: bold;
+
+            box-shadow: 0 5px 12px #0d244820;
+            transition: 0.3s;
+        }
+
+        .home-button:hover {
+            background: #e5a800;
+            transform: translateY(-3px);
+        }
+
+        .home-icon {
+            width: 30px;
+            height: 30px;
+            fill: #0d2448;
+        }
+
+        /* FOOTER */
+        footer {
+            margin-top: 35px;
+            width: 100%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 25px;
+
+            font-size: 18px;
+            letter-spacing: 3px;
+        }
+
+        footer::before,
+        footer::after {
+            content: "";
+            height: 1px;
+            width: 120px;
+            background: #0755b8;
+        }
+
+        /* TABLET */
+        @media (min-width: 768px) and (max-width: 1024px) {
+
+            header {
+                padding: 25px 30px;
+            }
+
+            .brand-name h1 {
+                font-size: 35px;
+            }
+
+            .brand-name h2 {
+                font-size: 26px;
+            }
+
+            .warning-bar {
+                width: 140px;
+            }
+
+            .warning-sign {
+                width: 150px;
+                height: 150px;
+            }
+
+            .countdown {
+                gap: 12px;
+            }
+
+            .time-box {
+                width: 145px;
+            }
+        }
+
+        /* MOBILE */
+        @media (max-width: 767px) {
+
+            header {
+                padding: 20px 15px;
+                min-height: 100px;
+                gap: 12px;
+            }
+
+            .logo {
+                width: 95px;
+            }
+
+            .brand-name h1 {
+                font-size: 25px;
+            }
+
+            .brand-name h2 {
+                font-size: 17px;
+            }
+
+            .brand-name p {
+                font-size: 11px;
+            }
+
+            main {
+                min-height: calc(100vh - 100px);
+                padding: 30px 15px;
+            }
+
+            .construction-icon {
+                gap: 5px;
+                margin-bottom: 25px;
+            }
+
+            .warning-sign {
+                width: 100px;
+                height: 100px;
+            }
+
+            .warning-bar {
+                width: 55px;
+                height: 25px;
+                background: repeating-linear-gradient(
+                    125deg,
+                    #ffb900 0px,
+                    #ffb900 12px,
+                    #252525 12px,
+                    #252525 24px
+                );
+            }
+
+            .main-heading {
+                font-size: clamp(32px, 8vw, 50px);
+                margin-bottom: 20px;
+            }
+
+            .message {
+                font-size: 18px;
+            }
+
+            .deadline {
+                font-size: 27px;
+            }
+
+            .return-message {
+                font-size: 17px;
+                margin-bottom: 25px;
+            }
+
+            .countdown {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 12px;
+                width: 100%;
+                max-width: 400px;
+                margin-bottom: 30px;
+            }
+
+            .time-box {
+                width: 100%;
+                min-height: 100px;
+                border-radius: 12px;
+            }
+
+            .time-box span {
+                font-size: 42px;
+            }
+
+            .time-box small {
+                font-size: 13px;
+            }
+
+            .colon {
+                display: none;
+            }
+
+            .home-button {
+                font-size: 18px;
+                padding: 15px 25px;
+            }
+
+            footer {
+                font-size: 13px;
+                letter-spacing: 1px;
+                gap: 10px;
+            }
+
+            footer::before,
+            footer::after {
+                width: 35px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <img
+            src="images/ei_1789659934871-removebg-preview.png"
+            alt="Global Ethos International Institute Logo"
+            class="logo"
+        >
+
+        <div class="brand-name">
+            <h1>Global Ethos</h1>
+            <h2>International Institute</h2>
+            <p>Character • Attitude • Behaviour</p>
+        </div>
+
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <!-- CONSTRUCTION SIGN -->
+        <div class="construction-icon">
+
+            <div class="warning-bar"></div>
+
+            <svg
+                class="warning-sign"
+                viewBox="0 0 200 200"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-label="Construction warning sign"
+                role="img"
+            >
+                <rect
+                    x="22"
+                    y="22"
+                    width="156"
+                    height="156"
+                    rx="15"
+                    transform="rotate(45 100 100)"
+                    fill="#ffbd00"
+                    stroke="#0d2448"
+                    stroke-width="5"
+                />
+
+                <rect
+                    x="32"
+                    y="32"
+                    width="136"
+                    height="136"
+                    rx="10"
+                    transform="rotate(45 100 100)"
+                    fill="none"
+                    stroke="#0d2448"
+                    stroke-width="3"
+                />
+
+                <circle
+                    cx="105"
+                    cy="57"
+                    r="11"
+                    fill="#0d2448"
+                />
+
+                <path
+                    d="M82 77
+                       L105 77
+                       L105 112
+                       L127 128
+                       L144 128
+                       L144 145
+                       L99 145
+                       L83 131
+                       L72 145
+                       L56 145
+                       L75 117
+                       L75 94
+                       L66 108
+                       L52 100
+                       L65 77
+                       Z"
+                    fill="#0d2448"
+                />
+
+                <path
+                    d="M80 88 L94 88 L105 105 L122 112"
+                    stroke="#ffbd00"
+                    stroke-width="5"
+                    fill="none"
+                />
+
+                <path
+                    d="M75 115 L92 115 L92 145"
+                    stroke="#ffbd00"
+                    stroke-width="5"
+                    fill="none"
+                />
+
+                <path
+                    d="M42 151 L158 151"
+                    stroke="#0d2448"
+                    stroke-width="6"
+                />
+            </svg>
+
+            <div class="warning-bar"></div>
+
+        </div>
+
+        <!-- HEADING -->
+        <h1 class="main-heading">
+            <span>Under</span> Construction
+        </h1>
+
+        <!-- MESSAGE -->
+        <p class="message">
+            The selected pages will be available
+        </p>
+
+        <p class="deadline">
+            by Sunday, 7:00 PM.
+        </p>
+
+        <p class="return-message">
+            Please return to the home page for now.
+        </p>
+
+        <!-- COUNTDOWN TIMER -->
+        <div
+            class="countdown"
+            id="countdown"
+            role="timer"
+            aria-label="Time remaining until the pages are available"
+        >
+
+            <div class="time-box">
+                <span id="days">00</span>
+                <small>Days</small>
+            </div>
+
+            <div class="colon">:</div>
+
+            <div class="time-box">
+                <span id="hours">00</span>
+                <small>Hours</small>
+            </div>
+
+            <div class="colon">:</div>
+
+            <div class="time-box">
+                <span id="minutes">00</span>
+                <small>Minutes</small>
+            </div>
+
+            <div class="colon">:</div>
+
+            <div class="time-box">
+                <span id="seconds">00</span>
+                <small>Seconds</small>
+            </div>
+
+        </div>
+
+        <p id="countdown-message" hidden>
+            The scheduled release time has arrived!
+        </p>
+
+        <!-- BACK TO HOME BUTTON -->
+        <a href="index.html" class="home-button">
+
+            <svg
+                class="home-icon"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+            >
+                <path d="M12 2L1 12h3v10h6v-7h4v7h6V12h3L12 2z"/>
+            </svg>
+
+            Back to Home
+
+        </a>
+
+        <!-- FOOTER -->
+        <footer>
+            <span>Thank you for your patience!</span>
+        </footer>
+
+    </main>
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        // Deadline: Sunday, September 27, 2026, at 7:00 PM
+        // Nigeria time (West Africa Time, UTC+1).
+
+        const deadline = new Date(
+            "2026-09-27T19:00:00+01:00"
+        ).getTime();
+
+        const daysElement =
+            document.getElementById("days");
+
+        const hoursElement =
+            document.getElementById("hours");
+
+        const minutesElement =
+            document.getElementById("minutes");
+
+        const secondsElement =
+            document.getElementById("seconds");
+
+        const countdownElement =
+            document.getElementById("countdown");
+
+        const messageElement =
+            document.getElementById("countdown-message");
+
+        let timer;
+
+        function updateCountdown() {
+
+            const now = Date.now();
+
+            // Remaining time in milliseconds
+            const difference = deadline - now;
+
+            // When the deadline arrives
+            if (difference <= 0) {
+
+                clearInterval(timer);
+
+                daysElement.textContent = "00";
+                hoursElement.textContent = "00";
+                minutesElement.textContent = "00";
+                secondsElement.textContent = "00";
+
+                countdownElement.hidden = true;
+                messageElement.hidden = false;
+
+                return;
+            }
+
+            // Calculate days
+            const days = Math.floor(
+                difference / (1000 * 60 * 60 * 24)
+            );
+
+            // Calculate hours
+            const hours = Math.floor(
+                (difference / (1000 * 60 * 60)) % 24
+            );
+
+            // Calculate minutes
+            const minutes = Math.floor(
+                (difference / (1000 * 60)) % 60
+            );
+
+            // Calculate seconds
+            const seconds = Math.floor(
+                (difference / 1000) % 60
+            );
+
+            // Display the calculated values
+            daysElement.textContent =
+                String(days).padStart(2, "0");
+
+            hoursElement.textContent =
+                String(hours).padStart(2, "0");
+
+            minutesElement.textContent =
+                String(minutes).padStart(2, "0");
+
+            secondsElement.textContent =
+                String(seconds).padStart(2, "0");
+        }
+
+        // Run immediately so the timer displays correctly
+        updateCountdown();
+
+        // Update every second
+        timer = setInterval(updateCountdown, 1000);
+
+    </script>
+
+</body>
+</html>

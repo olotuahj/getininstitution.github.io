@@ -870,7 +870,7 @@ footer hr {
     color: #fff;
     background-color: #000;
     font-family: Arial, sans-serif;
-    height: 950px;
+    height: 850px;
 }
 
 /* second-row */
@@ -885,7 +885,7 @@ footer hr {
     letter-spacing: 0.5px;
     line-height: 2.5rem;
      word-spacing: 0.1em;
-     padding: 10rem 40px 20px;
+     padding: 16px 40px 20px;
 }
 
 /*  Reach Out header */
@@ -1732,7 +1732,7 @@ footer hr {
 
     /* footer */
     .footer{
-        height: 1000px;
+        height: 900px;
     }
 }
 
@@ -1890,6 +1890,61 @@ footer hr {
 /* ================= DESKTOP LOGO ================= */
 @media (min-width: 1025px) {
 
+    .desktop-actions {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.desktop-actions a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 48px;
+
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* Login */
+#login {
+    color: #fff;
+    border: 1px solid #fff;
+    background: transparent;
+    padding: 10px 20px;
+}
+
+/* Register Now */
+#register {
+    color: #000;
+    background: #ffd400;
+    border: 1px solid #ffd400;
+      height: 50px;
+    width: 150px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover and focus */
+#login:hover,
+#login:focus {
+    background: #fff;
+    color: #000;
+}
+
+#register:hover,
+#register:focus {
+    background: #fff;
+    border-color: #fff;
+    color: #000;
+}
+
     #logo {
         width: 180px;
         height: auto;
@@ -1903,33 +1958,6 @@ footer hr {
         align-items: center;
          margin-left: 50px;
     }
-
-    #login{
-        display: inline-block;
-        text-decoration: none;
-        font-size: 1.2rem;
-        padding: 10px 20px;
-        background-color: #fff;
-        border-radius: 5px;
-        cursor: pointer;
-        color: #000;
-        font-weight: normal;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        font-size: large;
-        transition: all 0.3s ease;
-}
-
-#login:hover {
-    color: #000;
-    background-color: #ffd400;
-}
-
-#login:focus {
-     color: #000;
-    background-color: #fff;
-    outline: 2px solid #ffd400;
-    outline-offset: 3px;
-}
 }
 
 /* ================= TABLET LOGO ================= */
@@ -1980,7 +2008,7 @@ footer hr {
 /* MOBILE EVENT SPACING */
 @media (max-width: 767px) {
      .fig1-3 {
-   gap: 2rem;
+   gap: 6rem;
     }
 
     #CAB-conferences,
@@ -2070,6 +2098,60 @@ footer hr {
 
 /* ================= SMALLER PHONES LOGO ================= */
 @media (max-width: 400px) {
+    
+/* ================= MOBILE LOGIN & REGISTER ================= */
+
+.mobile-auth {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.mobile-auth a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    min-height: 48px;
+
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* Login */
+#mobile-login {
+    color: #fff;
+    border: 1px solid #fff;
+    background: transparent;
+}
+
+/* Register Now */
+#mobile-register {
+    color: #000;
+    background: #ffd400;
+    border: 1px solid #ffd400;
+}
+
+/* Hover and focus */
+#mobile-login:hover,
+#mobile-login:focus {
+    background: #fff;
+    color: #000;
+}
+
+#mobile-register:hover,
+#mobile-register:focus {
+    background: #fff;
+    border-color: #fff;
+    color: #000;
+}
+
     #logo {
         width: 140px;
         height: auto;
@@ -2087,6 +2169,11 @@ footer hr {
     .hamburger{
         margin-left: 9rem;
     }
+
+      .fig1-3 {
+   gap: 1rem;
+    }
+
     #CAB-conferences,
     #Mentor-image,
     #Publicity-image {
@@ -2170,6 +2257,59 @@ footer hr {
 
 /* MOBILE VIEW */
 @media (max-width: 767px) {
+    
+/* ================= MOBILE LOGIN & REGISTER ================= */
+
+.mobile-auth {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.mobile-auth a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    min-height: 48px;
+
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* Login */
+#mobile-login {
+    color: #fff;
+    border: 1px solid #fff;
+    background: transparent;
+}
+
+/* Register Now */
+#mobile-register {
+    color: #000;
+    background: #ffd400;
+    border: 1px solid #ffd400;
+}
+
+/* Hover and focus */
+#mobile-login:hover,
+#mobile-login:focus {
+    background: #fff;
+    color: #000;
+}
+
+#mobile-register:hover,
+#mobile-register:focus {
+    background: #fff;
+    border-color: #fff;
+    color: #000;
+}
 
     #fig1-img1,
     #fig2-img2,

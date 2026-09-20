@@ -113,3 +113,48 @@ window.addEventListener("resize", () => {
     showSlide(currentSlide);
 });
 
+
+// ================= UNDER CONSTRUCTION REDIRECT =================
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const constructionPage = "construction.html";
+
+    document.querySelectorAll("a").forEach(link => {
+
+        link.addEventListener("click", (event) => {
+
+            const href = link.getAttribute("href");
+
+            // Allow external links
+            if (
+                href &&
+                (
+                    href.startsWith("https://") ||
+                    href.startsWith("http://") ||
+                    href.startsWith("mailto:")
+                )
+            ) {
+                return;
+            }
+
+            // Keep users on index.html when they click Home
+            if (href === "index.html" || href === "#") {
+                event.preventDefault();
+
+                if (href === "index.html") {
+                    window.location.href = "index.html";
+                }
+
+                return;
+            }
+
+            // Redirect other links
+            event.preventDefault();
+            window.location.href = constructionPage;
+
+        });
+
+    });
+
+});
