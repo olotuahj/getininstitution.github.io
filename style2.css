@@ -19,13 +19,19 @@
 .top-bar {
     width: 100%;
     max-width: 1200px;
-    background-color: #0a89f1;
-    padding: 1.5rem 5rem 1.5rem 1rem;
+    background-color: #369aeb;
+    padding: 1.5rem 3rem 1.5rem 0.5rem;
     color: #fff;
     height: 6rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.topbar-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 .topbar-right {
@@ -60,12 +66,45 @@
     border-radius: 5px;
     font-size: large;
     transition: all 0.3s ease;
+    font-weight: normal;
 }
 
 #CAB:hover,
 #CAB:focus {
-    outline: 2px solid #ffd400;
+     background: #fff;
+    border-color: #fff;
+    color: #000;
 }
+
+/* ================= register ================= */
+#register {
+    height: 50px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+    color:  #000;
+    background: #ffd400;
+    border-radius: 5px;
+    font-size: large;
+    transition: all 0.3s ease;
+    font-weight: normal;
+}
+
+#register:hover {
+    color: #000;
+    background-color: #fff;
+}
+
+#register:focus {
+     color: #000;
+    background-color: #fff;
+    outline: 2px solid #ffd400;
+    outline-offset: 3px;
+}
+
 
 /* ================= HAMBURGER ================= */
 .hamburger {
@@ -460,6 +499,72 @@ footer hr {
 
 /* ================= MOBILE ONLY ================= */
 @media (max-width: 767px) {
+     .hamburger{
+        margin-left: 11rem;
+    }
+    
+        #logo {
+        width: 160px;
+        height: auto;
+        object-fit: contain;
+        display: block;
+        
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+
+  .mobile-auth {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.mobile-auth a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    min-height: 48px;
+
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* ================= CAB BUTTON ================= */
+#CAB {
+    color: #fff;
+    background: #0a89f1;
+    width: 210px;
+}
+
+#CAB:hover,
+#CAB:focus {
+    background: #fff;
+    color: #000;
+}
+
+/* Register Now */
+#mobile-register {
+    color: #000;
+    background: #ffd400;
+}
+
+#mobile-register:hover,
+#mobile-register:focus {
+    background: #fff;
+    border-color: #fff;
+    color: #000;
+}
+
      /* us a */
    #us a{
     text-decoration: none;
@@ -718,6 +823,69 @@ footer hr {
 
 /* ================= TABLET ONLY ================= */
 @media (min-width:768px) and (max-width:1024px) {
+        #logo {
+        width: 180px;
+        height: auto;
+        object-fit: contain;
+        display: block;
+        
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+         margin-left: 50px;
+    }
+
+        .mobile-auth {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.mobile-auth a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    min-height: 48px;
+
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* ================= CAB BUTTON ================= */
+#CAB {
+    color: #fff;
+    background: #0a89f1;
+    width: 210px;
+}
+
+#CAB:hover,
+#CAB:focus {
+    background: #fff;
+    color: #000;
+}
+
+/* Register Now */
+#mobile-register {
+    color: #000;
+    background: #ffd400;
+}
+
+#mobile-register:hover,
+#mobile-register:focus {
+    background: #fff;
+    border-color: #fff;
+    color: #000;
+}
+
       /* about-droplink a */
     .about-droplink a{
         text-decoration: none;
@@ -877,6 +1045,56 @@ footer hr {
 
 /* ================= DESKTOP ONLY ================= */
 @media (min-width:1025px) {
+    /* mainContent */
+    #mainContent {
+        max-width: 100%;
+        margin: 0 auto;
+        background-color: #554a4a;
+    }
+
+        .desktop-actions {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.desktop-actions a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 48px;
+
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+   .brand-name h1 {
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+
+        .brand-name h2 {
+            font-family: Georgia, serif;
+            font-weight: normal;
+        }
+
+        #logo {
+        width: 180px;
+        height: auto;
+        object-fit: contain;
+        display: block;
+        
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+         margin-left: 50px;
+    }
+
      /* home, slash */
     #home,
     #slash {
@@ -1085,5 +1303,27 @@ footer hr {
     transform: translateX(0); 
 }
 
+@media (max-width: 665px) {
+    .brand-name h1{
+        font-size: 26px;
+    }
+
+    .brand-name h2{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 665px) {
+    .brand-name {
+        display: none;
+    }
+}
 
 
+.brand-name{
+    color: #03005B;
+}
+
+#GETIN {
+    color: #03005B;
+}

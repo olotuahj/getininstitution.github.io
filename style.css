@@ -28,6 +28,12 @@
     align-items: center;
 }
 
+.topbar-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 .topbar-right {
     display: flex;
     align-items: center;
@@ -1428,6 +1434,16 @@ footer hr {
 
 /* ================= DESKTOP ONLY ================= */
 @media (min-width: 1025px){
+     .brand-name h1 {
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+
+        .brand-name h2 {
+            font-family: Georgia, serif;
+            font-weight: normal;
+        }
+
     /* mainContent */
     #mainContent {
         max-width: 100%;
@@ -1905,10 +1921,9 @@ footer hr {
 
 /* Login */
 #login {
-    color: #fff;
-    border: 1px solid #fff;
-    background: transparent;
     padding: 10px 20px;
+     background: #fff;
+    color: #000;
 }
 
 /* Register Now */
@@ -1928,15 +1943,16 @@ footer hr {
 /* Hover and focus */
 #login:hover,
 #login:focus {
-    background: #fff;
-    color: #000;
+        color: #fff;
+    border: 1px solid #fff;
+    background: transparent;
 }
 
 #register:hover,
 #register:focus {
-    background: #fff;
-    border-color: #fff;
-    color: #000;
+       color: #fff;
+    border: 1px solid #fff;
+    background: transparent;
 }
 
     #logo {
@@ -2653,4 +2669,60 @@ footer hr {
     #Media-Engagement {
          max-width: 300px;
     }
+}
+
+@media (max-width: 665px) {
+    .brand-name h1{
+        font-size: 26px;
+    }
+
+    .brand-name h2{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 665px) {
+    .brand-name {
+        display: none;
+    }
+}
+
+.brand-name{
+    color: #03005B;
+}
+
+/* Login */
+#login {
+    padding: 10px 20px;
+     background: #fff;
+    color: #000;
+}
+
+/* Register Now */
+#register {
+    color: #000;
+    background: #ffd400;
+    border: 1px solid #ffd400;
+      height: 50px;
+    width: 150px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover and focus */
+#login:hover,
+#login:focus {
+        color: #fff;
+    border: 1px solid #fff;
+    background: transparent;
+}
+
+#register:hover,
+#register:focus {
+       color: #fff;
+    border: 1px solid #fff;
+    background: transparent;
 }
