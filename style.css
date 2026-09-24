@@ -22,7 +22,7 @@
     background-color: #369aeb;
     padding: 1.5rem 3rem 1.5rem 0.5rem;
     color: #fff;
-    height: 6rem;
+    height: 6.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,7 +31,7 @@
 .topbar-left {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 25px;
 }
 
 .topbar-right {
@@ -109,6 +109,13 @@
     border: none;
     color: #171b3b;
     cursor: pointer;
+}
+
+.hamburger:hover,
+.hamburger:focus{
+    outline: none;
+     border-radius: 14px;
+    border: 2px solid #000;
 }
 
 /* ================= MOBILE SLIDE MENU ================= */
@@ -976,6 +983,15 @@ footer hr {
 
 /* ================= TABLET ONLY ================= */
 @media (min-width: 768px) and (max-width: 1024px) {
+    .brand-name h1 {
+            font-family: Georgia, serif;
+            line-height: 1;
+            font-size: 42px;
+    }
+
+        .brand-name h2{
+            font-size: 30px;
+        }
 
     .About-CAB {
         display: flex;
@@ -1008,6 +1024,7 @@ footer hr {
         width: 50%;
         flex: 1;
     }
+    
 
     #aboutCAB-header {
         font-size: 2rem;
@@ -1117,19 +1134,6 @@ footer hr {
         align-items: center;
         overflow-x: hidden;
       }
-    
-    /* fig-img */
-#fig1-img1,
-#fig2-img2,
-#fig3-img3 {
-    width: 1020px;
-    height: 700px;
-    margin-top: 1.5rem;
-    object-fit: cover;
-    
-    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%);
-    mask-image: linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%);
-}
 
     /* caption */
     #caption-1,
@@ -1322,7 +1326,7 @@ footer hr {
      color: #fff;
      background-color: #1e5be0;
      font-family: Arial, sans-serif;
-     height: 600px;
+     height: 550px;
 }
 
 /* second-row */
@@ -1437,11 +1441,13 @@ footer hr {
      .brand-name h1 {
             font-family: Georgia, serif;
             line-height: 1;
+            font-size: 42px;
         }
 
         .brand-name h2 {
             font-family: Georgia, serif;
             font-weight: normal;
+            font-size: 30px;
         }
 
     /* mainContent */
@@ -1456,6 +1462,19 @@ footer hr {
         margin-top: 1rem;
         margin-bottom: 1.5rem;
     }
+
+    /* fig-img */
+#fig1-img1,
+#fig2-img2,
+#fig3-img3 {
+    width: 1020px;
+    height: 700px;
+    margin-top: 1.5rem;
+    object-fit: cover;
+    
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%);
+}
 
      /* slide-indicator */
      .slide-indicator {
@@ -1819,6 +1838,9 @@ footer hr {
 
 /* ================= TABLET: WHY CHOOSE GETIN ================= */
 @media (min-width: 768px) and (max-width: 1024px) {
+    .top-bar{
+        height: 7rem;
+    }
 
     /* Hide the slide count and arrow buttons */
     .slide-indicator {
@@ -1836,7 +1858,7 @@ footer hr {
         overflow-x: auto;
         overflow-y: hidden;
 
-        gap: 8rem;
+        gap: 13rem;
         width: 100%;
         padding: 0 5rem 1.5rem;
 
@@ -1858,6 +1880,17 @@ footer hr {
         align-items: center;
     }
 
+    .fig1,
+    .fig2,
+    .fig3{
+         overflow: hidden;
+         border-radius: 15px;
+            background-color: #2e324e;
+    color: #fff;
+    width: 400px;
+    margin-top: 2rem;
+    }
+
     #fig1-img1,
     #fig2-img2,
     #fig3-img3 {
@@ -1867,20 +1900,22 @@ footer hr {
 
         object-fit: cover;
         display: block;
-        margin-top: 1rem;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
     }
 
    #img-paragraph,
 #img-paragraph2,
 #img-paragraph3 {
-    width: 100%;
-    max-width: 100%;
+    width: 80%;
+    max-width: 80%;
     font-size: 1.5rem;
     line-height: 1.5;
     text-align: center;
     padding: 1rem 0 1.5rem;
-    margin: 0;
+    margin: 0 auto;
     box-sizing: border-box;
+    font-weight: normal;
 }
 
     /* Feature headings */
@@ -1899,6 +1934,23 @@ footer hr {
 
 /* ================= DESKTOP LOGO ================= */
 @media (min-width: 1025px) {
+       .top-bar{
+        height: 7.5rem;
+    }
+
+    #logo {
+        width: 150px;
+        height: auto;
+        object-fit: contain;
+        display: block;
+        
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+         margin-left: 50px;
+    }
 
     .desktop-actions {
     display: flex;
@@ -1922,7 +1974,7 @@ footer hr {
 /* Login */
 #login {
     padding: 10px 20px;
-     background: #fff;
+     background: purple;
     color: #000;
 }
 
@@ -1955,26 +2007,13 @@ footer hr {
     background: transparent;
 }
 
-    #logo {
-        width: 180px;
-        height: auto;
-        object-fit: contain;
-        display: block;
-        
-    }
-
-    .logo {
-        display: flex;
-        align-items: center;
-         margin-left: 50px;
-    }
 }
 
 /* ================= TABLET LOGO ================= */
 @media (min-width: 768px) and (max-width:1024px ) {
 
     #logo {
-        width: 180px;
+        width: 150px;
         height: auto;
         object-fit: contain;
         display: block;
@@ -2159,7 +2198,9 @@ footer hr {
 /* ================= SMALLER PHONES LOGO ================= */
 @media (max-width: 400px) {
     
-/* ================= MOBILE LOGIN & REGISTER ================= */
+.brand-name{
+    display: none;
+}
 
 .mobile-auth {
     display: flex;
@@ -2405,7 +2446,7 @@ footer hr {
 
 
 /* ================= TABLET LOGO ================= */
-@media (min-width: 768px) and (max-width:780px ) {
+@media (min-width: 768px) and (max-width:779px ) {
     #Why-choose-us{
         margin-bottom: 2rem;
       }
@@ -2672,16 +2713,6 @@ footer hr {
 }
 
 @media (max-width: 665px) {
-    .brand-name h1{
-        font-size: 26px;
-    }
-
-    .brand-name h2{
-        font-size: 20px;
-    }
-}
-
-@media (max-width: 665px) {
     .brand-name {
         display: none;
     }
@@ -2694,8 +2725,8 @@ footer hr {
 /* Login */
 #login {
     padding: 10px 20px;
-     background: #fff;
-    color: #000;
+      background: purple;
+    color: #fff;
 }
 
 /* Register Now */
