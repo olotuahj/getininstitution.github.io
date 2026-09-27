@@ -124,34 +124,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
         link.addEventListener("click", (event) => {
 
+            event.preventDefault();
+
             const href = link.getAttribute("href");
 
-            // Allow external links
-            if (
-                href &&
-                (
-                    href.startsWith("https://") ||
-                    href.startsWith("http://") ||
-                    href.startsWith("mailto:")
-                )
-            ) {
-                return;
+            if(href === 'about.html'){
+                 window.location.href = 'about.html';
+            } else {
+                window.location.href = constructionPage;
             }
-
-            // Keep users on index.html when they click Home
-            if (href === "index.html" || href === "#") {
-                event.preventDefault();
-
-                if (href === "index.html") {
-                    window.location.href = "index.html";
-                }
-
-                return;
-            }
-
-            // Redirect other links
-            event.preventDefault();
-            window.location.href = constructionPage;
+            
+            
 
         });
 

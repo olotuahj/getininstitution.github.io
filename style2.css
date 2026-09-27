@@ -46,40 +46,10 @@
     align-items: center;
 }
 
-/* ================= CAB BUTTON ================= */
+/* ================= register ================= */
 #CAB {
     height: 50px;
-    width: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    cursor: pointer;
-    color: #fff;
-    background: linear-gradient(
-        90deg,
-        #0a89f1 0%,
-        #0a89f1 10%,
-        #2e65dd 45%,
-        #2e65dd 100%
-    );
-    border-radius: 5px;
-    font-size: large;
-    transition: all 0.3s ease;
-    font-weight: normal;
-}
-
-#CAB:hover,
-#CAB:focus {
-     background: #fff;
-    border-color: #fff;
-    color: #000;
-}
-
-/* ================= register ================= */
-#register {
-    height: 50px;
-    width: 150px;
+    width: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -93,12 +63,12 @@
     font-weight: normal;
 }
 
-#register:hover {
+#CAB:hover {
     color: #000;
     background-color: #fff;
 }
 
-#register:focus {
+#CAB:focus {
      color: #000;
     background-color: #fff;
     outline: 2px solid #ffd400;
@@ -215,7 +185,7 @@
 
 /* ================= about bar ================= */
 .about-bar {
-    background-color: #0a89f1;
+    background-color: #012a4e;
     width: 100%;
     height: 40px;
 }
@@ -247,7 +217,7 @@
 .image1 {
          width: 100%;
     max-width: 1200px;
-    height: 400px;
+    height: 100%;
     overflow: hidden;
 }
 
@@ -265,7 +235,7 @@
 }
 
 .top-page{
-   background-color: #c6dfee;
+   background-color: #0897f0;
 }
 
 /* ================= heading1 ================= */
@@ -273,6 +243,7 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1.5rem;
     padding: 1rem 0px 7px 1.2rem;
+    color: #000;
 }
 
 /* ================= GETIN ================= */
@@ -284,14 +255,21 @@
 #GETIN-paragraph 
 {
     line-height: 1.6rem;
+    padding: 0px 1rem 1rem 1.2rem;
+    color: #000;
+}
+
+#GETIN-paragraph2{
+     line-height: 1.6rem;
     padding: 0px 1rem 3rem 1.2rem;
+    color: #000;
 }
 
 /* ================= Programs-imgcontent  ================= */
 .programs-imgcontent {
          width: 100%;
     max-width: 1200px;
-    height: 400px;
+    height: 500px;
     overflow: hidden;
 }
 
@@ -303,33 +281,19 @@
     display: block;
 }
 
- /* ================= programs-content ================= */
-.programs-content {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
- /* ================= Programs-header ================= */
-#Programs-header{
-         padding: 1.2rem 0rem 1.2rem 0rem;
-         word-spacing: 0.13rem;
-}
-
- /* ================= program-paragraph ================= */
-#program-paragraph {
-    padding: 0rem 0rem 1.5rem 0rem;
+.what-we-do{
+    background-color: #0897f0;
 }
 
 /* middle */
 .middle{
-    background-color: #7ecde0;
+    background-color: #4aafee;
 }
 
 /* ================= more-programs ================= */
 #more-programs {
     color: #000;
     background-color: #f1d63c;
-    height: 60px;
-    width: 110px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -349,7 +313,7 @@
 #what-we-do {
        padding-bottom: 1.5rem;
        padding-left: 1.5rem;
-       color: #0a89f1;
+       color: #fff;
        font-weight: bold;
        margin-right: 1rem;
 }
@@ -370,28 +334,21 @@
      line-height: 1.4rem;
 }
 
-/* ================= Socials ================= */
-#socials-header {
-      padding-top: 3rem; 
-      padding-bottom: 1rem;
-      text-transform: uppercase;
-      font-family: Arial, sans-serif;
-      letter-spacing: 0.5px;
+/* ================= programs-content ================= */
+.programs-content {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.socials {
-    display: flex;
-    gap: 1rem;
-    padding-bottom: 2rem;
-    align-items: center;
+ /* ================= Programs-header ================= */
+#Programs-header{
+         padding: 0rem 0rem 1.2rem 0rem;
+         word-spacing: 0.13rem;
 }
 
-.socials a img{
-    transition: transform 1.3s ease;
-}
-
-.socials a:hover img{
-    transform: scale(1.2);
+ /* ================= program-paragraph ================= */
+#program-paragraph {
+    padding: 0rem 0rem 1.5rem 0rem;
+    font-size: 1.6rem;
 }
 
 footer hr {
@@ -500,7 +457,6 @@ footer hr {
     height: 100%;
     object-fit: cover;
     display: block;
-    padding-bottom: 1.5rem;
 }
 }
 
@@ -548,25 +504,12 @@ footer hr {
 
 /* ================= CAB BUTTON ================= */
 #CAB {
-    color: #fff;
-    background: #0a89f1;
-    width: 210px;
-}
-
-#CAB:hover,
-#CAB:focus {
-    background: #fff;
-    color: #000;
-}
-
-/* Register Now */
-#mobile-register {
     color: #000;
     background: #ffd400;
 }
 
-#mobile-register:hover,
-#mobile-register:focus {
+#CAB:hover,
+#CAB:focus {
     background: #fff;
     border-color: #fff;
     color: #000;
@@ -593,8 +536,15 @@ footer hr {
 
     /* GETIN-paragraph */
     #GETIN-paragraph {
-        font-size: 1.6rem;
-        line-height: 1.6;
+        font-size: 1.7rem;
+        line-height: 1.7;
+        letter-spacing: 0.5px;
+    }
+
+    /* GETIN-paragraph2 */
+    #GETIN-paragraph2 {
+        font-size: 1.7rem;
+        line-height: 1.7;
         letter-spacing: 0.5px;
     }
 
@@ -602,9 +552,12 @@ footer hr {
     .programs-content {
         background-color: #0a89f1;
         color: #eeeeee;
-        height: 200px;
+        height: 250px;
         padding-left: 1.2rem;
         padding-right: 1.2rem;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
     }
  
     /* desktop-break */
@@ -630,21 +583,31 @@ footer hr {
 }
        /* what-we-do */ 
        #what-we-do {
-        font-size: 1.7rem;
+        font-size: 2rem;
        }
+
+       .programs-content{
+        background-color: #03005B;
+       }
+
+
 
        /* program-paragraph2 */
        #program-paragraph2 {
-        font-size: 1.6rem;
-        line-height: 1.6;
+        font-size: 1.7rem;
+        line-height: 1.7;
         letter-spacing: 0.5px;
        }
 
        /* program-paragraph3 */
        #program-paragraph3 {
-        font-size: 1.6rem;
-        line-height: 1.6;
+        font-size: 1.7rem;
+        line-height: 1.7;
         letter-spacing: 0.5px;
+       }
+
+       #Programs-header{
+        font-size: 2rem;
        }
 
 /* footer */
@@ -652,7 +615,7 @@ footer hr {
     color: #fff;
     background-color: #000;
     font-family: Arial, sans-serif;
-    height: 850px;
+    height: 650px;
 }
 
 /* second-row */
@@ -794,11 +757,11 @@ footer hr {
     .programs-content {
         position: absolute;
         top: 50%;
-        right: 5%;               
+        left: 5%;               
         transform: translateY(-50%);
         width: 400px;
         height: 300px;
-        background-color: darkslategray; 
+        background-color: #03005B;
         color: #eeeeee;
         padding: 2.5rem;
         display: flex;
@@ -831,7 +794,7 @@ footer hr {
 /* ================= TABLET ONLY ================= */
 @media (min-width:768px) and (max-width:1024px) {
       .top-bar{
-        height: 7rem;
+        height: 8.5rem;
     }
     
        #logo {
@@ -883,25 +846,12 @@ footer hr {
 
 /* ================= CAB BUTTON ================= */
 #CAB {
-    color: #fff;
-    background: #0a89f1;
-    width: 210px;
-}
-
-#CAB:hover,
-#CAB:focus {
-    background: #fff;
-    color: #000;
-}
-
-/* Register Now */
-#mobile-register {
     color: #000;
     background: #ffd400;
 }
 
-#mobile-register:hover,
-#mobile-register:focus {
+#CAB:hover,
+#CAB:focus {
     background: #fff;
     border-color: #fff;
     color: #000;
@@ -925,10 +875,15 @@ footer hr {
             line-height: 1.7;
          }
 
+         /* GETIN-paragraph2 */
+         #GETIN-paragraph2 {
+            font-size: 32px;
+            line-height: 1.7;
+         }
+
          /* what-we-do */
          #what-we-do {
            font-size: 42px;
-           padding-top: 1.5rem;
            padding-bottom: 2.5rem;
          }
 
@@ -952,6 +907,10 @@ footer hr {
          /* program-paragraph */
          #program-paragraph {
              font-size: 20px;
+         }
+
+         #Programs-img{
+            object-position: center 30%;
          }
 
     /* footer */
@@ -1078,8 +1037,12 @@ footer hr {
         background-color: #554a4a;
     }
 
-      .top-bar{
-        height: 7.5rem;
+     .top-bar{
+        height: 8.5rem;
+    }
+
+    #MobileMenu{
+        display: none;
     }
 
      #logo {
@@ -1106,6 +1069,10 @@ footer hr {
             font-family: Georgia, serif;
             font-weight: normal;
             font-size: 30px;
+        }
+
+        #CAB{
+            font-size: 1.5rem;
         }
 
         .desktop-actions {
@@ -1146,7 +1113,13 @@ footer hr {
            
          /* GETIN-paragraph */
          #GETIN-paragraph {
-            font-size: 24px;
+            font-size: 26px;
+            line-height: 1.7;
+         }
+
+         /* GETIN-paragraph2 */
+         #GETIN-paragraph2 {
+            font-size: 26px;
             line-height: 1.7;
          }
 
@@ -1155,15 +1128,19 @@ footer hr {
            font-size: 48px;
          }
 
+         #img1 {
+            object-position: center 40%;
+}
+
          /* program-paragraph2 */
          #program-paragraph2 {
-            font-size: 24px;
+            font-size: 26px;
             line-height: 1.7;
          }
 
          /* program-paragraph3 */
          #program-paragraph3 {
-            font-size: 24px;
+            font-size: 26px;
             line-height: 1.7;
          }
 
@@ -1177,12 +1154,16 @@ footer hr {
              font-size: 20px;
          }
 
+          #Programs-img{
+            object-position: center 10%;
+         }
+
     /* footer */
 .footer {
      color: #fff;
      background-color: #000;
      font-family: Arial, sans-serif;
-     height: 450px;
+     height: 475px;
 }
 
 /* second-row */
@@ -1357,7 +1338,7 @@ footer hr {
 }
 
 #GETIN {
-    color: #03005B;
+    color: #f1d63c;
 }
 
 /* ================= TABLET  ================= */
@@ -1375,4 +1356,51 @@ footer hr {
     display: flex;
     flex-direction: column;
 }
+}
+
+/* ================= Socials ================= */
+.socials-content {
+    background-color: #0a89f1;
+}
+
+#more-programs{
+    background-color: red;
+    color: #fff;
+    font-size: 1.3rem;
+    padding: 10px 1px;
+}
+
+@media (min-width: 422px) and (max-width: 544px) {
+    .footer{
+         height: 750px;
+    }
+}
+
+@media (min-width: 350px) and (max-width: 421px) {
+    .programs-content{
+       height: 350px;
+    }
+
+    #program-paragraph{
+      line-height: 1.6;
+    } 
+
+    .footer{
+        height: 920px;
+    }
+}
+
+@media (max-width: 349px) {
+     .footer{
+        height: 980px;
+    }
+}
+
+
+#Programs-header{
+    color: #ffffff;
+
+    text-shadow: 
+    0 2px 0 #ff0000,
+    0 3px 4px rgba(255, 0, 0, 0.3);
 }

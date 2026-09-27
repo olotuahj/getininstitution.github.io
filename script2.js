@@ -33,4 +33,26 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.3 });
 
     faders.forEach(fader => appearOnScroll.observe(fader));
+
+    const constructionPage = "construction.html";
+
+    document.querySelectorAll("a").forEach(link => {
+
+        link.addEventListener("click", (event) => {
+
+            event.preventDefault();
+
+            const href = link.getAttribute("href");
+
+             if(href === 'index.html'){
+                window.location.href = "index.html"
+                   
+             } else{
+                 window.location.href = constructionPage;
+             }
+
+        });
+
+    });
+
 });

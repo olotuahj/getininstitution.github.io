@@ -1839,7 +1839,7 @@ footer hr {
 /* ================= TABLET: WHY CHOOSE GETIN ================= */
 @media (min-width: 768px) and (max-width: 1024px) {
     .top-bar{
-        height: 7rem;
+        height: 8.5rem;
     }
 
     /* Hide the slide count and arrow buttons */
@@ -1922,12 +1922,11 @@ footer hr {
     #caption-1,
     #caption-2,
     #caption-3 {
-        width: 100%;
         font-size: 1.5rem;
-        text-align: center;
-
         margin-top: 0.5rem;
         padding-top: 0.5rem;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
 
@@ -1935,7 +1934,7 @@ footer hr {
 /* ================= DESKTOP LOGO ================= */
 @media (min-width: 1025px) {
        .top-bar{
-        height: 7.5rem;
+        height: 8.5rem;
     }
 
     #logo {
