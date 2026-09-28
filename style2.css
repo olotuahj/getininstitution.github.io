@@ -1396,11 +1396,21 @@ footer hr {
     }
 }
 
-
 #Programs-header{
     color: #ffffff;
 
     text-shadow: 
     0 2px 0 #ff0000,
     0 3px 4px rgba(255, 0, 0, 0.3);
+}
+
+.footer-links a:hover{
+    color: yellow;
+}
+
+@media (max-width: 400px) {
+    #logo {
+        width: 140px;
+        height: auto;
+    }
 }

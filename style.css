@@ -274,9 +274,10 @@
 /* ================= Why-choose-us ================= */
 #Why-choose-us {
     text-align: center;
-    font-family: Arial, sans-serif;
     font-weight: normal;
     padding-top: 1rem;  
+     font-family: 'Poppins', sans-serif;
+     font-weight: 300px;
 }
 
 /* ================= fig1 ================= */
@@ -544,10 +545,12 @@
 
 /* ================= aboutCAB-header ================= */
 #aboutCAB-header {
-    color: #000;
+    color: aqua;
     font-size: 1.8rem;
     margin-bottom: 0.8rem;
     text-transform: uppercase; 
+     font-family: 'Poppins', sans-serif;
+     font-weight: 300px;
 }
 
 /* ================= aboutCAB-paragraph ================= */
@@ -2263,7 +2266,6 @@ footer hr {
     .logo {
         display: flex;
         align-items: center;
-         margin-left: 5px;
     }
 
     .hamburger{
@@ -2755,4 +2757,12 @@ footer hr {
        color: #fff;
     border: 1px solid #fff;
     background: transparent;
+}
+
+.footer-links a:hover{
+    color: yellow;
+}
+
+#discovercab-p {
+    font-family: 'Poppins', sans-serif;
 }
