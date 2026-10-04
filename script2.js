@@ -44,8 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const href = link.getAttribute("href");
 
-             if(href === 'index.html'){
-                window.location.href = "index.html"
+             if(href === 'home.html'){
+                window.location.href = "home.html"
                    
              } else{
                  window.location.href = constructionPage;

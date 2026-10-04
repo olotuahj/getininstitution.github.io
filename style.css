@@ -1978,6 +1978,7 @@ footer hr {
     padding: 10px 20px;
      background: purple;
     color: #000;
+    font-size: 1.5rem;
 }
 
 /* Register Now */
@@ -2229,9 +2230,10 @@ footer hr {
 
 /* Login */
 #mobile-login {
+    padding: 10px 20px;
+      background: purple;
     color: #fff;
-    border: 1px solid #fff;
-    background: transparent;
+    font-weight: normal;
 }
 
 /* Register Now */
@@ -2385,11 +2387,11 @@ footer hr {
     font-weight: 600;
 }
 
-/* Login */
 #mobile-login {
+    padding: 10px 20px;
+      background: purple;
     color: #fff;
-    border: 1px solid #fff;
-    background: transparent;
+    font-weight: normal;
 }
 
 /* Register Now */
@@ -2728,6 +2730,7 @@ footer hr {
     padding: 10px 20px;
       background: purple;
     color: #fff;
+    font-weight: normal;
 }
 
 /* Register Now */
@@ -2747,7 +2750,7 @@ footer hr {
 /* Hover and focus */
 #login:hover,
 #login:focus {
-        color: #fff;
+        color: #000;
     border: 1px solid #fff;
     background: transparent;
 }
