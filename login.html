@@ -910,6 +910,13 @@
 
                         </div>
 
+                        <p
+                            class="error-message"
+                            id="passwordError"
+                        >
+                            Wrong password.
+                        </p>
+
                     </div>
 
                     <button
@@ -938,7 +945,7 @@
                     </span>
 
                     <a
-                        href="register.html"
+                        href="index.html"
                         class="register-link"
                     >
                         Register
@@ -953,7 +960,6 @@
     </main>
 
 
-    <!-- Password visibility toggle -->
     <script>
 
         const passwordInput =
@@ -992,7 +998,6 @@
     </script>
 
 
-    <!-- Firebase Authentication -->
     <script type="module">
 
         import {
@@ -1035,12 +1040,18 @@
         const loginForm =
             document.getElementById("loginForm");
 
+        const passwordError =
+            document.getElementById("passwordError");
+
 
         loginForm.addEventListener(
             "submit",
             async function (event) {
 
                 event.preventDefault();
+
+
+                passwordError.style.display = "none";
 
 
                 const email =
@@ -1061,28 +1072,49 @@
                 });
 
 
-                const userCredential =
-                    await signInWithEmailAndPassword(
-                        auth,
-                        email,
-                        password
+                try {
+
+                    const userCredential =
+                        await signInWithEmailAndPassword(
+                            auth,
+                            email,
+                            password
+                        );
+
+
+                    const user =
+                        userCredential.user;
+
+
+                    console.log("Login successful!");
+
+                    console.log(
+                        "User UID:",
+                        user.uid
                     );
 
 
-                const user =
-                    userCredential.user;
+                    window.location.href = "home.html";
 
 
-                console.log("Login successful!");
+                } catch (error) {
 
-                console.log(
-                    "User UID:",
-                    user.uid
-                );
+                    console.error(
+                        "Login error:",
+                        error
+                    );
 
 
-                // Redirect only after Firebase confirms the login
-                window.location.href = "home.html";
+                    if (
+                        error.code === "auth/wrong-password" ||
+                        error.code === "auth/invalid-credential"
+                    ) {
+
+                        passwordError.style.display = "block";
+
+                    }
+
+                }
 
             }
         );
