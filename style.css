@@ -5,28 +5,34 @@
     box-sizing: border-box;
 }
 
+
 /* ================= LAYOUT ================= */
 .main-page {
     width: 100%;
-    max-width: 1200px;
-    height: 2000px;
-    margin: 0 auto;
-    overflow: scroll;
-    box-shadow: 0px 2px 8px rgba(0,0,0,0.05);
+    max-width: none;
+    min-height: 100vh;
+    height: auto;
+    margin: 0;
+    overflow-x: hidden;
+    box-shadow: none;
     background-color: #0c8cf5;
 }
 
+
+
 .top-bar {
     width: 100%;
-    max-width: 1200px;
+    max-width: none;
     background-color: #369aeb;
     padding: 1.5rem 3rem 1.5rem 0.5rem;
     color: #fff;
-    height: 6.5rem;
+    height: 8.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
+
 
 .topbar-left {
     display: flex;
@@ -184,7 +190,8 @@
 .link {
     display: flex;
     gap: 5.6rem;
-    padding: 7px 5rem 0;
+    padding-top: 7px;
+    justify-content: center;
 }
 
 .link a {
@@ -2769,4 +2776,45 @@ footer hr {
 
 #discovercab-p {
     font-family: 'Poppins', sans-serif;
+}
+
+
+
+/* ================= FULL-WIDTH DESKTOP FIX ================= */
+@media (min-width: 1025px) {
+
+    .main-page,
+    .top-bar,
+    .image1,
+    .link-box,
+    #mainContent {
+        width: 100%;
+        max-width: none;
+    }
+
+    .main-page {
+        margin: 0;
+        min-height: 100vh;
+        height: auto;
+        overflow-x: hidden;
+    }
+
+    .About-CAB {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+    }
+}
+
+@media (max-width: 699px) {
+    .paragraph-box{
+        background-color: #fff;
+        padding: 25px;
+        width:  90%;
+        max-width: 600px;
+        margin: 0px auto;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+        border-radius: 15px;
+    }
 }
