@@ -2454,9 +2454,183 @@ footer hr {
       font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+@media (max-width: 655px) {
+
+    .fig1-3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        overflow: visible;
+    }
+
+    .fig1-content,
+    .fig2-content,
+    .fig3-content {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fig1,
+    .fig2,
+    .fig3 {
+        margin: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #fig1-img1,
+    #fig2-img2,
+    #fig3-img3 {
+        width: 100%;
+        max-width: 310px;
+        height: 250px;
+        object-fit: cover;
+        display: block;
+        margin: 0;
+    }
+
+    #caption-1,
+    #caption-2,
+    #caption-3 {
+        margin-top: 0.8rem;
+        margin-bottom: 0;
+        padding-top: 0;
+        font-size: 1.4rem;
+        max-width: 310px;
+        width: 90%;
+        text-align: center;
+    }
+
+        #img-paragraph,
+    #img-paragraph2,
+    #img-paragraph3 {
+        width: 100%;
+        max-width: 310px;
+        padding-top: 0.6rem;
+        padding-bottom: 0;
+        margin: 0;
+        line-height: 1.6;
+        word-spacing: normal;
+        text-align: center;
+    }
+
+    .events-content{
+        margin-top: 1rem;
+    }
+
+    #conferences-caption, 
+    #Mentor-Mentee, 
+    #Media-Engagement {
+         max-width: 300px;
+         margin-top: 1rem;
+    }
+}
+
+@media (max-width: 665px) {
+    .brand-name {
+        display: none;
+    }
+}
+
+.brand-name{
+    color: #03005B;
+}
+
+/* Login */
+#login {
+    padding: 10px 20px;
+      background: purple;
+    color: #fff;
+    font-weight: normal;
+}
+
+/* Register Now */
+#register {
+    color: #000;
+    background: #ffd400;
+    border: 1px solid #ffd400;
+      height: 50px;
+    width: 150px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover and focus */
+#login:hover,
+#login:focus {
+        color: #000;
+    border: 1px solid #fff;
+    background: transparent;
+}
+
+#register:hover,
+#register:focus {
+       color: #fff;
+    border: 1px solid #fff;
+    background: transparent;
+}
+
+.footer-links a:hover{
+    color: yellow;
+}
+
+#discovercab-p {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+/* ================= FULL-WIDTH DESKTOP FIX ================= */
+@media (min-width: 1025px) {
+
+    .main-page,
+    .top-bar,
+    .image1,
+    .link-box,
+    #mainContent {
+        width: 100%;
+        max-width: none;
+    }
+
+    .main-page {
+        margin: 0;
+        min-height: 100vh;
+        height: auto;
+        overflow-x: hidden;
+    }
+
+    .About-CAB {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+    }
+}
+
+@media (max-width: 699px) {
+    .paragraph-box{
+        background-color: #fff;
+        padding: 25px;
+        width:  90%;
+        max-width: 600px;
+        margin: 0px auto;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+        border-radius: 15px;
+    }
+}
+
 
 /* ================= TABLET LOGO ================= */
-@media (min-width: 768px) and (max-width:779px ) {
+@media (min-width: 767px) and (max-width:780px ) {
     #Why-choose-us{
         margin-bottom: 2rem;
       }
@@ -2645,176 +2819,19 @@ footer hr {
 }
 }
 
-@media (max-width: 655px) {
 
-    .fig1-3 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
-        overflow: visible;
-    }
-
-    .fig1-content,
-    .fig2-content,
-    .fig3-content {
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .fig1,
-    .fig2,
-    .fig3 {
-        margin: 0;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #fig1-img1,
-    #fig2-img2,
-    #fig3-img3 {
-        width: 100%;
-        max-width: 310px;
-        height: 250px;
-        object-fit: cover;
-        display: block;
-        margin: 0;
-    }
-
+@media (max-width:768px ) {
     #caption-1,
     #caption-2,
-    #caption-3 {
-        margin-top: 0.8rem;
-        margin-bottom: 0;
-        padding-top: 0;
-        font-size: 1.4rem;
-        max-width: 310px;
-        width: 90%;
-        text-align: center;
+    #caption-3{
+           font-size: 2rem;
     }
-
-        #img-paragraph,
-    #img-paragraph2,
-    #img-paragraph3 {
-        width: 100%;
-        max-width: 310px;
-        padding-top: 0.6rem;
-        padding-bottom: 0;
-        margin: 0;
-        line-height: 1.6;
-        word-spacing: normal;
-        text-align: center;
-    }
-
-    .events-content{
-        margin-top: 1rem;
-    }
-
-    #conferences-caption, 
-    #Mentor-Mentee, 
-    #Media-Engagement {
-         max-width: 300px;
-         margin-top: 1rem;
-    }
-}
-
-@media (max-width: 665px) {
-    .brand-name {
-        display: none;
-    }
-}
-
-.brand-name{
-    color: #03005B;
-}
-
-/* Login */
-#login {
-    padding: 10px 20px;
-      background: purple;
+    
+   #img-paragraph,
+   #img-paragraph2,
+   #img-paragraph3{
     color: #fff;
-    font-weight: normal;
-}
-
-/* Register Now */
-#register {
-    color: #000;
-    background: #ffd400;
-    border: 1px solid #ffd400;
-      height: 50px;
-    width: 150px;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-/* Hover and focus */
-#login:hover,
-#login:focus {
-        color: #000;
-    border: 1px solid #fff;
-    background: transparent;
-}
-
-#register:hover,
-#register:focus {
-       color: #fff;
-    border: 1px solid #fff;
-    background: transparent;
-}
-
-.footer-links a:hover{
-    color: yellow;
-}
-
-#discovercab-p {
+    font-weight: 400;
     font-family: 'Poppins', sans-serif;
-}
-
-
-
-/* ================= FULL-WIDTH DESKTOP FIX ================= */
-@media (min-width: 1025px) {
-
-    .main-page,
-    .top-bar,
-    .image1,
-    .link-box,
-    #mainContent {
-        width: 100%;
-        max-width: none;
-    }
-
-    .main-page {
-        margin: 0;
-        min-height: 100vh;
-        height: auto;
-        overflow-x: hidden;
-    }
-
-    .About-CAB {
-        width: 100%;
-        max-width: none;
-        margin: 0;
-    }
-}
-
-@media (max-width: 699px) {
-    .paragraph-box{
-        background-color: #fff;
-        padding: 25px;
-        width:  90%;
-        max-width: 600px;
-        margin: 0px auto;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        box-sizing: border-box;
-        border-radius: 15px;
-    }
+   }
 }
