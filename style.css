@@ -2236,35 +2236,6 @@ footer hr {
     font-weight: 600;
 }
 
-/* Login */
-#mobile-login {
-    padding: 10px 20px;
-      background: purple;
-    color: #fff;
-    font-weight: normal;
-}
-
-/* Register Now */
-#mobile-register {
-    color: #000;
-    background: #ffd400;
-    border: 1px solid #ffd400;
-}
-
-/* Hover and focus */
-#mobile-login:hover,
-#mobile-login:focus {
-    background: #fff;
-    color: #000;
-}
-
-#mobile-register:hover,
-#mobile-register:focus {
-    background: #fff;
-    border-color: #fff;
-    color: #000;
-}
-
     #logo {
         width: 140px;
         height: auto;
@@ -2395,34 +2366,6 @@ footer hr {
     font-weight: 600;
 }
 
-#mobile-login {
-    padding: 10px 20px;
-      background: purple;
-    color: #fff;
-    font-weight: normal;
-}
-
-/* Register Now */
-#mobile-register {
-    color: #000;
-    background: #ffd400;
-    border: 1px solid #ffd400;
-}
-
-/* Hover and focus */
-#mobile-login:hover,
-#mobile-login:focus {
-    background: #fff;
-    color: #000;
-}
-
-#mobile-register:hover,
-#mobile-register:focus {
-    background: #fff;
-    border-color: #fff;
-    color: #000;
-}
-
     #fig1-img1,
     #fig2-img2,
     #fig3-img3 {
@@ -2543,41 +2486,22 @@ footer hr {
     color: #03005B;
 }
 
-/* Login */
-#login {
-    padding: 10px 20px;
-      background: purple;
-    color: #fff;
-    font-weight: normal;
-}
-
-/* Register Now */
-#register {
-    color: #000;
-    background: #ffd400;
-    border: 1px solid #ffd400;
-      height: 50px;
-    width: 150px;
-    justify-content: center;
-    align-items: center;
+.get-started-btn {
+    display: inline-block;
+    background-color: #FFFFFF;
+    color: #0a89f1;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
     text-decoration: none;
-    cursor: pointer;
+    padding: 12px 28px;
+    border-radius: 8px;
     transition: all 0.3s ease;
 }
 
-/* Hover and focus */
-#login:hover,
-#login:focus {
-        color: #000;
-    border: 1px solid #fff;
-    background: transparent;
-}
-
-#register:hover,
-#register:focus {
-       color: #fff;
-    border: 1px solid #fff;
-    background: transparent;
+.get-started-btn:hover {
+    background-color: #0d2448;
+    color: #FFFFFF;
 }
 
 .footer-links a:hover{
@@ -2613,11 +2537,32 @@ footer hr {
         overflow-x: hidden;
     }
 
+     .event-imagecontent{
+        display: flex;
+        justify-content: center;
+    }
+
     .About-CAB {
         width: 100%;
         max-width: none;
         margin: 0;
     }
+
+   .aboutCab-image {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#AboutCAB-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 1%;
+    display: block;
+}
+
+
 }
 
 @media (max-width: 699px) {
@@ -2872,4 +2817,38 @@ footer hr {
 .get-started-btn:hover {
     background-color: #0d2448;
     color: #FFFFFF;
+}
+
+.mobile-menu .mobile-auth .get-started-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 28px;
+
+    background-color: #fff;
+    color: #0a89f1;
+
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+
+    border-radius: 8px;
+}
+
+/* Hover and keyboard focus */
+.mobile-menu .mobile-auth .get-started-btn:hover,
+.mobile-menu .mobile-auth .get-started-btn:focus {
+    background-color: #0d2448;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.discovercab-p{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
 }
