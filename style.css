@@ -189,7 +189,7 @@
 
 .link {
     display: flex;
-    gap: 5.6rem;
+    gap: 8rem;
     padding-top: 7px;
     justify-content: center;
 }
@@ -199,6 +199,7 @@
     color: rgb(2, 23, 48);
     transition: 0.3s ease;
     font-family: Arial, sans-serif;
+    font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.9px;
     padding: 3.5px;
@@ -2591,6 +2592,10 @@ footer hr {
 
 /* ================= FULL-WIDTH DESKTOP FIX ================= */
 @media (min-width: 1025px) {
+    .hamburger,
+    .mobile-menu {
+        display: none;
+    }
 
     .main-page,
     .top-bar,
@@ -2834,4 +2839,37 @@ footer hr {
     font-weight: 400;
     font-family: 'Poppins', sans-serif;
    }
+
+   #conferences-caption,
+   #Mentor-Mentee,
+   #Media-Engagement{
+    font-size: 2rem;
+   }
+
+   #event1-paragraph,
+   #event2-paragraph,
+   #event3-paragraph{
+          font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+   }
+
+}
+
+
+.get-started-btn {
+    display: inline-block;
+    background-color: #FFFFFF;
+    color: #0a89f1;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.get-started-btn:hover {
+    background-color: #0d2448;
+    color: #FFFFFF;
 }
