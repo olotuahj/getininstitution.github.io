@@ -2500,7 +2500,7 @@ footer hr {
 
 
 
-/* ================= FULL-WIDTH DESKTOP FIX ================= */
+/* ================= FULL-WIDTH ================= */
 @media (min-width: 1025px) {
     .hamburger,
     .mobile-menu {
@@ -2784,6 +2784,14 @@ footer hr {
    }
 
 }
+
+  #img-paragraph,
+   #img-paragraph2,
+   #img-paragraph3{
+    color: #fff;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+   }
 
 
 .get-started-btn {
