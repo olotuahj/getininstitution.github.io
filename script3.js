@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // close menu
-    aboutPage.addEventListener('scroll', () => {
+    window.addEventListener('scroll', () => {
         mobileMenu.classList.remove('active');
     });
 
