@@ -539,16 +539,17 @@ footer hr {
 #GETIN-paragraph,
 #GETIN-paragraph2,
 #program-paragraph2,
-#program-paragraph3 {
+#program-paragraph3,
+#program-paragraph {
     width: 100%;
-    max-width: 100%;
-    margin: 0;
-    padding-left: 1rem;
-    padding-right: 1rem;
     box-sizing: border-box;
     font-size: 1.5rem;
     line-height: 1.7;
     letter-spacing: normal;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    
 }
 
 
@@ -1447,6 +1448,9 @@ footer hr {
 
 /* Mobile */
 @media (max-width: 767px) {
+    #Programs-header{
+        text-align: center;
+    }
 
     /* Footer */
     .footer {
