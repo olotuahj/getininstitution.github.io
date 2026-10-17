@@ -156,7 +156,7 @@
 .link {
     display: flex;
     gap: 8rem;
-      padding-top: 7px;
+    padding-top: 7px;
     justify-content: center;
 }
 
@@ -164,26 +164,50 @@
     text-decoration: none;
     color: rgb(2, 23, 48);
     transition: 0.3s ease;
+    font-family: Arial, sans-serif;
+    font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.9px;
     padding: 3.5px;
-    transition: all 0.3s ease;
+    border: none;
     border-radius: 7px;
-    display: inline-block;
+     transition: all 0.3s ease;
 }
 
 .link a:hover,
 .link a:focus {
-    border: none;
-    transform: scale(1.1);
     background-color: #0a89f1;
     color: #fff;
-    
+    transform: scale(1.1);
 } 
+
+.link a:visited{
+    background-color: transparent;
+}
+
+.link a#contactlink{
+      background-color: #0a89f1;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+
+.link a#contactlink:hover,
+ .link a#contactlink:focus{
+    text-decoration: none;
+    color: rgb(2, 23, 48);
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.9px;
+    border: none;
+     transform: scale(1.1);
+     background-color: #fff;
+}
 
 /* ================= contactus.. bar ================= */
 .contactus-bar {
-        background-color: #0a89f1;
+        background-color: #012a4e;
     width: 100%;
     height: 40px;
 }
@@ -245,7 +269,7 @@
 .image1-contactus {
     width: 100%;
     max-width: 1200px;
-    height: 500px;
+    height: 650px;
     overflow: hidden;
     position: relative;
     z-index: 0;
@@ -448,7 +472,6 @@
     padding: 1.5rem 1rem;
     background-color: #fff;
     margin-top: 1rem;
-    margin-bottom: 1.5rem;
 }
 
 .question-leftside {
@@ -508,7 +531,6 @@
 .map iframe {
     width: 100%;
     height: 400px;
-    margin-bottom: 1rem;
 }
 
 /* ================= RESPONSIVE RULES ================= */
@@ -591,14 +613,35 @@
         align-items: center;
     }
 
+        .brand-name {
+    color: #03005B;
+}
 
         /* contact-us a */
    #contact-us a{
+      background-color: #0a89f1;
+    transition: all 0.3s ease;
     text-decoration: none;
-   }
+    border-radius: 7px;
+    padding: 5px 10px;
+}
+
+
+ #contact-us a:hover,
+ #contact-us a:focus{
+    text-decoration: none;
+    color: rgb(2, 23, 48);
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.9px;
+    border: none;
+     transform: scale(1.1);
+     background-color: #fff;
+}
+
     /*  Contact-Information  */
     .Contact-Information {
-       margin-top: 2rem;
          background-color: #0a89f1;
        text-align: center;
     }
@@ -772,7 +815,6 @@
     align-items: center;
     justify-content: center;
     display: flex;
-    margin-top: 2rem;
     margin-bottom: 1rem;
 }
 
@@ -929,19 +971,25 @@
         /* contactus-droplink */
    .contactus-droplink {
     display: flex;
-    padding: 7px 5rem 0;
+    padding-top: 7px;
     gap: 0.5rem;
+     padding-left: 12rem;
    }
+
+   /* img1-contactus */
+#img1-contactus{
+     object-position: center 1%;
+}
 
    /*  Contact-Information  */
    .Contact-Information {
         background-color: #0a89f1;
     width: 100%;
-    height: 60px; 
+    height: 80px; 
     align-items: center;
     justify-content: center;
     display: flex;
-    margin-top: 2rem;
+    font-family: 'Poppins', sans-serif;
 }
 
 #Find-Contact-Information{
@@ -1122,6 +1170,14 @@
 
     .hamburger{
         margin-left: 9rem;
+    }
+
+    #img1-contactus{
+        object-position: 35% center;
+    }
+
+    #contactus-header{
+        display: none;
     }
 }
 

@@ -215,6 +215,30 @@
     transform: scale(1.1);
 } 
 
+.link a:visited{
+    background-color: transparent;
+}
+
+.link a#home{
+      background-color: #0a89f1;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+
+.link a#home:hover,
+ .link a#home:focus{
+    text-decoration: none;
+    color: rgb(2, 23, 48);
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.9px;
+    border: none;
+     transform: scale(1.1);
+     background-color: #fff;
+}
+
 /* ================= company name ================= */
 .Mentorship-programme {
     width: 100%;
