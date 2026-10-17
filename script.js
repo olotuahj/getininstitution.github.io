@@ -141,3 +141,24 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    var slides = document.querySelectorAll('.slide');
+    var currentSlide = 0;
+
+    function showNextSlide() {
+        slides[currentSlide].classList.remove('active');
+
+        currentSlide++;
+
+        if (currentSlide >= slides.length) {
+            currentSlide = 0;
+        }
+
+        slides[currentSlide].classList.add('active');
+    }
+
+    setInterval(showNextSlide, 5000);
+
+});

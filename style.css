@@ -2077,6 +2077,10 @@ footer hr {
     border-color: #fff;
     color: #000;
 }
+
+  .image1 .slide:nth-child(2) {
+        object-position: center 25%;
+    }
 }
 
 /* ================= MOBILE LOGO ================= */
@@ -3734,3 +3738,37 @@ footer hr {
 
 }
 
+/* ================= PHOTO SLIDER ================= */
+.image1.photo-slider {
+    position: relative;
+}
+
+/* All slider images */
+.image1 .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding-bottom: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Currently visible image */
+.image1 .slide.active {
+    opacity: 1;
+}
+
+/* ================= DESKTOP PHOTO SLIDER ================= */
+@media (min-width: 1025px) {
+    .image1-content .image1.photo-slider {
+        height: 450px;
+    }
+
+      .image1 .slide:nth-child(2) {
+        object-position: center 25%;
+    }
+    
+}
