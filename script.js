@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 observer.unobserve(entry.target);  
             }
         });
-    }, { threshold: 0.2 });
+    }, { threshold: 0.1 });
 
     faders.forEach(fader => appearOnScroll.observe(fader));
 
@@ -154,5 +154,92 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     setInterval(showNextSlide, 5000);
+
+});
+
+
+/* ================= SEE MORE / SEE LESS ================= */
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    const paragraphIds = [
+        'img-paragraph',
+        'img-paragraph2',
+        'img-paragraph3'
+    ];
+
+    const wordLimit = 10;
+    const mobileTabletWidth = 1024;
+
+    paragraphIds.forEach(function (id) {
+
+        const paragraph = document.getElementById(id);
+
+        if (!paragraph) return;
+
+        // Save the original paragraph text
+        const fullText = paragraph.textContent.trim();
+
+        // Separate the paragraph into words
+        const words = fullText.split(/\s+/);
+
+        // Only shorten paragraphs longer than 10 words
+        if (words.length <= wordLimit) return;
+
+        const shortText = words.slice(0, wordLimit).join(' ') + '...';
+
+        // Create the See more / See less link
+        const toggleLink = document.createElement('a');
+        toggleLink.href = '#';
+        toggleLink.className = 'see-more-link';
+
+        function updateParagraph() {
+
+            if (window.innerWidth <= mobileTabletWidth) {
+
+                if (toggleLink.dataset.expanded === 'true') {
+                    paragraph.textContent = fullText;
+                    toggleLink.textContent = ' See less';
+                } else {
+                    paragraph.textContent = shortText;
+                    toggleLink.textContent = 'See more';
+                }
+
+                paragraph.appendChild(toggleLink);
+
+            } else {
+                paragraph.textContent = fullText;
+            }
+        }
+
+        toggleLink.addEventListener('click', function (event) {
+            event.preventDefault();
+
+            const isExpanded = toggleLink.dataset.expanded === 'true';
+
+            toggleLink.dataset.expanded = isExpanded ? 'false' : 'true';
+
+            updateParagraph();
+        });
+
+        // Reset to collapsed view when crossing into mobile/tablet
+        let previousMobileTabletState = window.innerWidth <= mobileTabletWidth;
+
+        window.addEventListener('resize', function () {
+            const currentMobileTabletState =
+                window.innerWidth <= mobileTabletWidth;
+
+            if (currentMobileTabletState !== previousMobileTabletState) {
+                toggleLink.dataset.expanded = 'false';
+                previousMobileTabletState = currentMobileTabletState;
+            }
+
+            updateParagraph();
+        });
+
+        toggleLink.dataset.expanded = 'false';
+        updateParagraph();
+
+    });
 
 });

@@ -3809,3 +3809,72 @@ footer hr {
     opacity: 1;
     transform: translate(0, 0);
 }
+
+@media (min-width: 1025px) {
+    html,
+    body {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    #Why-choose-us {
+        margin-bottom: 6rem;
+        margin-top: 4rem;
+    }
+
+    .fig1-3 {
+        width: 100%;
+        height: auto;
+        min-height: 100vh;
+        overflow: visible;
+        flex-wrap: nowrap;
+        gap: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    .fig1-content,
+    .fig2-content,
+    .fig3-content {
+        flex: 1 1 0;
+        min-width: 0;
+        width: auto;
+        height: auto;
+        overflow: visible;
+    }
+
+    .fig1,
+    .fig2,
+    .fig3 {
+        width: 100%;
+        height: auto;
+        overflow: visible;
+    }
+
+    #fig1-img1,
+    #fig2-img2,
+    #fig3-img3 {
+        display: block;
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        object-fit: cover;
+    }
+}
+
+
+
+/* ================= SEE MORE / SEE LESS ================= */
+
+.see-more-link {
+    display: inline;
+    color: #63b2ff;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.see-more-link:hover {
+    text-decoration: underline;
+}
