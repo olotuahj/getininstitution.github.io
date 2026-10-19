@@ -2884,13 +2884,12 @@ footer hr {
 
 
 
-/* Mobile */
+/* ================= MOBILE FOOTER ================= */
 @media (max-width: 767px) {
 
-    /* Footer */
     .footer {
         width: 100%;
-        padding: 2.5rem 0 3rem;
+        padding: 1.8rem 0 2rem;
         background: linear-gradient(135deg, #062750, #001b40);
         color: #f5f7ff;
         font-family: 'Poppins', sans-serif;
@@ -2901,11 +2900,11 @@ footer hr {
         display: flex;
         flex-direction: column;
         width: 100%;
-        padding: 0 14%;
-        gap: 2.5rem;
+        padding: 0 7%;
+        gap: 1.8rem;
     }
 
-    /* Organization logo and name */
+    /* Logo and organization name */
     .footer-brand {
         width: 100%;
         display: flex;
@@ -2916,17 +2915,20 @@ footer hr {
     .footer-logo {
         display: flex;
         align-items: center;
-        gap: 0.8rem;
+        gap: 0.6rem;
         width: 100%;
         color: #fff;
         text-decoration: none;
     }
 
     .footer-logo img {
-        width: 5rem;
-        height: 5rem;
+        width: 3.5rem;
+        height: 3.5rem;
         flex-shrink: 0;
         object-fit: contain;
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 4px;
     }
 
     .footer-brand-name {
@@ -2936,39 +2938,38 @@ footer hr {
     .footer-brand-name h2 {
         color: #fff;
         font-family: 'Poppins', sans-serif;
-        font-size: clamp(1.25rem, 5vw, 1.8rem);
+        font-size: clamp(1rem, 4.5vw, 1.35rem);
         font-weight: 700;
         line-height: 1.25;
-        white-space: nowrap;
+        white-space: normal;
     }
 
     .footer-brand-name h3 {
         color: #fff;
         font-family: 'Poppins', sans-serif;
-        font-size: clamp(0.85rem, 3.5vw, 1.2rem);
+        font-size: clamp(0.7rem, 3vw, 0.9rem);
         font-weight: 500;
-        line-height: 1.5;
-        white-space: nowrap;
+        line-height: 1.4;
+        white-space: normal;
     }
 
     .footer-brand-name p {
-        margin-top: 0.35rem;
-        padding-top: 0.35rem;
-        border-top: 2px solid #ffc928;
+        margin-top: 0.3rem;
+        padding-top: 0.25rem;
+        border-top: 1px solid #ffc928;
         color: #ffc928;
-        font-size: clamp(0.48rem, 2.1vw, 0.75rem);
+        font-size: clamp(0.42rem, 1.8vw, 0.58rem);
         font-weight: 700;
-        letter-spacing: 0.5px;
-        white-space: nowrap;
+        letter-spacing: 0.3px;
+        white-space: normal;
     }
 
     /* Organization description */
     .footer-description {
-        margin-top: 1.8rem;
-        margin-bottom: 1.5rem;
+        margin: 1rem 0;
         color: #f5f7ff;
-        font-size: 1rem;
-        line-height: 1.8;
+        font-size: 0.85rem;
+        line-height: 1.7;
         font-weight: 400;
         overflow-wrap: anywhere;
     }
@@ -2979,23 +2980,22 @@ footer hr {
         align-items: center;
         justify-content: flex-start;
         flex-wrap: wrap;
-        gap: 1.2rem;
-        margin-bottom: 0.25rem;
+        gap: 0.7rem;
+        margin-bottom: 0.2rem;
     }
 
     .footer-socials a {
-        width: 3.5rem;
-        height: 3.5rem;
+        width: 2.5rem;
+        height: 2.5rem;
         display: flex;
         justify-content: center;
         align-items: center;
-        border: 2px solid #ffc928;
-        border-radius: 12px;
+        border: 1.5px solid #ffc928;
+        border-radius: 8px;
         color: #ffc928;
-        font-size: 1.8rem;
+        font-size: 1.25rem;
         text-decoration: none;
-        transition: background-color 0.3s ease,
-                    color 0.3s ease;
+        transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     .footer-socials a:hover,
@@ -3004,20 +3004,20 @@ footer hr {
         color: #062750;
     }
 
-    /* Quick links section */
+    /* Quick links */
     .footer-quick-links {
         width: 100%;
-        padding-top: 2.5rem;
-        border-top: 2px solid #315c91;
+        padding-top: 1.5rem;
+        border-top: 1px solid #315c91;
     }
 
     .footer-heading {
         position: relative;
-        margin-bottom: 1.5rem;
-        padding-bottom: 1.1rem;
+        margin-bottom: 1rem;
+        padding-bottom: 0.7rem;
         color: #fff;
         font-family: 'Poppins', sans-serif;
-        font-size: 1.6rem;
+        font-size: 1.2rem;
         font-weight: 700;
     }
 
@@ -3026,15 +3026,15 @@ footer hr {
         position: absolute;
         bottom: 0;
         left: 0;
-        width: 5rem;
-        height: 6px;
+        width: 3.2rem;
+        height: 3px;
         background-color: #ffc928;
     }
 
     .footer-quick-links ul {
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        gap: 0.65rem;
         margin: 0;
         padding: 0;
         list-style: none;
@@ -3049,11 +3049,11 @@ footer hr {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 1rem;
+        gap: 0.7rem;
         width: 100%;
-        padding: 0.15rem 0;
+        padding: 0.1rem 0;
         color: #f5f7ff;
-        font-size: 1.05rem;
+        font-size: 0.85rem;
         font-weight: 400;
         text-decoration: none;
         text-transform: none;
@@ -3065,7 +3065,7 @@ footer hr {
     .footer-quick-links li a i {
         flex-shrink: 0;
         color: #ffc928;
-        font-size: 1.7rem;
+        font-size: 1.15rem;
         transition: transform 0.3s ease;
     }
 
@@ -3075,25 +3075,25 @@ footer hr {
     }
 
     .footer-quick-links li a:hover i {
-        transform: translateX(5px);
+        transform: translateX(3px);
     }
 
     /* Contact information */
     .footer-contact {
         display: flex;
         flex-direction: column;
-        gap: 1.8rem;
+        gap: 1.2rem;
         width: 100%;
         margin-top: 0;
-        padding: 2.5rem 14% 2.5rem;
-        border-top: 2px solid #315c91;
+        padding: 1.5rem 7%;
+        border-top: 1px solid #315c91;
     }
 
     .footer-contact-item {
         display: grid;
-        grid-template-columns: 3.2rem minmax(0, 1fr);
+        grid-template-columns: 2rem minmax(0, 1fr);
         align-items: start;
-        column-gap: 1.2rem;
+        column-gap: 0.75rem;
         width: 100%;
     }
 
@@ -3101,16 +3101,16 @@ footer hr {
         display: flex;
         justify-content: center;
         align-items: flex-start;
-        padding-top: 0.2rem;
+        padding-top: 0.15rem;
         color: #ffc928;
-        font-size: 2.5rem;
+        font-size: 1.5rem;
     }
 
     .footer-contact-item h3 {
-        margin-bottom: 0.45rem;
+        margin-bottom: 0.3rem;
         color: #ffc928;
         font-family: 'Poppins', sans-serif;
-        font-size: 1.15rem;
+        font-size: 0.9rem;
         font-weight: 700;
         line-height: 1.4;
     }
@@ -3121,9 +3121,9 @@ footer hr {
         margin: 0;
         color: #f5f7ff;
         font-family: 'Poppins', sans-serif;
-        font-size: 1rem;
+        font-size: 0.8rem;
         font-weight: 400;
-        line-height: 1.7;
+        line-height: 1.65;
         text-decoration: none;
         overflow-wrap: anywhere;
     }
@@ -3139,19 +3139,19 @@ footer hr {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 1.3rem;
-        width: 72%;
+        gap: 0.8rem;
+        width: 86%;
         margin: 0 auto;
-        padding-top: 2rem;
-        border-top: 2px solid #315c91;
+        padding-top: 1.2rem;
+        border-top: 1px solid #315c91;
         text-align: center;
     }
 
     .footer-copyright {
         margin: 0;
         color: #f5f7ff;
-        font-size: 0.95rem;
-        line-height: 1.8;
+        font-size: 0.75rem;
+        line-height: 1.7;
         font-weight: 400;
     }
 
@@ -3160,15 +3160,15 @@ footer hr {
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        gap: 1rem;
+        gap: 0.6rem;
         width: 100%;
     }
 
     .footer-legal-links a {
         color: #f5f7ff;
-        font-size: 0.85rem;
+        font-size: 0.7rem;
         text-decoration: none;
-        white-space: nowrap;
+        white-space: normal;
     }
 
     .footer-legal-links a:hover,
@@ -3179,15 +3179,9 @@ footer hr {
 
     .footer-legal-divider {
         display: block;
-        width: 2px;
-        height: 1.5rem;
+        width: 1px;
+        height: 1rem;
         background-color: #315c91;
-    }
-
-        .footer-logo img {
-        background-color: #ffffff;
-        border-radius: 12px;
-        padding: 5px;
     }
 }
 
@@ -3195,24 +3189,22 @@ footer hr {
 /* ================= TABLET FOOTER ================= */
 @media (min-width: 768px) and (max-width: 1024px) {
 
-    /* Main footer */
     .footer {
         width: 100%;
         height: auto;
         min-height: 0;
-        padding: 3rem 2.5rem 1.5rem;
-        color: #ffffff;
+        padding: 2.5rem 3% 1.2rem;
+        color: #fff;
         background: linear-gradient(135deg, #031b3b, #052650);
         font-family: 'Poppins', sans-serif;
     }
 
-    /* Brand and Quick Links */
     .footer-main {
         display: grid;
         grid-template-columns: 1.2fr 0.8fr;
         align-items: start;
-        gap: 3rem;
-        padding: 0 0 2.5rem;
+        gap: 2rem;
+        padding: 0 0 2rem;
         border-bottom: 1px solid #32649a;
     }
 
@@ -3222,11 +3214,11 @@ footer hr {
         min-width: 0;
     }
 
-    /* Organization logo and name */
+    /* Logo and organization name */
     .footer-logo {
         display: flex;
         align-items: center;
-        gap: 1rem;
+        gap: 0.75rem;
         width: fit-content;
         max-width: 100%;
         text-decoration: none;
@@ -3234,71 +3226,70 @@ footer hr {
 
     .footer-logo img {
         flex-shrink: 0;
-        width: 90px;
-        height: 90px;
+        width: 70px;
+        height: 70px;
         object-fit: contain;
         padding: 4px;
-        background-color: #ffffff;
-        border-radius: 10px;
+        background-color: #fff;
+        border-radius: 8px;
     }
 
     .footer-brand-name h2 {
         margin: 0;
-        color: #ffffff;
-        font-size: 1.65rem;
+        color: #fff;
+        font-size: 1.35rem;
         line-height: 1.3;
     }
 
     .footer-brand-name h3 {
         margin: 0.15rem 0 0;
-        padding-bottom: 0.35rem;
-        color: #ffffff;
-        font-size: 1rem;
+        padding-bottom: 0.3rem;
+        color: #fff;
+        font-size: 0.85rem;
         font-weight: 500;
         line-height: 1.4;
-        border-bottom: 2px solid #ffd400;
+        border-bottom: 1.5px solid #ffd400;
     }
 
     .footer-brand-name p {
-        margin-top: 0.5rem;
+        margin-top: 0.35rem;
         color: #ffd400;
-        font-size: 0.65rem;
+        font-size: 0.55rem;
         font-weight: 700;
-        letter-spacing: 0.8px;
+        letter-spacing: 0.5px;
         line-height: 1.5;
     }
 
-    /* Organization description */
+    /* Description */
     .footer-description {
         max-width: 430px;
-        margin: 1.5rem 0;
-        color: #ffffff;
-        font-size: 0.95rem;
-        line-height: 1.8;
+        margin: 1.1rem 0;
+        color: #fff;
+        font-size: 0.85rem;
+        line-height: 1.7;
     }
 
-    /* Social media icons */
+    /* Social icons */
     .footer-socials {
         display: flex;
         align-items: center;
         flex-wrap: wrap;
-        gap: 1rem;
-        margin-top: 1.25rem;
+        gap: 0.75rem;
+        margin-top: 1rem;
     }
 
     .footer-socials a {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 48px;
-        height: 48px;
+        width: 40px;
+        height: 40px;
         color: #ffd400;
-        font-size: 1.35rem;
-        border: 2px solid #ffd400;
-        border-radius: 10px;
+        font-size: 1.1rem;
+        border: 1.5px solid #ffd400;
+        border-radius: 8px;
         text-decoration: none;
-        transition: background-color 0.25s ease,
-                    color 0.25s ease;
+        transition: background-color 0.25s ease, color 0.25s ease;
     }
 
     .footer-socials a:hover,
@@ -3307,28 +3298,28 @@ footer hr {
         background-color: #ffd400;
     }
 
-    /* Quick Links heading */
+    /* Quick links heading */
     .footer-heading {
-        margin: 0 0 1.5rem;
-        color: #ffffff;
-        font-size: 1.55rem;
+        margin: 0 0 1.1rem;
+        color: #fff;
+        font-size: 1.3rem;
         font-weight: 700;
     }
 
     .footer-heading::after {
         content: "";
         display: block;
-        width: 65px;
-        height: 4px;
-        margin-top: 0.75rem;
+        width: 50px;
+        height: 3px;
+        margin-top: 0.6rem;
         background-color: #ffd400;
     }
 
-    /* Quick Links list */
+    /* Quick links list */
     .footer-quick-links ul {
         display: flex;
         flex-direction: column;
-        gap: 0.75rem;
+        gap: 0.6rem;
         padding: 0;
         margin: 0;
         list-style: none;
@@ -3343,10 +3334,10 @@ footer hr {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 0.75rem;
-        padding: 0.25rem 0;
-        color: #ffffff;
-        font-size: 1rem;
+        gap: 0.6rem;
+        padding: 0.2rem 0;
+        color: #fff;
+        font-size: 0.85rem;
         text-decoration: none;
         transition: color 0.25s ease;
     }
@@ -3354,7 +3345,7 @@ footer hr {
     .footer-quick-links li a i {
         flex-shrink: 0;
         color: #ffd400;
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .footer-quick-links li a:hover,
@@ -3367,17 +3358,17 @@ footer hr {
         display: grid;
         grid-template-columns: 1.2fr 1fr 1fr;
         align-items: stretch;
-        gap: 1.25rem;
-        padding: 2rem 0;
+        gap: 0.75rem;
+        padding: 1.5rem 0;
         border-bottom: 1px solid #32649a;
     }
 
     .footer-contact-item {
         display: flex;
         align-items: flex-start;
-        gap: 0.85rem;
+        gap: 0.5rem;
         min-width: 0;
-        padding: 0 1rem;
+        padding: 0 0.6rem;
     }
 
     .footer-contact-item:first-child {
@@ -3390,25 +3381,26 @@ footer hr {
 
     .footer-contact-item > i {
         flex-shrink: 0;
-        width: 35px;
-        margin-top: 0.2rem;
+        width: 26px;
+        margin-top: 0.15rem;
         color: #ffd400;
-        font-size: 1.8rem;
+        font-size: 1.35rem;
         text-align: center;
     }
 
     .footer-contact-item h3 {
-        margin: 0 0 0.4rem;
+        margin: 0 0 0.3rem;
         color: #ffd400;
-        font-size: 0.95rem;
+        font-size: 0.8rem;
         font-weight: 700;
+        line-height: 1.4;
     }
 
     .footer-contact-item p,
     .footer-contact-item a {
-        color: #ffffff;
-        font-size: 0.8rem;
-        line-height: 1.7;
+        color: #fff;
+        font-size: 0.7rem;
+        line-height: 1.65;
         overflow-wrap: anywhere;
     }
 
@@ -3427,15 +3419,15 @@ footer hr {
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
-        gap: 1rem;
-        padding: 1.25rem 0 0;
+        gap: 0.75rem;
+        padding: 1rem 0 0;
     }
 
     .footer-copyright {
         margin: 0;
-        color: #ffffff;
-        font-size: 0.8rem;
-        line-height: 1.7;
+        color: #fff;
+        font-size: 0.7rem;
+        line-height: 1.6;
     }
 
     .footer-legal-links {
@@ -3443,12 +3435,12 @@ footer hr {
         align-items: center;
         justify-content: flex-end;
         flex-wrap: wrap;
-        gap: 1rem;
+        gap: 0.65rem;
     }
 
     .footer-legal-links a {
-        color: #ffffff;
-        font-size: 0.8rem;
+        color: #fff;
+        font-size: 0.7rem;
         text-decoration: none;
         white-space: nowrap;
     }
@@ -3461,7 +3453,7 @@ footer hr {
     .footer-legal-divider {
         display: block;
         width: 1px;
-        height: 24px;
+        height: 18px;
         background-color: #32649a;
     }
 }
@@ -3471,25 +3463,23 @@ footer hr {
 /* ================= DESKTOP FOOTER ================= */
 @media (min-width: 1025px) {
 
-    /* Main footer */
     .footer {
         width: 100%;
         height: auto;
         min-height: 0;
-        padding: 4rem 5.4% 2rem;
-        color: #ffffff;
+        padding: 3rem 4% 1.5rem;
+        color: #fff;
         background: linear-gradient(115deg, #031b3b, #052650);
         font-family: 'Poppins', sans-serif;
     }
 
-    /* Brand and Quick Links */
     .footer-main {
         display: grid;
         grid-template-columns: 1.25fr 0.75fr;
         align-items: start;
-        gap: 5rem;
-        padding: 0 0 3rem;
-        border-bottom: 2px solid #28578b;
+        gap: 3rem;
+        padding: 0 0 2.2rem;
+        border-bottom: 1px solid #28578b;
     }
 
     .footer-brand,
@@ -3498,11 +3488,11 @@ footer hr {
         min-width: 0;
     }
 
-    /* Organization logo and name */
+    /* Logo and organization name */
     .footer-logo {
         display: flex;
         align-items: center;
-        gap: 1.5rem;
+        gap: 1rem;
         width: fit-content;
         max-width: 100%;
         text-decoration: none;
@@ -3511,70 +3501,70 @@ footer hr {
     .footer-logo img {
         display: block;
         flex-shrink: 0;
-        width: 155px;
-        height: 155px;
+        width: 110px;
+        height: 110px;
         object-fit: contain;
-        padding: 0;
-        background: transparent;
-        border-radius: 0;
+        padding: 5px;
+        background-color: #fff;
+        border-radius: 10px;
     }
 
     .footer-brand-name h2 {
         margin: 0;
-        color: #ffffff;
-        font-size: 3rem;
+        color: #fff;
+        font-size: 2.2rem;
         font-weight: 700;
         line-height: 1.2;
     }
 
     .footer-brand-name h3 {
         margin: 0.1rem 0 0;
-        padding-bottom: 0.4rem;
-        color: #ffffff;
-        font-size: 1.75rem;
+        padding-bottom: 0.3rem;
+        color: #fff;
+        font-size: 1.3rem;
         font-weight: 500;
         line-height: 1.35;
-        border-bottom: 2px solid #ffd400;
+        border-bottom: 1.5px solid #ffd400;
     }
 
     .footer-brand-name p {
-        margin-top: 0.65rem;
+        margin-top: 0.45rem;
         color: #ffd400;
-        font-size: 0.95rem;
+        font-size: 0.7rem;
         font-weight: 700;
-        letter-spacing: 1.5px;
+        letter-spacing: 1px;
         line-height: 1.5;
     }
 
-    /* Organization description */
+    /* Description */
     .footer-description {
-        max-width: 520px;
-        margin: 1.5rem 0;
-        color: #ffffff;
-        font-size: 1.2rem;
+        max-width: 500px;
+        margin: 1.2rem 0;
+        color: #fff;
+        font-size: 1rem;
         font-weight: 400;
         line-height: 1.65;
     }
 
-    /* Social media icons */
+    /* Social icons */
     .footer-socials {
         display: flex;
         align-items: center;
         flex-wrap: wrap;
-        gap: 2rem;
-        margin-top: 1.5rem;
+        gap: 1.2rem;
+        margin-top: 1.2rem;
     }
 
     .footer-socials a {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 68px;
-        height: 68px;
+        width: 52px;
+        height: 52px;
         color: #ffd400;
-        font-size: 2rem;
-        border: 3px solid #ffd400;
-        border-radius: 13px;
+        font-size: 1.5rem;
+        border: 2px solid #ffd400;
+        border-radius: 10px;
         text-decoration: none;
         transition: background-color 0.25s ease,
                     color 0.25s ease,
@@ -3588,11 +3578,11 @@ footer hr {
         transform: translateY(-3px);
     }
 
-    /* Quick Links heading */
+    /* Quick links heading */
     .footer-heading {
-        margin: 0 0 2rem;
-        color: #ffffff;
-        font-size: 2.25rem;
+        margin: 0 0 1.5rem;
+        color: #fff;
+        font-size: 1.8rem;
         font-weight: 700;
         line-height: 1.3;
     }
@@ -3600,17 +3590,17 @@ footer hr {
     .footer-heading::after {
         content: "";
         display: block;
-        width: 85px;
-        height: 6px;
-        margin-top: 1.1rem;
+        width: 65px;
+        height: 4px;
+        margin-top: 0.8rem;
         background-color: #ffd400;
     }
 
-    /* Quick Links list */
+    /* Quick links list */
     .footer-quick-links ul {
         display: flex;
         flex-direction: column;
-        gap: 1.1rem;
+        gap: 0.8rem;
         padding: 0;
         margin: 0;
         list-style: none;
@@ -3625,10 +3615,10 @@ footer hr {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 1.5rem;
-        padding: 0.15rem 0;
-        color: #ffffff;
-        font-size: 1.25rem;
+        gap: 1rem;
+        padding: 0.1rem 0;
+        color: #fff;
+        font-size: 1rem;
         font-weight: 400;
         text-decoration: none;
         transition: color 0.25s ease;
@@ -3637,7 +3627,7 @@ footer hr {
     .footer-quick-links li a i {
         flex-shrink: 0;
         color: #ffd400;
-        font-size: 1.65rem;
+        font-size: 1.3rem;
         transition: transform 0.25s ease;
     }
 
@@ -3648,7 +3638,7 @@ footer hr {
 
     .footer-quick-links li a:hover i,
     .footer-quick-links li a:focus-visible i {
-        transform: translateX(5px);
+        transform: translateX(4px);
     }
 
     /* Contact information */
@@ -3657,16 +3647,16 @@ footer hr {
         grid-template-columns: 1.25fr 1.1fr 1fr;
         align-items: stretch;
         gap: 0;
-        padding: 2.75rem 0;
-        border-bottom: 2px solid #28578b;
+        padding: 2rem 0;
+        border-bottom: 1px solid #28578b;
     }
 
     .footer-contact-item {
         display: flex;
         align-items: flex-start;
-        gap: 1.5rem;
+        gap: 1rem;
         min-width: 0;
-        padding: 0 2rem;
+        padding: 0 1.3rem;
     }
 
     .footer-contact-item:first-child {
@@ -3678,32 +3668,32 @@ footer hr {
     }
 
     .footer-contact-item + .footer-contact-item {
-        border-left: 2px solid #28578b;
+        border-left: 1px solid #28578b;
     }
 
     .footer-contact-item > i {
         flex-shrink: 0;
-        width: 50px;
+        width: 38px;
         margin-top: 0.15rem;
         color: #ffd400;
-        font-size: 2.7rem;
+        font-size: 2rem;
         text-align: center;
     }
 
     .footer-contact-item h3 {
-        margin: 0 0 0.5rem;
+        margin: 0 0 0.4rem;
         color: #ffd400;
-        font-size: 1.35rem;
+        font-size: 1.05rem;
         font-weight: 700;
         line-height: 1.4;
     }
 
     .footer-contact-item p,
     .footer-contact-item a {
-        color: #ffffff;
-        font-size: 1.1rem;
+        color: #fff;
+        font-size: 0.9rem;
         font-weight: 400;
-        line-height: 1.7;
+        line-height: 1.65;
         overflow-wrap: anywhere;
     }
 
@@ -3721,14 +3711,14 @@ footer hr {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 2rem;
-        padding: 2rem 0 0;
+        gap: 1.2rem;
+        padding: 1.5rem 0 0;
     }
 
     .footer-copyright {
         margin: 0;
-        color: #ffffff;
-        font-size: 1rem;
+        color: #fff;
+        font-size: 0.85rem;
         font-weight: 400;
         line-height: 1.7;
     }
@@ -3737,12 +3727,13 @@ footer hr {
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        gap: 2rem;
+        flex-wrap: wrap;
+        gap: 1.2rem;
     }
 
     .footer-legal-links a {
-        color: #ffffff;
-        font-size: 1rem;
+        color: #fff;
+        font-size: 0.85rem;
         font-weight: 400;
         text-decoration: none;
         white-space: nowrap;
@@ -3757,17 +3748,10 @@ footer hr {
     .footer-legal-divider {
         display: block;
         flex-shrink: 0;
-        width: 2px;
-        height: 30px;
+        width: 1px;
+        height: 22px;
         background-color: #28578b;
     }
-
-.footer-logo img {
-    background-color: #ffffff;
-    border-radius: 12px;
-    padding: 6px;
-}
-
 }
 
 /* ================= PHOTO SLIDER ================= */
