@@ -3796,3 +3796,24 @@ footer hr {
     }
     
 }
+
+
+/* Initial state: hidden */
+.fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Visible state */
+.fade-up.show,
+.fade-left.show {
+    opacity: 1;
+    transform: translate(0, 0);
+}

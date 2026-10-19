@@ -19,12 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', () => {
         mobileMenu.classList.remove('active');
     })
-
-        // smooth scroll to About CAB
-        aboutCab.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        });
     });
 
     // Fade-up AND Fade-left animations
