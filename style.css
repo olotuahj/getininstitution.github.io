@@ -295,11 +295,12 @@
     padding-bottom: 1.5rem;
 }
  
-/* ================= GETIIN ================= */
+/* ================= GETIN ================= */
 #getiin {
-      color: #eef10b;
-      font-family: Georgia, 'Times New Roman', Times, serif;
-      font-style: italic;
+    color: #eef10b;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-style: normal;
 }
 
 /* ================= fig1-3 ================= */
@@ -314,10 +315,9 @@
 /* ================= Why-choose-us ================= */
 #Why-choose-us {
     text-align: center;
-    font-weight: normal;
-    padding-top: 1rem;  
-     font-family: 'Poppins', sans-serif;
-     font-weight: 300px;
+    padding-top: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
 }
 
 /* ================= fig1 ================= */
