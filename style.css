@@ -855,7 +855,7 @@ footer hr {
     #Why-choose-us{
         font-size: 2rem;
         margin-top: 2rem;
-        margin-bottom: 2rem;
+        margin-bottom: 4rem;
     }
 
      /* figcaption */
@@ -1206,6 +1206,7 @@ footer hr {
      /* Why-choose-us */
     #Why-choose-us{
         padding-bottom: 2rem;
+        padding-top: 2rem;
     }
     
      /* slide-indicator */
@@ -4016,7 +4017,7 @@ footer hr {
         font-family: 'Playfair Display', Georgia, serif;
         font-style: italic;
         font-weight: 800;
-        color: #ffffff;
+        color: #000;
         position: relative;
     }
 
