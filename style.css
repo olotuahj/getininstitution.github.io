@@ -845,7 +845,7 @@ footer hr {
 }
 
 /* ================= (MOBILE ONLY) ================= */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
      /* paragraph */
     #paragraph {
         font-size: 1.5rem;
@@ -1024,7 +1024,7 @@ footer hr {
 }
 
 /* ================= TABLET ONLY ================= */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
     .brand-name h1 {
             font-family: Georgia, serif;
             line-height: 1;
@@ -1090,7 +1090,7 @@ footer hr {
 }
 
 /* ================= (DESKTOP ONLY) ================= */
-@media (min-width: 768px) {
+@media (min-width: 769px) {
     /* figcaption */
     #caption-1,
     #caption-2,
@@ -1164,7 +1164,7 @@ footer hr {
 }
 
 /* ================= TABLET & DESKTOP ================= */
-@media (min-width: 768px) {
+@media (min-width: 769px) {
     /* WhyChooseUs-content */
       .WhyChooseUs-content {
         margin-bottom: 4rem;
@@ -1795,7 +1795,7 @@ footer hr {
 }
 
 /* ================= 700px - 767px ================= */
-@media (min-width: 700px) and (max-width: 767px) {
+@media (min-width: 700px) and (max-width: 768px) {
 
     .image1-content {
         position: relative;
@@ -1866,7 +1866,7 @@ footer hr {
 
 
 /* ================= TABLET: WHY CHOOSE GETIN ================= */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
     .top-bar{
         height: 8.5rem;
     }
@@ -2039,7 +2039,7 @@ footer hr {
 }
 
 /* ================= TABLET LOGO ================= */
-@media (min-width: 768px) and (max-width:1024px ) {
+@media (min-width: 769px) and (max-width:1024px ) {
 
     #logo {
         width: 150px;
@@ -2116,7 +2116,7 @@ footer hr {
 }
 
 /* ================= MOBILE LOGO ================= */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 
     #logo {
         width: 160px;
@@ -2138,7 +2138,7 @@ footer hr {
 }
 
 /* MOBILE EVENT SPACING */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
      .fig1-3 {
    gap: 6rem;
     }
@@ -2885,7 +2885,7 @@ footer hr {
 
 
 /* ================= MOBILE FOOTER ================= */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 
     .footer {
         width: 100%;
@@ -3187,7 +3187,7 @@ footer hr {
 
 
 /* ================= TABLET FOOTER ================= */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
 
     .footer {
         width: 100%;
@@ -3865,10 +3865,10 @@ footer hr {
 
 
 /* ================= SEE MORE / SEE LESS ================= */
-
+@media (max-width: 768px) {
 .see-more-link {
     display: inline;
-    color: #63b2ff;
+    color: #000;
     font-weight: 600;
     text-decoration: none;
     cursor: pointer;
@@ -3877,4 +3877,19 @@ footer hr {
 
 .see-more-link:hover {
     text-decoration: underline;
+}
+}
+
+@media (min-width: 769px) {
+    .see-more-link {
+        display: inline;
+        color: #fff;
+        font-weight: 600;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .see-more-link:hover {
+        text-decoration: underline;
+    }
 }
