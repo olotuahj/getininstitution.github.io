@@ -168,6 +168,30 @@
     color: #000;
 }
 
+
+/* Home */
+.mobile-menu a#home {
+    background-color: #0a89f1;
+    color: #fff;
+    transition: all 0.3s ease;
+    padding: 3.5px;
+    width: 60px;
+}
+
+
+.mobile-menu a#home:hover,
+ .mobile-menu a#home:focus{
+    text-decoration: none;
+    color: rgb(2, 23, 48);
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.9px;
+    border: none;
+     transform: scale(1.1);
+     background-color: #fff;
+}
+
 /* close button */
 .close-menu {
     align-self: flex-end;
@@ -1028,11 +1052,11 @@ footer hr {
     .brand-name h1 {
             font-family: Georgia, serif;
             line-height: 1;
-            font-size: 42px;
+            font-size: 32px;
     }
 
         .brand-name h2{
-            font-size: 30px;
+            font-size: 20px;
         }
 
     .About-CAB {
