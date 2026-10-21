@@ -232,13 +232,6 @@
      transition: all 0.3s ease;
 }
 
-.link a:hover,
-.link a:focus {
-    background-color: #0a89f1;
-    color: #fff;
-    transform: scale(1.1);
-}
-
 .link a:visited {
     color: rgb(2, 23, 48);
     background-color: transparent;
@@ -248,6 +241,7 @@
 .link a:focus {
     color: white;
     background-color: #0a89f1;
+    transform: scale(1.1);
 }
 
 /* Home */
