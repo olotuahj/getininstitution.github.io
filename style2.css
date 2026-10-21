@@ -262,7 +262,7 @@
 }
 
 .top-page{
-   background-color: #4aafee;
+   background-color: #f5f4ea;
 }
 
 /* ================= heading1 ================= */
@@ -314,7 +314,7 @@
 
 /* middle */
 .middle{
-    background-color: #4aafee;
+    background-color:#f5f4ea;
 }
 
 /* ================= more-programs ================= */
@@ -569,7 +569,7 @@ footer hr {
 #program-paragraph {
     width: 100%;
     box-sizing: border-box;
-    font-size: 1.5rem;
+    font-size: 0.95rem;
     line-height: 1.7;
     letter-spacing: normal;
     margin-left: auto;
@@ -622,7 +622,7 @@ footer hr {
        }
 
        #Programs-header{
-        font-size: 2rem;
+        font-size: 1.25rem;
        }
 
 /* footer */
@@ -774,7 +774,7 @@ footer hr {
         top: 50%;
         left: 5%;               
         transform: translateY(-50%);
-        width: 400px;
+        width: 300px;
         height: 300px;
         background-color: #03005B;
         color: #eeeeee;
@@ -829,11 +829,11 @@ footer hr {
         .brand-name h1 {
             font-family: Georgia, serif;
             line-height: 1;
-            font-size: 42px;
+            font-size: 32px;
     }
 
         .brand-name h2{
-            font-size: 30px;
+            font-size: 20px;
         }
 
         .mobile-auth {
@@ -916,12 +916,12 @@ footer hr {
 
           /* Programs-header */
          #Programs-header {
-            font-size: 2rem;
+            font-size: 1.5rem;
          }
 
          /* program-paragraph */
          #program-paragraph {
-             font-size: 20px;
+             font-size: 16px;
          }
 
          #Programs-img{
@@ -1140,7 +1140,7 @@ footer hr {
 
          /* what-we-do */
          #what-we-do {
-           font-size: 48px;
+           font-size: 1.5rem;
          }
 
          #img1 {
@@ -1149,25 +1149,25 @@ footer hr {
 
          /* program-paragraph2 */
          #program-paragraph2 {
-            font-size: 26px;
+            font-size: 20px;
             line-height: 1.7;
          }
 
          /* program-paragraph3 */
          #program-paragraph3 {
-            font-size: 26px;
+            font-size: 20px;
             line-height: 1.7;
          }
 
           /* Programs-header */
          #Programs-header {
-            font-size: 3.5rem;
+            font-size: 1.5rem;
             margin-bottom: 1.5rem;
          }
 
          /* program-paragraph */
          #program-paragraph {
-             font-size: 2rem;
+             font-size: 1rem;
              margin-bottom: 1.5rem;
          }
 
@@ -2376,13 +2376,13 @@ footer hr {
 }
 
     .programs-content {
-        min-height: 400px;
+        min-height: 100px;
         padding: 40px;
-        width: 45%;
+        width: 25%;
     }
 
      #more-programs {
-        font-size: 1.8rem;
+        font-size: 1rem;
     }
 }
 
@@ -2428,14 +2428,14 @@ footer hr {
 
     #GETIN-paragraph {
         font-size: 1rem;
-        line-height: 1.7;
+        line-height: 1.8;
         padding-top: 0.5rem;
         padding-bottom: 1rem;
     }
 
     #GETIN-paragraph2 {
         font-size: 1rem;
-        line-height: 1.7;
+        line-height: 1.8;
         padding-top: 0.5rem;
         padding-bottom: 1.5rem;
         border-radius: 0 0 14px 14px;
@@ -2540,7 +2540,7 @@ footer hr {
     column-gap: 2rem;
     align-items: stretch;
     padding: 2rem 3rem;
-    background-color: #4aafee;
+    background-color: #f5f4ea;
 }
 
 /* White box for the heading and paragraphs */
@@ -2591,4 +2591,332 @@ footer hr {
     object-fit: cover;
     border-radius: 12px;
 }
+}
+
+/*TABLET + DESKTOP */
+@media (min-width: 768px) {
+
+    .GETINparagraph-image {
+        overflow: hidden;
+        border-radius: 12px;
+        clip-path: polygon(
+                     15% 0,
+            100% 0,
+            100% 100%,
+            0 100%,
+            0 18%
+        );
+    }
+
+    #GETINparagraph-image1 {
+        border-radius: 0;
+    }
+
+}
+
+.what-we-do {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#what-we-do {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0;
+}
+
+
+/* WHAT WE DO — MOBILE VIEW */
+
+@media (max-width: 767px) {
+
+    /* Main container */
+    .middle {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 30px;
+
+        width: 100%;
+        padding: 30px 18px 45px;
+        margin: 0 auto;
+
+        box-sizing: border-box;
+    }
+
+    /* Individual program cards */
+    .program-card {
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+        min-width: 0;
+        margin: 0;
+
+        background-color: #ffffff;
+        border-radius: 14px;
+        overflow: hidden;
+
+        box-shadow: 0 6px 22px rgba(16, 43, 97, 0.09);
+        box-sizing: border-box;
+    }
+
+    /* Image container */
+    .program-image {
+        width: 100%;
+        height: 220px;
+        overflow: hidden;
+        flex-shrink: 0;
+    }
+
+    /* Card images */
+    .program-image img {
+        display: block;
+
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+        object-position: center 10%;
+    }
+
+    /* Text container */
+    .program-content {
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+        padding: 22px 20px 25px;
+
+        box-sizing: border-box;
+    }
+
+    /* Card headings */
+    .program-content h3 {
+        margin: 0 0 12px;
+
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.25rem;
+        font-weight: 700;
+        line-height: 1.4;
+
+        color: #102b61;
+    }
+
+    /* Card descriptions */
+    .program-content p {
+        margin: 0;
+
+        font-family: 'Inter', sans-serif;
+        font-size: 0.95rem;
+        font-weight: 400;
+        line-height: 1.8;
+
+        color: #4b5563;
+    }
+
+}
+
+/* WHAT WE DO — TABLET VIEW */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    /* Main container */
+    .middle {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px;
+
+        width: 100%;
+        padding: 35px 30px 55px;
+        margin: 0 auto;
+
+        box-sizing: border-box;
+        align-items: stretch;
+    }
+
+    /* Individual program cards */
+    .program-card {
+        display: flex;
+        flex-direction: column;
+
+        min-width: 0;
+        margin: 0;
+
+        background-color: #ffffff;
+        border-radius: 15px;
+        overflow: hidden;
+
+        box-shadow: 0 7px 24px rgba(16, 43, 97, 0.09);
+        box-sizing: border-box;
+    }
+
+    /* Centre the third card */
+    .program-card:last-child {
+        grid-column: 1 / -1;
+        width: calc(50% - 14px);
+        justify-self: center;
+    }
+
+    /* Image container */
+    .program-image {
+        width: 100%;
+        height: 230px;
+        overflow: hidden;
+        flex-shrink: 0;
+    }
+
+    /* Card images */
+    .program-image img {
+        display: block;
+
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+        object-position: center;
+    }
+
+    /* Text container */
+    .program-content {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+
+        padding: 24px 22px 28px;
+        box-sizing: border-box;
+    }
+
+    /* Card headings */
+    .program-content h3 {
+        margin: 0 0 14px;
+
+        font-family: 'Poppins', sans-serif;
+        font-size: clamp(1.2rem, 2.2vw, 1.5rem);
+        font-weight: 700;
+        line-height: 1.4;
+
+        color: #102b61;
+    }
+
+    /* Card descriptions */
+    .program-content p {
+        margin: 0;
+
+        font-family: 'Inter', sans-serif;
+        font-size: 0.95rem;
+        font-weight: 400;
+        line-height: 1.8;
+
+        color: #4b5563;
+    }
+
+}
+
+
+/* WHAT WE DO — DESKTOP VIEW */
+
+@media (min-width: 1025px) {
+
+    /* Main section */
+    .middle {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 30px;
+
+        width: 100%;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 45px 5% 70px;
+
+        box-sizing: border-box;
+        align-items: stretch;
+    }
+
+    /* Individual program card */
+    .program-card {
+        display: flex;
+        flex-direction: column;
+
+        min-width: 0;
+        background-color: #ffffff;
+        border-radius: 16px;
+        overflow: hidden;
+
+        box-shadow: 0 8px 28px rgba(16, 43, 97, 0.09);
+
+        transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
+    }
+
+    /* Subtle hover effect */
+    .program-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 16px 35px rgba(16, 43, 97, 0.14);
+    }
+
+    /* Image wrapper */
+    .program-image {
+        width: 100%;
+        height: 250px;
+        overflow: hidden;
+        flex-shrink: 0;
+    }
+
+    /* Images */
+    .program-image img {
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+        object-position: center;
+
+        transition: transform 0.5s ease;
+    }
+
+    /* Image zoom on hover */
+    .program-card:hover .program-image img {
+        transform: scale(1.05);
+    }
+
+    /* Text area inside each card */
+    .program-content {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+
+        padding: 28px 25px 32px;
+    }
+
+    /* Card headings */
+    .program-content h3 {
+        margin: 0 0 16px;
+
+        font-family: 'Poppins', sans-serif;
+        font-size: clamp(1.2rem, 1.5vw, 1.55rem);
+        font-weight: 700;
+        line-height: 1.4;
+
+        color: #102b61;
+    }
+
+    /* Card descriptions */
+    .program-content p {
+        margin: 0;
+
+        font-family: 'Inter', sans-serif;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.85;
+
+        color: #4b5563;
+    }
+
 }

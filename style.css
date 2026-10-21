@@ -1520,7 +1520,7 @@ footer hr {
 
         /* Why-choose-us */
     #Why-choose-us {
-        margin-top: 3rem;
+        margin-top: 5rem;
         margin-bottom: 5rem;
     }
 
@@ -1601,7 +1601,7 @@ footer hr {
 
     /* events */
     #events {
-        margin-top: 5rem;
+        margin-top: 7rem;
         font-size: 3rem;
     }
 
@@ -3202,6 +3202,7 @@ footer hr {
 }
 
 
+
 /* ================= TABLET FOOTER ================= */
 @media (min-width: 769px) and (max-width: 1024px) {
 
@@ -3209,7 +3210,7 @@ footer hr {
         width: 100%;
         height: auto;
         min-height: 0;
-        padding: 2.5rem 3% 1.2rem;
+        padding: 2rem 3% 1rem;
         color: #fff;
         background: linear-gradient(135deg, #031b3b, #052650);
         font-family: 'Poppins', sans-serif;
@@ -3219,8 +3220,8 @@ footer hr {
         display: grid;
         grid-template-columns: 1.2fr 0.8fr;
         align-items: start;
-        gap: 2rem;
-        padding: 0 0 2rem;
+        gap: 1.5rem;
+        padding: 0 0 1.5rem;
         border-bottom: 1px solid #32649a;
     }
 
@@ -3234,55 +3235,58 @@ footer hr {
     .footer-logo {
         display: flex;
         align-items: center;
-        gap: 0.75rem;
+        gap: 0.6rem;
         width: fit-content;
         max-width: 100%;
         text-decoration: none;
     }
 
     .footer-logo img {
+        display: block;
         flex-shrink: 0;
-        width: 70px;
-        height: 70px;
+        width: 60px;
+        height: 60px;
         object-fit: contain;
-        padding: 4px;
+        padding: 3px;
         background-color: #fff;
-        border-radius: 8px;
+        border-radius: 7px;
     }
 
     .footer-brand-name h2 {
         margin: 0;
         color: #fff;
-        font-size: 1.35rem;
+        font-size: 1.2rem;
+        font-weight: 700;
         line-height: 1.3;
     }
 
     .footer-brand-name h3 {
-        margin: 0.15rem 0 0;
-        padding-bottom: 0.3rem;
+        margin: 0.1rem 0 0;
+        padding-bottom: 0.2rem;
         color: #fff;
-        font-size: 0.85rem;
+        font-size: 0.75rem;
         font-weight: 500;
-        line-height: 1.4;
-        border-bottom: 1.5px solid #ffd400;
+        line-height: 1.35;
+        border-bottom: 1px solid #ffd400;
     }
 
     .footer-brand-name p {
-        margin-top: 0.35rem;
+        margin-top: 0.3rem;
         color: #ffd400;
-        font-size: 0.55rem;
+        font-size: 0.5rem;
         font-weight: 700;
-        letter-spacing: 0.5px;
-        line-height: 1.5;
+        letter-spacing: 0.4px;
+        line-height: 1.4;
     }
 
     /* Description */
     .footer-description {
-        max-width: 430px;
-        margin: 1.1rem 0;
+        max-width: 400px;
+        margin: 0.8rem 0;
         color: #fff;
-        font-size: 0.85rem;
-        line-height: 1.7;
+        font-size: 0.78rem;
+        font-weight: 400;
+        line-height: 1.6;
     }
 
     /* Social icons */
@@ -3290,44 +3294,48 @@ footer hr {
         display: flex;
         align-items: center;
         flex-wrap: wrap;
-        gap: 0.75rem;
-        margin-top: 1rem;
+        gap: 0.6rem;
+        margin-top: 0.8rem;
     }
 
     .footer-socials a {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 40px;
-        height: 40px;
+        width: 34px;
+        height: 34px;
         color: #ffd400;
-        font-size: 1.1rem;
-        border: 1.5px solid #ffd400;
-        border-radius: 8px;
+        font-size: 0.95rem;
+        border: 1px solid #ffd400;
+        border-radius: 7px;
         text-decoration: none;
-        transition: background-color 0.25s ease, color 0.25s ease;
+        transition: background-color 0.25s ease,
+                    color 0.25s ease,
+                    transform 0.25s ease;
     }
 
     .footer-socials a:hover,
     .footer-socials a:focus-visible {
         color: #031b3b;
         background-color: #ffd400;
+        transform: translateY(-2px);
     }
 
     /* Quick links heading */
     .footer-heading {
-        margin: 0 0 1.1rem;
+        margin: 0 0 0.8rem;
         color: #fff;
-        font-size: 1.3rem;
+        font-size: 1.1rem;
         font-weight: 700;
+        line-height: 1.3;
     }
 
     .footer-heading::after {
         content: "";
         display: block;
-        width: 50px;
-        height: 3px;
-        margin-top: 0.6rem;
+        width: 42px;
+        height: 2px;
+        margin-top: 0.45rem;
         background-color: #ffd400;
     }
 
@@ -3335,7 +3343,7 @@ footer hr {
     .footer-quick-links ul {
         display: flex;
         flex-direction: column;
-        gap: 0.6rem;
+        gap: 0.45rem;
         padding: 0;
         margin: 0;
         list-style: none;
@@ -3350,10 +3358,11 @@ footer hr {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 0.6rem;
-        padding: 0.2rem 0;
+        gap: 0.5rem;
+        padding: 0.1rem 0;
         color: #fff;
-        font-size: 0.85rem;
+        font-size: 0.78rem;
+        font-weight: 400;
         text-decoration: none;
         transition: color 0.25s ease;
     }
@@ -3361,7 +3370,8 @@ footer hr {
     .footer-quick-links li a i {
         flex-shrink: 0;
         color: #ffd400;
-        font-size: 1rem;
+        font-size: 0.85rem;
+        transition: transform 0.25s ease;
     }
 
     .footer-quick-links li a:hover,
@@ -3369,26 +3379,35 @@ footer hr {
         color: #ffd400;
     }
 
+    .footer-quick-links li a:hover i,
+    .footer-quick-links li a:focus-visible i {
+        transform: translateX(3px);
+    }
+
     /* Contact information */
     .footer-contact {
         display: grid;
         grid-template-columns: 1.2fr 1fr 1fr;
         align-items: stretch;
-        gap: 0.75rem;
-        padding: 1.5rem 0;
+        gap: 0.5rem;
+        padding: 1.2rem 0;
         border-bottom: 1px solid #32649a;
     }
 
     .footer-contact-item {
         display: flex;
         align-items: flex-start;
-        gap: 0.5rem;
+        gap: 0.4rem;
         min-width: 0;
-        padding: 0 0.6rem;
+        padding: 0 0.5rem;
     }
 
     .footer-contact-item:first-child {
         padding-left: 0;
+    }
+
+    .footer-contact-item:last-child {
+        padding-right: 0;
     }
 
     .footer-contact-item + .footer-contact-item {
@@ -3397,17 +3416,17 @@ footer hr {
 
     .footer-contact-item > i {
         flex-shrink: 0;
-        width: 26px;
-        margin-top: 0.15rem;
+        width: 22px;
+        margin-top: 0.1rem;
         color: #ffd400;
-        font-size: 1.35rem;
+        font-size: 1.1rem;
         text-align: center;
     }
 
     .footer-contact-item h3 {
-        margin: 0 0 0.3rem;
+        margin: 0 0 0.25rem;
         color: #ffd400;
-        font-size: 0.8rem;
+        font-size: 0.72rem;
         font-weight: 700;
         line-height: 1.4;
     }
@@ -3415,8 +3434,9 @@ footer hr {
     .footer-contact-item p,
     .footer-contact-item a {
         color: #fff;
-        font-size: 0.7rem;
-        line-height: 1.65;
+        font-size: 0.65rem;
+        font-weight: 400;
+        line-height: 1.55;
         overflow-wrap: anywhere;
     }
 
@@ -3435,15 +3455,16 @@ footer hr {
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
-        gap: 0.75rem;
-        padding: 1rem 0 0;
+        gap: 0.6rem;
+        padding: 0.8rem 0 0;
     }
 
     .footer-copyright {
         margin: 0;
         color: #fff;
-        font-size: 0.7rem;
-        line-height: 1.6;
+        font-size: 0.65rem;
+        font-weight: 400;
+        line-height: 1.5;
     }
 
     .footer-legal-links {
@@ -3451,14 +3472,16 @@ footer hr {
         align-items: center;
         justify-content: flex-end;
         flex-wrap: wrap;
-        gap: 0.65rem;
+        gap: 0.5rem;
     }
 
     .footer-legal-links a {
         color: #fff;
-        font-size: 0.7rem;
+        font-size: 0.65rem;
+        font-weight: 400;
         text-decoration: none;
         white-space: nowrap;
+        transition: color 0.25s ease;
     }
 
     .footer-legal-links a:hover,
@@ -3468,11 +3491,13 @@ footer hr {
 
     .footer-legal-divider {
         display: block;
+        flex-shrink: 0;
         width: 1px;
-        height: 18px;
+        height: 15px;
         background-color: #32649a;
     }
 }
+
 
 
 
@@ -3483,7 +3508,7 @@ footer hr {
         width: 100%;
         height: auto;
         min-height: 0;
-        padding: 3rem 4% 1.5rem;
+        padding: 2rem 4% 1rem;
         color: #fff;
         background: linear-gradient(115deg, #031b3b, #052650);
         font-family: 'Poppins', sans-serif;
@@ -3493,8 +3518,8 @@ footer hr {
         display: grid;
         grid-template-columns: 1.25fr 0.75fr;
         align-items: start;
-        gap: 3rem;
-        padding: 0 0 2.2rem;
+       gap: 2rem;
+        padding-bottom: 1.5rem;
         border-bottom: 1px solid #28578b;
     }
 
@@ -3508,7 +3533,7 @@ footer hr {
     .footer-logo {
         display: flex;
         align-items: center;
-        gap: 1rem;
+          gap: 0.75rem;
         width: fit-content;
         max-width: 100%;
         text-decoration: none;
@@ -3517,8 +3542,8 @@ footer hr {
     .footer-logo img {
         display: block;
         flex-shrink: 0;
-        width: 110px;
-        height: 110px;
+           width: 85px;
+        height: 85px;
         object-fit: contain;
         padding: 5px;
         background-color: #fff;
@@ -3528,7 +3553,7 @@ footer hr {
     .footer-brand-name h2 {
         margin: 0;
         color: #fff;
-        font-size: 2.2rem;
+         font-size: 1.6rem;
         font-weight: 700;
         line-height: 1.2;
     }
@@ -3546,20 +3571,21 @@ footer hr {
     .footer-brand-name p {
         margin-top: 0.45rem;
         color: #ffd400;
-        font-size: 0.7rem;
         font-weight: 700;
-        letter-spacing: 1px;
         line-height: 1.5;
+         font-size: 0.6rem;
+        letter-spacing: 0.6px;
     }
 
     /* Description */
     .footer-description {
-        max-width: 500px;
-        margin: 1.2rem 0;
         color: #fff;
-        font-size: 1rem;
         font-weight: 400;
-        line-height: 1.65;
+
+        font-size: 0.85rem;
+        line-height: 1.5;
+        margin: 0.8rem 0;
+        max-width: 420px;
     }
 
     /* Social icons */
@@ -3567,24 +3593,26 @@ footer hr {
         display: flex;
         align-items: center;
         flex-wrap: wrap;
-        gap: 1.2rem;
-        margin-top: 1.2rem;
+        gap: 0.8rem;
+        margin-top: 0.8rem;
     }
 
     .footer-socials a {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 52px;
-        height: 52px;
         color: #ffd400;
-        font-size: 1.5rem;
         border: 2px solid #ffd400;
-        border-radius: 10px;
         text-decoration: none;
         transition: background-color 0.25s ease,
                     color 0.25s ease,
                     transform 0.25s ease;
+
+                       width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+        border-width: 1.5px;
+        border-radius: 8px;
     }
 
     .footer-socials a:hover,
@@ -3596,27 +3624,28 @@ footer hr {
 
     /* Quick links heading */
     .footer-heading {
-        margin: 0 0 1.5rem;
+        margin: 0 0 1rem;
         color: #fff;
-        font-size: 1.8rem;
         font-weight: 700;
         line-height: 1.3;
+        font-size: 1.35rem;
     }
 
     .footer-heading::after {
         content: "";
         display: block;
-        width: 65px;
-        height: 4px;
-        margin-top: 0.8rem;
         background-color: #ffd400;
+
+         width: 45px;
+        height: 3px;
+        margin-top: 0.5rem;
     }
 
     /* Quick links list */
     .footer-quick-links ul {
         display: flex;
         flex-direction: column;
-        gap: 0.8rem;
+         gap: 0.5rem;
         padding: 0;
         margin: 0;
         list-style: none;
@@ -3634,7 +3663,7 @@ footer hr {
         gap: 1rem;
         padding: 0.1rem 0;
         color: #fff;
-        font-size: 1rem;
+        font-size: 0.85rem;
         font-weight: 400;
         text-decoration: none;
         transition: color 0.25s ease;
@@ -3643,7 +3672,7 @@ footer hr {
     .footer-quick-links li a i {
         flex-shrink: 0;
         color: #ffd400;
-        font-size: 1.3rem;
+        font-size: 0.9rem;
         transition: transform 0.25s ease;
     }
 
@@ -3663,16 +3692,17 @@ footer hr {
         grid-template-columns: 1.25fr 1.1fr 1fr;
         align-items: stretch;
         gap: 0;
-        padding: 2rem 0;
+       padding: 1.25rem 0;
         border-bottom: 1px solid #28578b;
     }
 
     .footer-contact-item {
         display: flex;
         align-items: flex-start;
-        gap: 1rem;
         min-width: 0;
-        padding: 0 1.3rem;
+
+          gap: 0.7rem;
+        padding: 0 0.9rem;
     }
 
     .footer-contact-item:first-child {
@@ -3689,28 +3719,32 @@ footer hr {
 
     .footer-contact-item > i {
         flex-shrink: 0;
-        width: 38px;
         margin-top: 0.15rem;
         color: #ffd400;
-        font-size: 2rem;
         text-align: center;
+
+          width: 28px;
+        font-size: 1.4rem;
     }
 
     .footer-contact-item h3 {
-        margin: 0 0 0.4rem;
+        margin: 0 0 0.25rem;
         color: #ffd400;
-        font-size: 1.05rem;
         font-weight: 700;
         line-height: 1.4;
+
+                font-size: 0.9rem;
+
     }
 
     .footer-contact-item p,
     .footer-contact-item a {
         color: #fff;
-        font-size: 0.9rem;
         font-weight: 400;
-        line-height: 1.65;
         overflow-wrap: anywhere;
+
+        font-size: 0.78rem;
+        line-height: 1.5;
     }
 
     .footer-contact-item a {
@@ -3727,14 +3761,15 @@ footer hr {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 1.2rem;
-        padding: 1.5rem 0 0;
+        padding: 1rem 0 0;
+
+        gap: 0.8rem;
     }
 
     .footer-copyright {
         margin: 0;
         color: #fff;
-        font-size: 0.85rem;
+        font-size: 0.75rem;
         font-weight: 400;
         line-height: 1.7;
     }
@@ -3744,12 +3779,12 @@ footer hr {
         align-items: center;
         justify-content: flex-end;
         flex-wrap: wrap;
-        gap: 1.2rem;
+         gap: 0.8rem;
     }
 
     .footer-legal-links a {
         color: #fff;
-        font-size: 0.85rem;
+        font-size: 0.75rem;
         font-weight: 400;
         text-decoration: none;
         white-space: nowrap;
@@ -3765,7 +3800,7 @@ footer hr {
         display: block;
         flex-shrink: 0;
         width: 1px;
-        height: 22px;
+         height: 16px;
         background-color: #28578b;
     }
 }
