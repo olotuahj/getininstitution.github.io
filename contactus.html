@@ -50,12 +50,13 @@
 <nav class="mobile-menu" id="MobileMenu">
     <button class="close-menu" id="closeMenu">✕</button>
 
+    <a href="home.html">Home</a>
     <a href="about.html">About us</a>
     <a href="program.html">Programs </a>
     <a href="#">How to apply</a>
     <a href="team.html">Team</a>
    <a href="event.html">Events</a>
-     <a href="contactus.html">Contact us</a> 
+     <a href="contactus.html" id="contactus-mobile">Contact us</a> 
 </nav>
         </div>
 
@@ -80,103 +81,278 @@
     </ul>
     </div> 
     
-      <div class="image1-content-contactus">
-              <div class="image1-contactus">
-            <img src="images/Young Professional on a Phone Call.png" id="img1-contactus" alt=""  >
-        </div>
-        <div>
-                <h2 id="contactus-header">Contact Us</h2>
-        </div>
-        </div>
+<!-- ================= CONTACT HERO ================= -->
+<section class="contact-hero">
 
-        <div class="Contact-Information">
-            <h3 id="Find-Contact-Information">Contact Information</h3>
-        </div>
+    <div class="contact-hero-content">
 
-       <div class="ReachOut-contact">
-        <div class="contact-left">
-        <h2 id="Access-Dedicated">Access Dedicated Contact Details</h2>
-        <p id="Access-Dedicated-paragraph">We're here to support you. Get in touch with us today
-             to connect with a member of our knowledgeable and
-              friendly team. Whether you have a general enquiry, 
-              need assistance or support, want to collaborate, or
-               wish to reach us through our social media platforms, 
-               we’re always happy to hear from you and provide the help you need.</p>
+        <h1 id="contactus-header">
+            Contact <span>Us</span>
+        </h1>
 
-                             <h3 id="callUs">Call Us</h3>
-           <p id="customerSupport">Customer support</p>
-       <span class="phone-line">
+        <p>
+            We'd love to hear from you. Reach out to our team
+            for any enquiries, support or collaboration.
+        </p>
 
-    <span class="phone-icon">
-        <img src="images/ei_1770372120356-removebg-preview.png" id="phone-img" alt="phone">
-    </span>
+    </div>
 
-    <span id="phone">+234 903 141 5691</span>
+    <div class="contact-hero-image">
+        <img
+            src="images/Young Professional on a Phone Call.png"
+            id="img1-contactus"
+            alt="Professional speaking on a phone call"
+        >
+    </div>
 
-</span>
-               </div>
+</section>
 
-                <div class="contact-right">
-                <div>
-                             <h3 id="emailUs">Email Us</h3>
-           <p id="mailSupport">Send your mail for general enquiries</p>
-        <span class="email-line">
-            <span class="email-icon">
-            <img src="images/ei_1770372036540-removebg-preview.png" id="email-img" alt="email"
-             style="width: 30px; height: 30px;">
-             </span>
 
-             <span id="email">info@globalethosinternational.com</span>  
-            
-            </span>
-               </div>
+<!-- ================= CONTACT INFORMATION ================= -->
+<section class="contact-information-section">
 
-                <div>
-                             <h3 id="stay-connected">Social Media</h3>
-           <p id="social-Media">Stay connected with us on our social media platforms </p>
-        <span class="socials">
-             <a href="https://www.instagram.com/" target="_blank" rel="noopener">
-                    <img src="images/ei_1780334293364-removebg-preview.png" alt="instagram" style="width: 30px; height: 30px;">
+    <div class="contact-section-heading">
+        <h2>Contact Information</h2>
+        <p>
+            Get in touch with us through any of the channels below.
+        </p>
+    </div>
+
+    <div class="contact-cards">
+
+        <!-- Phone Card -->
+        <article class="contact-card">
+
+            <div class="contact-card-icon">
+                <img
+                    src="images/ei_1792630371505-removebg-preview.png"
+                    alt=""
+                    id="phone-img"
+                >
+            </div>
+
+            <div class="contact-card-content">
+                <h3>Call Us</h3>
+                <p>Customer support</p>
+
+                <a href="tel:+2349031415691" id="phone">
+                    +234 903 141 5691
                 </a>
-        
-                       <a href="https://twitter.com/" target="_blank" rel="noopener">
-                    <img src="images/ei_1780334188803-removebg-preview (1).png" alt="twitter" style="width: 30px; height: 30px;"> </a>
-                
-                            <a href="https://www.youtube.com/" target="_blank" rel="noopener">
-                    <img src="images/ei_1780333945567-removebg-preview.png" alt="youtube" style="width: 35px; height: 35px;"> 
+            </div>
+
+        </article>
+
+
+        <!-- Email Card -->
+        <article class="contact-card">
+
+            <div class="contact-card-icon">
+                <img
+                    src="images/ei_1792630702016-removebg-preview.png"
+                    alt=""
+                    id="email-img"
+                >
+            </div>
+
+            <div class="contact-card-content">
+                <h3>Email Us</h3>
+                <p>Send your mail for general enquiries</p>
+
+                <a
+                    href="mailto:info@globalethosinternational.com"
+                    id="email"
+                >
+                    info@globalethosinternational.com
                 </a>
-            </span>
-               </div>
-               </div>
-       </div>
+            </div>
 
-       <div class="question">
-        <img src="images/boliviainteligente-y4-gADiavu0-unsplash.jpg" alt="question img">
-             <div class="question-leftside">
-                <p id="question-p">Have questions about our programs and upcoming events? Let's hear from you! </p>
-             </div>
-             <div class="question-rightside">
-                  <form action="#" method="post">
-                          <input type="text" id="lastName" name="lastName" placeholder=" Last name" size="25" maxlength="100" required>
+        </article>
 
-                    <input type="text" id="firstName" name="firstName" placeholder=" First name" size="25" maxlength="100" required>
 
-                    <input type="text" id="Email-contact" name="Email" placeholder=" Email" size="25" maxlength="100" required >
+        <!-- Social Media Card -->
+        <article class="contact-card">
 
-                     <textarea id="message-text" name="message" placeholder=" Message" rows="4" cols="50" required></textarea>
+            <div class="contact-card-icon">
+                <i class="fa-solid fa-users" aria-hidden="true"></i>
+            </div>
 
-                     <button id="submit" type="submit">SEND MESSAGE</button>
-                  
-                  </form>
-             </div>
-       </div>
+            <div class="contact-card-content">
+                <h3>Social Media</h3>
 
-       <div class="map">
+                <p>
+                    Stay connected with us on our social media platforms.
+                </p>
+
+                <div class="contact-socials">
+
+                    <a
+                        href="https://www.instagram.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Instagram"
+                    >
+                        <img
+                            src="images/ei_1780334293364-removebg-preview.png"
+                            alt=""
+                        >
+                    </a>
+
+                    <a
+                        href="https://twitter.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Twitter"
+                    >
+                        <img
+                            src="images/ei_1780334188803-removebg-preview (1).png"
+                            alt=""
+                        >
+                    </a>
+
+                    <a
+                        href="https://www.youtube.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="YouTube"
+                    >
+                        <img
+                            src="images/ei_1780333945567-removebg-preview.png"
+                            alt=""
+                        >
+                    </a>
+
+                </div>
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT FORM SECTION ================= -->
+<section class="contact-message-section">
+
+    <!-- Left Information Panel -->
+    <div class="contact-message-info">
+
+        <div class="contact-message-intro">
+            <span>HAVE QUESTIONS?</span>
+
+            <h2>
+                Let's Hear
+                <span>From You!</span>
+            </h2>
+
+            <p>
+                Have questions about our programs and upcoming events?
+                We're here to support you. Fill out the form and we'll
+                get back to you as soon as possible.
+            </p>
+        </div>
+
+        <div class="contact-support-options">
+
+            <div class="contact-support-item">
+                <i class="fa-regular fa-comments" aria-hidden="true"></i>
+                <span>Get Support</span>
+            </div>
+
+            <div class="contact-support-item">
+                <i class="fa-regular fa-handshake" aria-hidden="true"></i>
+                <span>Collaborate</span>
+            </div>
+
+            <div class="contact-support-item">
+                <i class="fa-regular fa-message" aria-hidden="true"></i>
+                <span>Ask Questions</span>
+            </div>
+
+        </div>
+
+        <p class="contact-message-signoff">
+            We're here to help!
+        </p>
+
+    </div>
+
+
+    <!-- Right Contact Form -->
+    <div class="contact-form-container">
+
+        <form action="#" method="post" class="contact-form">
+
+            <div class="contact-name-fields">
+
+                <input
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    placeholder="Last name"
+                    maxlength="100"
+                    autocomplete="family-name"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                    placeholder="First name"
+                    maxlength="100"
+                    autocomplete="given-name"
+                    required
+                >
+
+            </div>
+
+            <input
+                type="email"
+                id="Email-contact"
+                name="Email"
+                placeholder="Email address"
+                maxlength="100"
+                autocomplete="email"
+                required
+            >
+
+            <textarea
+                id="message-text"
+                name="message"
+                placeholder="Message"
+                rows="5"
+                required
+            ></textarea>
+
+            <button id="submit" type="submit">
+                <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                SEND MESSAGE
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- ================= LOCATION MAP ================= -->
+<section class="contact-map-section">
+
+    <div class="map">
+
         <iframe
-         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.051316576584!2d5.2165790747888!3d7.234987314487097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104785002afc8d97%3A0xf5bbd4290d8ef813!2sRBD%20Estate%20(The%20District)!5e0!3m2!1sen!2sng!4v1772031920796!5m2!1sen!2sng" 
-        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-       </div>
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.051316576584!2d5.2165790747888!3d7.234987314487097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104785002afc8d97%3A0xf5bbd4290d8ef813!2sRBD%20Estate%20(The%20District)!5e0!3m2!1sen!2sng!4v1772031920796!5m2!1sen!2sng"
+            title="Map showing RBD Estate (The District), Akure"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+        ></iframe>
+
+    </div>
+
+</section>
 
         <!-- footer -->
 <footer class="footer" id="footer">

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -346,6 +347,7 @@
             height: 22px;
         }
 
+        /* SIGN IN BUTTON */
         .sign-in-button {
             width: 100%;
             height: 64px;
@@ -360,17 +362,39 @@
             justify-content: center;
             align-items: center;
             gap: 14px;
-            transition: 0.25s ease;
+            transition: background 0.25s ease, opacity 0.25s ease;
         }
 
-        .sign-in-button:hover {
+        .sign-in-button:hover:not(:disabled) {
             background: #1262c9;
+        }
+
+        .sign-in-button:disabled {
+            cursor: not-allowed;
+            opacity: 0.85;
         }
 
         .button-arrow {
             font-size: 27px;
             font-weight: 300;
             line-height: 1;
+        }
+
+        /* LOADING SPINNER */
+        .button-spinner {
+            width: 22px;
+            height: 22px;
+            flex-shrink: 0;
+            border: 3px solid rgba(255, 255, 255, 0.35);
+            border-top-color: #ffffff;
+            border-radius: 50%;
+            animation: buttonSpin 0.7s linear infinite;
+        }
+
+        @keyframes buttonSpin {
+            to {
+                transform: rotate(360deg);
+            }
         }
 
         .or-divider {
@@ -419,7 +443,7 @@
         }
 
         @media (max-width: 1100px) {
-           .left-section {
+            .left-section {
                 width: 100%;
                 min-height: 620px;
                 padding: 45px 35px 310px;
@@ -699,7 +723,6 @@
     <main class="login-page">
 
         <div class="top-right-shape"></div>
-
         <div class="bottom-right-shape"></div>
 
         <section class="left-section">
@@ -750,22 +773,15 @@
             <div class="login-card">
 
                 <div class="login-logo">
-
                     <img
                         src="images/ei_1789659934871-removebg-preview.png"
                         alt="GETIN"
                     >
-
                 </div>
 
                 <div class="login-heading">
-
                     <h2>Welcome Back</h2>
-
-                    <p>
-                        Sign in to continue to GETIN
-                    </p>
-
+                    <p>Sign in to continue to GETIN</p>
                 </div>
 
                 <form id="loginForm">
@@ -773,14 +789,9 @@
                     <div class="form-group">
 
                         <div class="form-label-row">
-
-                            <label
-                                class="form-label"
-                                for="email"
-                            >
+                            <label class="form-label" for="email">
                                 Email Address
                             </label>
-
                         </div>
 
                         <div class="input-wrapper">
@@ -791,8 +802,8 @@
                                 fill="none"
                                 stroke="currentColor"
                                 stroke-width="1.8"
+                                aria-hidden="true"
                             >
-
                                 <rect
                                     x="3"
                                     y="5"
@@ -801,10 +812,7 @@
                                     rx="2"
                                 ></rect>
 
-                                <path
-                                    d="M3 7l9 6 9-6"
-                                ></path>
-
+                                <path d="M3 7l9 6 9-6"></path>
                             </svg>
 
                             <input
@@ -818,10 +826,7 @@
 
                         </div>
 
-                        <p
-                            class="error-message"
-                            id="emailError"
-                        >
+                        <p class="error-message" id="emailError">
                             Please enter a valid email address.
                         </p>
 
@@ -831,10 +836,7 @@
 
                         <div class="form-label-row">
 
-                            <label
-                                class="form-label"
-                                for="password"
-                            >
+                            <label class="form-label" for="password">
                                 Password
                             </label>
 
@@ -855,8 +857,8 @@
                                 fill="none"
                                 stroke="currentColor"
                                 stroke-width="1.8"
+                                aria-hidden="true"
                             >
-
                                 <rect
                                     x="5"
                                     y="10"
@@ -865,10 +867,7 @@
                                     rx="2"
                                 ></rect>
 
-                                <path
-                                    d="M8 10V7a4 4 0 0 1 8 0v3"
-                                ></path>
-
+                                <path d="M8 10V7a4 4 0 0 1 8 0v3"></path>
                             </svg>
 
                             <input
@@ -886,35 +885,25 @@
                                 id="togglePassword"
                                 aria-label="Show password"
                             >
-
                                 <svg
                                     id="eyeIcon"
                                     viewBox="0 0 24 24"
                                     fill="none"
                                     stroke="currentColor"
                                     stroke-width="1.8"
+                                    aria-hidden="true"
                                 >
-
                                     <path
                                         d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12z"
                                     ></path>
 
-                                    <circle
-                                        cx="12"
-                                        cy="12"
-                                        r="2.5"
-                                    ></circle>
-
+                                    <circle cx="12" cy="12" r="2.5"></circle>
                                 </svg>
-
                             </button>
 
                         </div>
 
-                        <p
-                            class="error-message"
-                            id="passwordError"
-                        >
+                        <p class="error-message" id="passwordError">
                             Wrong password.
                         </p>
 
@@ -923,14 +912,10 @@
                     <button
                         type="submit"
                         class="sign-in-button"
+                        id="signInButton"
                     >
-
                         <span>SIGN IN</span>
-
-                        <span class="button-arrow">
-                            →
-                        </span>
-
+                        <span class="button-arrow" aria-hidden="true">→</span>
                     </button>
 
                 </form>
@@ -940,18 +925,11 @@
                 </div>
 
                 <div class="register-text">
+                    <span>Don't have an account?</span>
 
-                    <span>
-                        Don't have an account?
-                    </span>
-
-                    <a
-                        href="index.html"
-                        class="register-link"
-                    >
+                    <a href="index.html" class="register-link">
                         Register
                     </a>
-
                 </div>
 
             </div>
@@ -960,44 +938,20 @@
 
     </main>
 
-
     <script>
+        const passwordInput = document.getElementById("password");
+        const togglePassword = document.getElementById("togglePassword");
 
-        const passwordInput =
-            document.getElementById("password");
-
-        const togglePassword =
-            document.getElementById("togglePassword");
-
-        togglePassword.addEventListener(
-            "click",
-            function () {
-
-                if (passwordInput.type === "password") {
-
-                    passwordInput.type = "text";
-
-                    togglePassword.setAttribute(
-                        "aria-label",
-                        "Hide password"
-                    );
-
-                } else {
-
-                    passwordInput.type = "password";
-
-                    togglePassword.setAttribute(
-                        "aria-label",
-                        "Show password"
-                    );
-
-                }
-
+        togglePassword.addEventListener("click", function () {
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                togglePassword.setAttribute("aria-label", "Hide password");
+            } else {
+                passwordInput.type = "password";
+                togglePassword.setAttribute("aria-label", "Show password");
             }
-        );
-
+        });
     </script>
-
 
     <script type="module">
 
@@ -1010,117 +964,107 @@
             signInWithEmailAndPassword
         } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-auth.js";
 
-
         const firebaseConfig = {
-
             apiKey: "AIzaSyAjZAC1P1m-cErMXQhjbNz3VcHXi1sR1M8",
-
             authDomain: "getin-ef910.firebaseapp.com",
-
             projectId: "getin-ef910",
-
             storageBucket: "getin-ef910.firebasestorage.app",
-
             messagingSenderId: "458508268395",
-
             appId: "1:458508268395:web:cd1fef3ac1d37321e3d22e",
-
             measurementId: "G-R9R39FT5QE"
-
         };
 
-
         const app = initializeApp(firebaseConfig);
-
         const auth = getAuth(app);
-
 
         console.log("Firebase initialized successfully!");
 
+        const loginForm = document.getElementById("loginForm");
+        const passwordError = document.getElementById("passwordError");
+        const emailError = document.getElementById("emailError");
+        const signInButton = document.getElementById("signInButton");
 
-        const loginForm =
-            document.getElementById("loginForm");
+        // Original button appearance
+        const originalButtonHTML = `
+            <span>SIGN IN</span>
+            <span class="button-arrow" aria-hidden="true">→</span>
+        `;
 
-        const passwordError =
-            document.getElementById("passwordError");
+        // Show loading animation
+        function showLoading() {
+            signInButton.disabled = true;
+            signInButton.setAttribute("aria-busy", "true");
 
+            signInButton.innerHTML = `
+                <span class="button-spinner" aria-hidden="true"></span>
+                <span>Signing in...</span>
+            `;
+        }
 
-        loginForm.addEventListener(
-            "submit",
-            async function (event) {
+        // Restore the button after a failed login
+        function hideLoading() {
+            signInButton.disabled = false;
+            signInButton.removeAttribute("aria-busy");
+            signInButton.innerHTML = originalButtonHTML;
+        }
 
-                event.preventDefault();
+        loginForm.addEventListener("submit", async function (event) {
+            event.preventDefault();
 
+            passwordError.style.display = "none";
+            emailError.style.display = "none";
 
-                passwordError.style.display = "none";
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value;
 
-
-                const email =
-                    document.getElementById("email").value.trim();
-
-
-                const password =
-                    document.getElementById("password").value;
-
-
-                if (!email || !password) {
-                    return;
-                }
-
-
-                console.log("Login submitted:", {
-                    email: email
-                });
-
-
-                try {
-
-                    const userCredential =
-                        await signInWithEmailAndPassword(
-                            auth,
-                            email,
-                            password
-                        );
-
-
-                    const user =
-                        userCredential.user;
-
-
-                    console.log("Login successful!");
-
-                    console.log(
-                        "User UID:",
-                        user.uid
-                    );
-
-
-                    window.location.href = "home.html";
-
-
-                } catch (error) {
-
-                    console.error(
-                        "Login error:",
-                        error
-                    );
-
-
-                    if (
-                        error.code === "auth/wrong-password" ||
-                        error.code === "auth/invalid-credential"
-                    ) {
-
-                        passwordError.style.display = "block";
-
-                        passwordError.textContent = "Invalid email or password.";
-
-                    }
-
-                }
-
+            if (!email || !password) {
+                return;
             }
-        );
+
+            console.log("Login submitted:", { email });
+
+            // Start the spinner when login begins
+            showLoading();
+
+            try {
+                const userCredential = await signInWithEmailAndPassword(
+                    auth,
+                    email,
+                    password
+                );
+
+                const user = userCredential.user;
+
+                console.log("Login successful!");
+                console.log("User UID:", user.uid);
+
+                // Keep the loading state while navigating
+                window.location.href = "home.html";
+
+            } catch (error) {
+                console.error("Login error:", error);
+
+                if (
+                    error.code === "auth/wrong-password" ||
+                    error.code === "auth/invalid-credential" ||
+                    error.code === "auth/user-not-found" ||
+                    error.code === "auth/invalid-email"
+                ) {
+                    passwordError.style.display = "block";
+                    passwordError.textContent =
+                        error.code === "auth/invalid-email"
+                            ? "Please enter a valid email address."
+                            : "Invalid email or password.";
+                } else {
+                    passwordError.style.display = "block";
+                    passwordError.textContent =
+                        "Unable to sign in. Please try again.";
+                }
+
+                // Stop the spinner and restore the button
+                hideLoading();
+            }
+        });
 
     </script>
 
