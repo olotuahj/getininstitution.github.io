@@ -108,34 +108,6 @@ window.addEventListener("resize", () => {
 });
 
 
-// ================= UNDER CONSTRUCTION REDIRECT =================
-
-document.addEventListener("DOMContentLoaded", () => {
-
-    const constructionPage = "construction.html";
-
-    document.querySelectorAll("a").forEach(link => {
-
-        link.addEventListener("click", (event) => {
-
-            event.preventDefault();
-
-            const href = link.getAttribute("href");
-
-            if(href === 'about.html'){
-                 window.location.href = 'about.html';
-            } else {
-                window.location.href = constructionPage;
-            }
-            
-            
-
-        });
-
-    });
-
-});
-
 document.addEventListener('DOMContentLoaded', function () {
 
     var slides = document.querySelectorAll('.slide');

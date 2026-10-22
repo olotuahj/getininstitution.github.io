@@ -34,25 +34,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     faders.forEach(fader => appearOnScroll.observe(fader));
 
-    const constructionPage = "construction.html";
-
-    document.querySelectorAll("a").forEach(link => {
-
-        link.addEventListener("click", (event) => {
-
-            event.preventDefault();
-
-            const href = link.getAttribute("href");
-
-             if(href === 'home.html'){
-                window.location.href = "home.html"
-                   
-             } else{
-                 window.location.href = constructionPage;
-             }
-
-        });
-
-    });
-
 });
