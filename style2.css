@@ -139,11 +139,14 @@
 
 /* about-us */
 .mobile-menu a#about-us {
-    background-color: #05487f;
+      background-color: #05487f;
     color: #fff;
     transition: all 0.3s ease;
-    padding: 3.5px;
-    width: 80px;
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
 }
 
 

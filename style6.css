@@ -79,8 +79,15 @@
     font-size: 2rem;
     background: none;
     border: none;
-    color: #fff;
+    color: #171b3b;
     cursor: pointer;
+}
+
+.hamburger:hover,
+.hamburger:focus{
+    outline: none;
+     border-radius: 14px;
+    border: 2px solid #000;
 }
 
 /* ================= MOBILE SLIDE MENU ================= */
@@ -98,7 +105,7 @@
 
     display: none;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
 
     transform: translateX(100%);
     transition: transform 0.35s ease-in-out;
@@ -127,6 +134,32 @@
     color: #000;
 }
 
+/* contactus-mobile */
+.mobile-menu a#events-mobile {
+      background-color: #05487f;
+    color: #fff;
+    transition: all 0.3s ease;
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+}
+
+
+.mobile-menu a#events-mobile:hover,
+ .mobile-menu a#events-mobile:focus{
+    text-decoration: none;
+    color: rgb(2, 23, 48);
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.9px;
+    border: none;
+     transform: scale(1.1);
+     background-color: #fff;
+}
+
 /* close button */
 .close-menu {
     align-self: flex-end;
@@ -138,7 +171,6 @@
     margin-bottom: 1rem;
     padding-right: 5rem;
 }
-
 /* ================= LINK BAR ================= */
 .link {
     display: flex;
@@ -212,6 +244,13 @@
     padding: 5px;
     font-size: 1.05rem;
     text-decoration: none;
+}
+
+/* ================= events-bar ================= */
+.events-bar{
+        background-color: #012a4e;
+    width: 100%;
+    height: 40px;
 }
 
 /* ================= event a ================= */
@@ -331,14 +370,61 @@ footer hr {
 @media (min-width: 768px) {
    /* about-droplink */
 .events-droplink {
-    display: flex;
-    padding: 7px 5rem 0;
-    gap: 0.5rem;
+           display: flex;
+        padding-top: 7px;
+        gap: 0.5rem;
+        padding-left: 12rem;
+}
+}
+
+@media (max-width: 400px) {
+     #logo {
+        width: 140px;
+        height: auto;
+        object-fit: contain;
+        display: block;
+        
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .brand-name{
+    display: none;
+}
+
+    .hamburger{
+        margin-left: 9rem;
+    }
+}
+
+@media (max-width: 665px) {
+       .brand-name{
+    display: none;
 }
 }
 
 /* ================= MOBILE ONLY ================= */
 @media (max-width: 767px) {
+           #logo {
+                width: 140px;
+        height: auto;
+        object-fit: contain;
+        display: block;
+        
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+
+        .brand-name {
+    color: #03005B;
+}
+
      /* event a */
    #event a{
     text-decoration: none;

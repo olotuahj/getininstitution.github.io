@@ -140,8 +140,11 @@
     background-color: #05487f;
     color: #fff;
     transition: all 0.3s ease;
-    padding: 3.5px;
     width: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
 }
 
 
@@ -1221,6 +1224,12 @@
 .brand-name{
     color: #03005B;
 }
+}
+
+@media (max-width: 655px) {
+    .brand-name {
+        display: none;
+    }
 }
 
 /* ============ FULL-WIDTH DESKTOP ============ */
