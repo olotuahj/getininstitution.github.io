@@ -259,7 +259,7 @@
 }
 
 .top-page{
-    background-color: #c6dfee;
+    background-color: #099af5;
 }
 
 .bottom-side {
@@ -2567,4 +2567,39 @@ footer hr {
          height: 16px;
         background-color: #28578b;
     }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    #logo {
+        width: 150px;
+        height: auto;
+        object-fit: contain;
+        display: block;
+    }
+
+        .logo {
+        display: flex;
+        align-items: center;
+        margin-left: 50px;
+    }
+
+        .brand-name {
+        color: #03005B;
+}
+
+.topbar-left {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+  .brand-name h1 {
+            font-family: Georgia, serif;
+            line-height: 1;
+            font-size: 32px;
+    }
+
+        .brand-name h2{
+            font-size: 20px;
+        }
 }
