@@ -497,6 +497,12 @@ footer hr {
            flex-direction: column;
     }
 
+    .box-main {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+    }
+
     /* box */
     .box {
         flex: 1;
@@ -544,7 +550,7 @@ footer hr {
      /* conference-activities */
      #conference-activities {
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        font-size: 2.8rem;
+        font-size: 2rem;
         letter-spacing: 0.02em;
      }
 
@@ -608,8 +614,6 @@ footer hr {
            display: flex;
            align-items: center;
           padding-left: 3rem;
-          margin-top: 3rem;
-          margin-bottom: 3rem;
      }
 
          /* conference-location */
@@ -791,17 +795,6 @@ footer hr {
     background-color: #0a89f1;
     color: #fff;
 }
-    /* box1 */
-    .box1 {
-           width: 100%;
-           max-width: 1024px;
-           height: 100px;
-           background-color: #034b86;
-           color: #fff;
-           display: flex;
-           align-items: center;
-           padding: 0 2rem 0;
-    }
 
     /* box1-item */
     #box1-item {
@@ -837,6 +830,11 @@ footer hr {
            max-width: 900px;
            margin: auto;
            width: 85%;
+    }
+
+      .box-main {
+        display: flex;
+        flex-direction: row;
     }
 
     /* box */
@@ -1216,17 +1214,6 @@ footer hr {
         text-decoration: none;
     }
 
-   /* box1 */
-    .box1 {
-           width: 100%;
-           max-width: 1300px;
-           height: 150px;
-           background-color: #023e6e;
-           color: #fff;
-           display: flex;
-           align-items: center;
-          padding-left: 3rem;
-    }
 
     /* box1-item */
     #box1-item {
@@ -1264,10 +1251,15 @@ footer hr {
            margin: auto;
     }
 
+    .box-main {
+        display: flex;
+        flex-direction: row;
+    }
+
     /* box */
     .box {
         flex: 1;
-        height: 200px;
+        height: 220px;
         border: none;
         background-color: #023e6e;
         color: #fff;
@@ -1410,7 +1402,6 @@ footer hr {
            display: flex;
            align-items: center;
           padding-left: 3rem;
-          margin-top: 3rem;
           margin-bottom: 4rem;
      }
 
@@ -2596,4 +2587,246 @@ footer hr {
         .brand-name h2{
             font-size: 20px;
         }
+}
+
+@media (max-width: 767px) {
+    .box-container {
+        margin-bottom: 0;
+    }
+}
+
+/* ================= CONFERENCE LOCATION ================= */
+
+.bottom-side {
+    width: 100%;
+    padding-bottom: 3rem;
+    background: #f5f4ea;
+    overflow: hidden;
+}
+
+/* Heading banner */
+.conferencelocation-box {
+    width: 100%;
+    max-width: none;
+    min-height: 130px;
+    background: linear-gradient(135deg, #023e6e, #0a89f1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    margin: 0 0 4rem;
+    border-radius: 0 0 35px 35px;
+    box-shadow: 0 8px 20px rgba(2, 62, 110, 0.2);
+}
+
+#conference-location {
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1.7rem, 4vw, 3rem);
+    font-weight: 800;
+    text-align: center;
+    letter-spacing: 2px;
+    line-height: 1.3;
+}
+
+/* Image arrangement */
+.image-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 5%;
+    min-height: auto;
+}
+
+.main-wrapper {
+    position: relative;
+    display: block;
+    width: min(850px, 85%);
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+/* Main venue image */
+.main-img {
+    display: block;
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    object-position: center;
+    border: 8px solid #ffffff;
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(2, 62, 110, 0.2);
+}
+
+/* Two overlapping circular images */
+.bottom-left,
+.top-right {
+    display: block;
+    position: absolute;
+    width: clamp(140px, 23vw, 250px);
+    height: clamp(140px, 23vw, 250px);
+    object-fit: cover;
+    border: 8px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.bottom-left {
+    top: -45px;
+    left: -85px;
+}
+
+.top-right {
+    bottom: -45px;
+    right: -85px;
+}
+
+/* Image hover effects */
+.bottom-left:hover,
+.top-right:hover {
+    transform: scale(1.06);
+    z-index: 2;
+}
+
+/* Venue name */
+#dome-name {
+    max-width: 900px;
+    margin: 4rem auto 0;
+    padding: 0 1.5rem;
+    color: #023e6e;
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1.4rem, 3vw, 2.2rem);
+    font-weight: 800;
+    line-height: 1.5;
+    text-align: center;
+}
+
+#dome-name::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 5px;
+    margin: 1rem auto 0;
+    background: #f1d63c;
+    border-radius: 10px;
+}
+
+/* ================= TABLET ================= */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .conferencelocation-box {
+        min-height: 115px;
+        margin-bottom: 4rem;
+    }
+
+    .main-wrapper {
+        width: 78%;
+    }
+
+    .main-img {
+        height: 400px;
+    }
+
+    .bottom-left {
+        top: -40px;
+        left: -55px;
+    }
+
+    .top-right {
+        bottom: -40px;
+        right: -55px;
+    }
+
+    #dome-name {
+        margin-top: 3.5rem;
+    }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 767px) {
+    .bottom-side {
+        padding-bottom: 2.5rem;
+    }
+
+    .conferencelocation-box {
+        min-height: 100px;
+        padding: 1.5rem 1rem;
+        margin-bottom: 3rem;
+        border-radius: 0 0 22px 22px;
+    }
+
+    #conference-location {
+        font-size: 1.65rem;
+        letter-spacing: 1px;
+    }
+
+    .image-box {
+        padding: 0 5%;
+    }
+
+    .main-wrapper {
+        width: 100%;
+        padding: 0;
+    }
+
+    .main-img {
+        height: 300px;
+        border-width: 5px;
+        border-radius: 18px;
+    }
+
+    .bottom-left,
+    .top-right {
+        width: 115px;
+        height: 115px;
+        border-width: 5px;
+    }
+
+    .bottom-left {
+        top: -35px;
+        left: -10px;
+    }
+
+    .top-right {
+        bottom: -35px;
+        right: -10px;
+    }
+
+    #dome-name {
+        margin: 3rem auto 0;
+        padding: 0 1.2rem;
+        font-size: 1.4rem;
+        line-height: 1.6;
+    }
+}
+
+/* ================= conference-box ================= */
+/* Heading banner */
+.conference-box,
+#box1-item {
+    width: 100%;
+    max-width: none;
+    min-height: 130px;
+    background: linear-gradient(135deg, #023e6e, #0a89f1);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: 0 8px 20px rgba(2, 62, 110, 0.2);
+}
+
+/* FADE-UP ANIMATION */
+.fade-up {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+}
+
+.fade-up.show {
+    opacity: 1;
+    transform: translateY(0);
 }
