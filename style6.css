@@ -363,17 +363,6 @@ footer hr {
     }
 }
 
-/* ================= TABLET & DESKTOP ================= */
-@media (min-width: 768px) {
-   /* about-droplink */
-.events-droplink {
-           display: flex;
-        padding-top: 7px;
-        gap: 0.5rem;
-        padding-left: 12rem;
-}
-}
-
 @media (max-width: 400px) {
      #logo {
         width: 140px;
@@ -543,8 +532,8 @@ footer hr {
            background-color: #023e6e;
            color: #fff;
            display: flex;
+           justify-content: center;
            align-items: center;
-          padding-left: 3rem;
      }
 
      /* conference-activities */
@@ -768,10 +757,6 @@ footer hr {
 
 /* ================= TABLET ONLY ================= */
 @media (min-width:768px ) and (max-width: 1024px) {
-     /* events-droplink */
-    .events-droplink a{
-        text-decoration: none;
-    }
          /* events-bar  */
      .events-bar {
         background-color: #fff;
@@ -782,6 +767,14 @@ footer hr {
     text-decoration: none;
     font-size: 1.02rem;
     color: #000; 
+}
+
+  /* about-droplink */
+.events-droplink {
+           display: flex;
+        padding-top: 7px;
+        gap: 0.5rem;
+        padding-left: 5rem;
 }
 
 /* home a  */
@@ -1213,6 +1206,14 @@ footer hr {
     .events-droplink a{
         text-decoration: none;
     }
+
+      /* about-droplink */
+.events-droplink {
+           display: flex;
+        padding-top: 7px;
+        gap: 0.5rem;
+        padding-left: 12rem;
+}
 
 
     /* box1-item */
@@ -2595,6 +2596,25 @@ footer hr {
     }
 }
 
+
+/* ================= conference-box & box1 ================= */
+/* Heading banner */
+.conference-box,
+.box1 {
+    width: 100%;
+    max-width: none;
+    min-height: 130px;
+    background: linear-gradient(135deg, #023e6e, #0a89f1);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: 0 8px 20px rgba(2, 62, 110, 0.2);
+}
+
 /* ================= CONFERENCE LOCATION ================= */
 
 .bottom-side {
@@ -2749,7 +2769,7 @@ footer hr {
         padding-bottom: 2.5rem;
     }
 
-    .conferencelocation-box {
+    .conferencelocation-box  {
         min-height: 100px;
         padding: 1.5rem 1rem;
         margin-bottom: 3rem;
@@ -2801,24 +2821,6 @@ footer hr {
     }
 }
 
-/* ================= conference-box ================= */
-/* Heading banner */
-.conference-box,
-#box1-item {
-    width: 100%;
-    max-width: none;
-    min-height: 130px;
-    background: linear-gradient(135deg, #023e6e, #0a89f1);
-    color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-    margin: 0;
-    border-radius: 0;
-    box-shadow: 0 8px 20px rgba(2, 62, 110, 0.2);
-}
-
 /* FADE-UP ANIMATION */
 .fade-up {
     opacity: 0;
@@ -2829,4 +2831,10 @@ footer hr {
 .fade-up.show {
     opacity: 1;
     transform: translateY(0);
+}
+
+@media (min-width: 1025px) {
+    #activity-img{
+        object-position: center 5%;
+    }
 }
