@@ -259,10 +259,6 @@
     text-decoration: none;
 }
 
-.top-page{
-    background-color: #099af5;
-}
-
 .bottom-side {
     background-color: #7ecde0;
 }
@@ -471,14 +467,25 @@ footer hr {
         font-size: 2rem;
     }
 
+    .top-page {
+    background-image: url("images/Black-Led\ Seminar\ Workshop.png");
+    background-size: cover;
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+
       /* cab-paragraph */
-    #cab-paragraph {
-        line-height: 1.7;
-        word-spacing: 0.05em;
-        margin: 2rem;
-        text-align: left;
-        font-size: 1.65rem;
-    }
+#cab-paragraph {
+   background: linear-gradient(135deg, #a5f3fc, #dbeafe);
+    color: #102b61;
+    line-height: 1.7;
+    word-spacing: 0.05em;
+    margin: 2rem;
+    padding: 1.5rem;
+    text-align: left;
+    font-size: 1.25rem;
+    border-radius: 8px;
+}
 
     /* box-container */
     .box-container {
@@ -523,47 +530,15 @@ footer hr {
                color: #000;
     }
 
-    /* video-box */
-    .video-box {
-        position: relative;
-        max-width: 600px;
-        width: 85%;
-        border: 2px solid #0674ce;
-        border-radius: 10px;
-        overflow: hidden;
-        margin: auto;
-    }
-
-    /* video-box video */
-     .video-box video {
-        width: 100%;
-        display: block;
-     }
-
-     /* overlay */
-     .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #333;
-        opacity: 0.6;
-        z-index: 1;
-     }
-
            /* conference-box */
      .conference-box {
           width: 100%;
-           max-width: 767px;
            height: 150px;
            background-color: #023e6e;
            color: #fff;
            display: flex;
            align-items: center;
           padding-left: 3rem;
-          margin-top: 3rem;
-          margin-bottom: 2rem;
      }
 
      /* conference-activities */
@@ -835,14 +810,25 @@ footer hr {
         letter-spacing: 0.02em;
     }
 
-      /* cab-paragraph */
-    #cab-paragraph {
-        line-height: 1.6;
-        word-spacing: 0.07em;
-        margin: 2rem;
-        text-align: left;
-        font-size: 1.7rem;
-    }
+    .top-page {
+    background-image: url("images/Black-Led\ Seminar\ Workshop.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+ /* cab-paragraph */
+#cab-paragraph {
+   background: linear-gradient(135deg, #a5f3fc, #dbeafe);
+    color: #102b61;
+    line-height: 1.6;
+    word-spacing: 0.07em;
+    margin: 2rem;
+    padding: 1.8rem;
+    text-align: left;
+    font-size: 1.25rem;
+    border-radius: 8px;
+}
 
       /* box-container */
     .box-container {
@@ -924,8 +910,6 @@ footer hr {
            display: flex;
            align-items: center;
           padding-left: 3rem;
-          margin-top: 3rem;
-          margin-bottom: 2rem;
      }
 
      /* conference-activities */
@@ -1251,15 +1235,26 @@ footer hr {
         letter-spacing: 0.02em;
     }
 
-    /* cab-paragraph */
-    #cab-paragraph {
-        line-height: 1.6;
-        word-spacing: 0.05em;
-        margin: 2rem auto;
-        text-align: left;
-        width: 750px;
-        font-size: 1.7rem;
-    }
+    .top-page {
+    background-image: url("images/Black-Led\ Seminar\ Workshop.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+  /* cab-paragraph */
+#cab-paragraph {
+   background: linear-gradient(135deg, #a5f3fc, #dbeafe);
+    color: #102b61;
+    line-height: 1.6;
+    word-spacing: 0.05em;
+    margin: 2rem auto;
+    padding: 2rem;
+    text-align: left;
+    width: 750px;
+    font-size: 1.25rem;
+    border-radius: 8px;
+}
 
     /* box-container */
     .box-container {
@@ -1341,8 +1336,6 @@ footer hr {
            display: flex;
            align-items: center;
           padding-left: 3rem;
-          margin-top: 3rem;
-          margin-bottom: 2rem;
      }
 
      /* conference-activities */
