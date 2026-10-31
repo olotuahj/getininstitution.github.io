@@ -3435,7 +3435,7 @@ footer hr {
     display: flex;
     align-items: center;
     width: calc(100% - 50px);
-    min-height: 158px;
+    min-height: 168px;
     margin: 4rem auto 0;
     overflow: hidden;
     border-radius: 15px;
@@ -3627,7 +3627,7 @@ footer hr {
     align-items: center;
     justify-content: center;
     gap: 35px;
-    margin: 0 0 10px;
+    margin: 2rem 0 10px;
     color: #092578;
     font-size: 38px;
     font-weight: 900;
@@ -4028,7 +4028,7 @@ footer hr {
    6. MOBILE RESPONSIVENESS
 ===================================================== */
 
-@media (max-width: 650px) {
+@media (max-width: 767px) {
 
     /* HERO SECTION */
 
@@ -4275,7 +4275,7 @@ footer hr {
    7. SMALL MOBILE DEVICES
 ===================================================== */
 
-@media (max-width: 380px) {
+@media (max-width: 400px) {
 
     .team-page .hero-content h1 {
         font-size: 45px;

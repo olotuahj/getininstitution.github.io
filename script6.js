@@ -4,100 +4,187 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileMenu = document.getElementById('MobileMenu');
     const closeMenu = document.getElementById('closeMenu');
 
-    // open menu
-    hamburger.addEventListener('click', () => {
-        mobileMenu.classList.add('active');
-    });
+    // =========================================
+    // OPEN MOBILE MENU
+    // =========================================
 
-    // close menu
-    closeMenu.addEventListener('click', () => {
-        mobileMenu.classList.remove('active');
-    });
+    if (hamburger && mobileMenu) {
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+        });
+    }
 
-       // Fade-up AND Fade-left animations
+    // =========================================
+    // CLOSE MOBILE MENU
+    // =========================================
+
+    if (closeMenu && mobileMenu) {
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+        });
+    }
+
+    // =========================================
+    // FADE-UP AND FADE-LEFT ANIMATIONS
+    // =========================================
+
     const faders = document.querySelectorAll('.fade-up, .fade-left');
 
     const appearOnScroll = new IntersectionObserver((entries, observer) => {
+
         entries.forEach(entry => {
+
             if (entry.isIntersecting) {
-                entry.target.classList.add('show'); 
-                observer.unobserve(entry.target);  
+                entry.target.classList.add('show');
+                observer.unobserve(entry.target);
             }
+
         });
+
     }, { threshold: 0.3 });
 
     faders.forEach(fader => appearOnScroll.observe(fader));
 
+
     // =========================================
-// SYNCHRONIZED OUTREACH IMAGE SLIDESHOW
-// =========================================
+    // SYNCHRONIZED OUTREACH IMAGE SLIDESHOW
+    // =========================================
 
-const outreachOverlay = document.querySelector(
-    '.team-page .outreach-overlay'
-);
+    const outreachOverlay = document.querySelector(
+        '.team-page .outreach-overlay'
+    );
 
-const outreachImage = document.getElementById('outreach-slide');
+    const outreachImage = document.getElementById('outreach-slide');
 
-if (outreachOverlay && outreachImage) {
+    if (outreachOverlay && outreachImage) {
 
-    const outreachImages = [
-        'images/Business meeting in modern office.png',
-        'images/Black-Led Seminar Workshop.png',
-        'images/file_000000005410824685ec810cad6c4d23.png'
-    ];
+        // IMAGE PATHS AND INDIVIDUAL DESKTOP POSITIONS
 
-    let currentImage = 0;
-    let isChangingImage = false;
+        const outreachImages = [
 
-    // Preload all images to reduce loading delays.
-    outreachImages.forEach((imagePath) => {
-        const image = new Image();
-        image.src = imagePath;
-    });
+            {
+                src: 'images/Business meeting in modern office.png',
+                position: 'center center'
+            },
 
-    // Change the image whenever the gradient animation
-    // completes one direction of movement.
-    outreachOverlay.addEventListener('animationiteration', () => {
+            {
+                src: 'images/Black-Led Seminar Workshop.png',
+                position: 'center 60%'
+            },
 
-        if (isChangingImage) return;
+            {
+                src: 'images/file_000000005410824685ec810cad6c4d23.png',
+                position: 'center 30%'
+            }
 
-        isChangingImage = true;
+        ];
 
-        outreachImage.classList.add('image-fade');
+        let currentImage = 0;
+        let isChangingImage = false;
 
-        setTimeout(() => {
 
-            currentImage =
-                (currentImage + 1) % outreachImages.length;
+        // =========================================
+        // DESKTOP OBJECT POSITION CONTROL
+        // =========================================
 
-            const nextImage = new Image();
+        function updateOutreachPosition() {
 
-            nextImage.onload = () => {
+            if (window.matchMedia('(min-width: 1025px)').matches) {
 
-                outreachImage.src = nextImage.src;
+                outreachImage.style.objectPosition =
+                    outreachImages[currentImage].position;
 
-                requestAnimationFrame(() => {
+            } else {
+
+                // Allow existing tablet and mobile CSS to take control
+
+                outreachImage.style.objectPosition = '';
+
+            }
+
+        }
+
+        // Apply position to the first image
+
+        updateOutreachPosition();
+
+        // Update position when screen size changes
+
+        window.addEventListener('resize', updateOutreachPosition);
+
+
+        // =========================================
+        // PRELOAD ALL IMAGES
+        // =========================================
+
+        outreachImages.forEach(imageData => {
+
+            const image = new Image();
+            image.src = imageData.src;
+
+        });
+
+
+        // =========================================
+        // SLIDESHOW ANIMATION
+        // =========================================
+
+        outreachOverlay.addEventListener('animationiteration', () => {
+
+            if (isChangingImage) return;
+
+            isChangingImage = true;
+
+            outreachImage.classList.add('image-fade');
+
+
+            setTimeout(() => {
+
+                currentImage =
+                    (currentImage + 1) % outreachImages.length;
+
+                const nextImage = new Image();
+
+
+                nextImage.onload = () => {
+
+                    outreachImage.src = nextImage.src;
+
+                    // Apply individual desktop image position
+
+                    updateOutreachPosition();
+
+                    requestAnimationFrame(() => {
+
+                        outreachImage.classList.remove('image-fade');
+
+                    });
+
+                    isChangingImage = false;
+
+                };
+
+
+                nextImage.onerror = () => {
+
                     outreachImage.classList.remove('image-fade');
-                });
 
-                isChangingImage = false;
-            };
+                    isChangingImage = false;
 
-            nextImage.onerror = () => {
-                outreachImage.classList.remove('image-fade');
-                isChangingImage = false;
+                    console.error(
+                        'Could not load outreach image:',
+                        outreachImages[currentImage].src
+                    );
 
-                console.error(
-                    'Could not load outreach image:',
-                    outreachImages[currentImage]
-                );
-            };
+                };
 
-            nextImage.src = outreachImages[currentImage];
 
-        }, 600);
+                nextImage.src = outreachImages[currentImage].src;
 
-    });
+            }, 600);
 
-}
+        });
+
+    }
+
 });
