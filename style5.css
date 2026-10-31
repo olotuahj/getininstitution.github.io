@@ -3103,7 +3103,7 @@ footer hr {
 
 
 /* =====================================================
-   1. HERO SECTION
+  HERO SECTION
 ===================================================== */
 
 .team-page .team-hero {
@@ -3240,10 +3240,9 @@ footer hr {
     opacity: 0.9;
 }
 
-
-/* =====================================================
-   2. TEAM OUTREACH BANNER
-===================================================== */
+/* =========================================
+   TEAM OUTREACH BANNER
+========================================= */
 
 .team-page .team-outreach {
     position: relative;
@@ -3251,33 +3250,49 @@ footer hr {
     align-items: center;
     width: calc(100% - 50px);
     min-height: 158px;
-    margin: 0 auto;
+    margin: 4rem auto 0;
     overflow: hidden;
     border-radius: 15px;
     background: #073c9c;
 }
 
-/* BACKGROUND IMAGE */
+/* =========================================
+   OUTREACH IMAGE SLIDESHOW
+========================================= */
 
 .team-page .outreach-image {
     position: absolute;
     inset: 0;
     z-index: 0;
+    overflow: hidden;
 }
 
 .team-page .outreach-image img {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center 45%;
+
+    opacity: 1;
+    transition: opacity 0.6s ease-in-out;
 }
 
-/* BLUE OVERLAY */
+/* Fade image during each transition */
+
+.team-page .outreach-image img.image-fade {
+    opacity: 0;
+}
+
+/* =========================================
+   MOVING BLUE GRADIENT
+========================================= */
 
 .team-page .outreach-overlay {
     position: absolute;
     inset: 0;
     z-index: 1;
+
     background: linear-gradient(
         90deg,
         rgba(3, 43, 119, 0.98) 0%,
@@ -3285,6 +3300,44 @@ footer hr {
         rgba(0, 83, 190, 0.65) 65%,
         rgba(0, 54, 130, 0.08) 100%
     );
+
+    background-size: 200% 100%;
+    background-position: 0% 50%;
+
+    animation: outreachGradient 7s ease-in-out infinite alternate;
+
+    pointer-events: none;
+}
+
+/* =========================================
+   GRADIENT ANIMATION
+========================================= */
+
+@keyframes outreachGradient {
+    from {
+        background-position: 0% 50%;
+    }
+
+    to {
+        background-position: 100% 50%;
+    }
+}
+
+/* =========================================
+   OUTREACH CONTENT ABOVE IMAGE AND GRADIENT
+========================================= */
+
+.team-page .outreach-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+    .team-page .outreach-image img {
+        transition: none;
+    }
 }
 
 /* BANNER CONTENT */
@@ -3372,7 +3425,7 @@ footer hr {
 
 
 /* =====================================================
-   3. MEET OUR TEAM
+   MEET OUR TEAM
 ===================================================== */
 
 .team-page .team {
@@ -3531,7 +3584,7 @@ footer hr {
 
 
 /* =====================================================
-   4. SOCIAL MEDIA FOOTER
+   SOCIAL MEDIA FOOTER
 ===================================================== */
 
 .team-page .getiin-connect {
@@ -3684,7 +3737,7 @@ footer hr {
 
 
 /* =====================================================
-   5. TABLET RESPONSIVENESS
+  TABLET RESPONSIVENESS
 ===================================================== */
 
 @media (max-width: 1024px) {
@@ -4064,4 +4117,91 @@ footer hr {
         font-size: 16px;
     }
 
+}
+
+
+@media (min-width: 1025px){
+    #hero-img{
+        object-position: center 80%;
+    }
+}
+
+/* ON DESKTOP */
+@media (min-width: 1025px) {
+    .team-page .hero-decoration-two {
+        display: none;
+    }
+}
+
+/* ================= OUTREACH OVERLAY ================= */
+
+.team-page .outreach-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        rgba(3, 43, 119, 0.98) 0%,
+        rgba(0, 65, 165, 0.94) 42%,
+        rgba(0, 83, 190, 0.65) 65%,
+        rgba(0, 54, 130, 0.08) 100%
+    );
+
+    background-size: 200% 100%;
+    background-position: 0% 50%;
+
+    animation: outreachGradient 7s ease-in-out infinite alternate;
+
+    pointer-events: none;
+    will-change: background-position;
+}
+
+/* ================= MOVING GRADIENT ================= */
+
+@keyframes outreachGradient {
+    from {
+        background-position: 0% 50%;
+    }
+
+    to {
+        background-position: 100% 50%;
+    }
+}
+
+/* ================= TABLET VIEW ================= */
+
+@media (max-width: 1024px) {
+    .team-page .outreach-overlay {
+        animation: outreachGradient 7s ease-in-out infinite alternate;
+    }
+}
+
+/* ================= MOBILE VIEW ================= */
+
+@media (max-width: 767px) {
+    .team-page .outreach-overlay {
+        display: block;
+        position: absolute;
+        inset: 0;
+
+        width: 100%;
+        height: 100%;
+
+        background: linear-gradient(
+            90deg,
+            rgba(3, 43, 119, 0.98) 0%,
+            rgba(0, 65, 165, 0.94) 42%,
+            rgba(0, 83, 190, 0.65) 65%,
+            rgba(0, 54, 130, 0.08) 100%
+        );
+
+        background-size: 200% 100%;
+        background-position: 0% 50%;
+
+        animation: outreachGradient 7s ease-in-out infinite alternate;
+    }
 }
