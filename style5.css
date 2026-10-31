@@ -4205,3 +4205,56 @@ footer hr {
         animation: outreachGradient 7s ease-in-out infinite alternate;
     }
 }
+
+/* ================= HERO DECORATION ANIMATION ================= */
+
+.team-page .hero-decoration-one {
+    background: linear-gradient(
+        90deg,
+        #0785ff,
+        #0785ff,
+        #ff0000,
+        #ff0000,
+        #0785ff
+    );
+
+    background-size: 300% 100%;
+    animation: snakeColorMove 3s linear infinite;
+}
+
+/* ================= SNAKE COLOUR MOVEMENT ================= */
+
+@keyframes snakeColorMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+/* =========================================
+   ANIMATED BLUE AND RED HERO IMAGE BORDER
+========================================= */
+
+.team-page .hero-image {
+    border-color: #0785ff;
+    animation: heroBorderColor 3s linear infinite;
+}
+
+/* ================= BORDER COLOUR ANIMATION ================= */
+
+@keyframes heroBorderColor {
+    0% {
+        border-color: #0785ff;
+    }
+
+    50% {
+        border-color: #ff0000;
+    }
+
+    100% {
+        border-color: #0785ff;
+    }
+}
