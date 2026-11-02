@@ -2317,11 +2317,10 @@ footer hr {
                 rgba(3, 19, 34, 0.88) 43%,
                 rgba(3, 19, 34, 0.28) 100%
             ),
-            url("images/programs-hero.jpg");
-
-        background-size: cover;
-        background-position: center 42%;
-        background-repeat: no-repeat;
+            url("images/Hopeful\ Campus\ Daydream.png");
+       background-size: 100% 100%, 115% auto;
+    background-position: center, 15% 45%;
+    background-repeat: no-repeat;
     }
 
     .programs-hero-content {
@@ -2883,10 +2882,10 @@ footer hr {
                 rgba(3, 19, 34, 0.88) 45%,
                 rgba(3, 19, 34, 0.28) 100%
             ),
-            url("images/programs-hero.jpg");
+            url("images/Hopeful\ Campus\ Daydream.png");
 
         background-size: cover;
-        background-position: center 42%;
+        background-position: center, 60% 65%;
         background-repeat: no-repeat;
     }
 
@@ -3441,10 +3440,10 @@ footer hr {
                 rgba(3, 19, 34, 0.88) 55%,
                 rgba(3, 19, 34, 0.55) 100%
             ),
-            url("images/programs-hero.jpg");
+            url("images/Hopeful\ Campus\ Daydream.png");
 
         background-size: cover;
-        background-position: 65% center;
+        background-position: center, 75% 65%;
         background-repeat: no-repeat;
     }
 
@@ -3977,7 +3976,7 @@ footer hr {
     .programs-hero {
         min-height: 250px;
         padding: 35px 6%;
-        background-position: 67% center;
+        background-position: -10% center;
     }
 
     .programs-hero-content {
