@@ -4201,3 +4201,1145 @@ footer hr {
     }
 
 }
+
+/* =========================================
+   WORKSHOP CARD SLIDE TRANSITION
+========================================= */
+
+.workshop-card {
+    overflow: hidden;
+}
+
+/* Both views animate smoothly */
+
+.workshop-card .workshop-view {
+    width: 100%;
+    min-width: 0;
+    max-height: 1200px;
+    opacity: 1;
+    transform: translateX(0);
+    transition:
+        max-height 0.65s ease,
+        opacity 0.4s ease,
+        transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+
+    overflow: hidden;
+}
+
+/* Original workshop view */
+
+.workshop-card .workshop-front {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+/* Course view is hidden initially */
+
+.workshop-card .workshop-course-view {
+    max-height: 0;
+    opacity: 0;
+    transform: translateX(45px);
+    pointer-events: none;
+}
+
+/* When the card opens */
+
+.workshop-card.courses-open .workshop-front {
+    max-height: 0;
+    opacity: 0;
+    transform: translateX(-45px);
+    pointer-events: none;
+}
+
+.workshop-card.courses-open .workshop-course-view {
+    max-height: 1200px;
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+}
+
+
+/* =========================================
+   COURSE VIEW HEADER
+========================================= */
+
+.workshop-course-header {
+    padding: 30px 24px 20px;
+    background: linear-gradient(
+        135deg,
+        #ffffff,
+        #f0f6ff
+    );
+
+    border-bottom: 1px solid #e8eef7;
+}
+
+.workshop-course-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 17px;
+
+    border-radius: 14px;
+    background: #fff0c2;
+    color: #e9a000;
+
+    font-size: 22px;
+}
+
+.workshop-label {
+    display: inline-block;
+    margin-bottom: 10px;
+
+    color: #b77b00;
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.workshop-course-header h3 {
+    margin: 0 0 12px;
+
+    color: #102343;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.workshop-course-header > p {
+    margin: 0;
+
+    color: #68758a;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   COURSE LIST - SINGLE COLUMN
+========================================= */
+
+.workshop-course-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+
+    padding: 10px 24px 18px;
+    background: #ffffff;
+}
+
+.workshop-course-list p {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+
+    margin: 0;
+    padding: 13px 0;
+
+    border-bottom: 1px solid #edf1f6;
+
+    color: #35445b;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.workshop-course-list p:last-child {
+    border-bottom: none;
+}
+
+.workshop-course-list p i {
+    flex-shrink: 0;
+    margin-top: 3px;
+
+    color: #e9a000;
+    font-size: 15px;
+}
+
+
+/* =========================================
+   BACK AND ENROL BUTTONS
+========================================= */
+
+.workshop-course-bottom {
+    padding: 18px 24px 24px;
+    margin-top: 0 !important;
+
+    border-top: 1px solid #edf1f6;
+    background: #ffffff;
+}
+
+/* Back button */
+
+.workshop-back-button {
+    min-height: 40px;
+    padding: 0 15px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    border: 1px solid #d9e2ee;
+    border-radius: 30px;
+
+    background: #ffffff;
+    color: #102343;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.workshop-back-button:hover {
+    background: #102343;
+    color: #ffffff;
+    border-color: #102343;
+    transform: translateX(-3px);
+}
+
+/* Enrol button */
+
+.workshop-card .workshop-enrol-button {
+    min-height: 40px;
+    padding: 0 20px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: #f4b629;
+    color: #102343;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.workshop-card .workshop-enrol-button:hover {
+    background: #102343;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 14px rgba(16, 35, 67, 0.15);
+}
+
+
+/* =========================================
+   KEYBOARD ACCESSIBILITY
+========================================= */
+
+.workshop-card button:focus-visible,
+.workshop-card a:focus-visible {
+    outline: 3px solid #0a89f1;
+    outline-offset: 4px;
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVENESS
+========================================= */
+
+@media (max-width: 767px) {
+
+    .workshop-course-header {
+        padding: 25px 20px 18px;
+    }
+
+    .workshop-course-header h3 {
+        font-size: 18px;
+    }
+
+    .workshop-course-header > p {
+        font-size: 12.5px;
+    }
+
+    .workshop-course-list {
+        padding: 8px 20px 14px;
+    }
+
+    .workshop-course-list p {
+        gap: 10px;
+        padding: 12px 0;
+        font-size: 12.5px;
+    }
+
+    .workshop-course-bottom {
+        padding: 16px 20px 20px;
+        gap: 12px;
+    }
+
+    .workshop-back-button,
+    .workshop-card .workshop-enrol-button {
+        min-height: 42px;
+        padding: 0 14px;
+        font-size: 11px;
+    }
+}
+
+
+/* =========================================
+   REDUCED MOTION ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .workshop-card .workshop-view,
+    .workshop-back-button,
+    .workshop-card .workshop-enrol-button {
+        transition: none;
+    }
+}
+
+/* =========================================
+   SHORT COURSES CARD: SLIDE TRANSITION
+========================================= */
+
+.short-course-card {
+    overflow: hidden;
+    position: relative;
+}
+
+/* Both views */
+
+.short-course-card .short-course-view {
+    width: 100%;
+    min-width: 0;
+    max-height: 1200px;
+    opacity: 1;
+    transform: translateX(0);
+
+    transition:
+        max-height 0.65s ease,
+        opacity 0.4s ease,
+        transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+
+    overflow: hidden;
+}
+
+/* Original card view */
+
+.short-course-card .short-course-front {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+/* Course list is hidden initially */
+
+.short-course-card .short-course-list-view {
+    max-height: 0;
+    opacity: 0;
+    transform: translateX(45px);
+    pointer-events: none;
+}
+
+/* When the course list opens */
+
+.short-course-card.courses-open .short-course-front {
+    max-height: 0;
+    opacity: 0;
+    transform: translateX(-45px);
+    pointer-events: none;
+}
+
+/* Show the course list */
+
+.short-course-card.courses-open .short-course-list-view {
+    max-height: 1200px;
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+}
+
+
+/* =========================================
+   COURSE LIST HEADER
+========================================= */
+
+.short-course-header {
+    padding: 30px 24px 20px;
+    background: linear-gradient(
+        135deg,
+        #f2f7ff,
+        #ffffff
+    );
+    border-bottom: 1px solid #e8eef7;
+}
+
+.short-course-header-icon {
+    width: 46px;
+    height: 46px;
+    margin-bottom: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+    background: #dceaff;
+    color: #1766d1;
+
+    font-size: 21px;
+}
+
+.short-course-label {
+    display: block;
+    margin-bottom: 8px;
+
+    color: #287bff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+}
+
+.short-course-header h3 {
+    margin: 0 0 10px;
+
+    color: #102343;
+    font-family: 'Poppins', sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.short-course-header > p {
+    margin: 0;
+
+    color: #68758a;
+    font-size: 12.5px;
+    line-height: 1.75;
+}
+
+
+/* =========================================
+   COURSE TOPICS — SINGLE COLUMN
+========================================= */
+
+.short-course-topics {
+    display: flex;
+    flex-direction: column;
+
+    padding: 10px 24px 16px;
+    background: #ffffff;
+}
+
+.short-course-topics p {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+
+    margin: 0;
+    padding: 13px 0;
+
+    border-bottom: 1px solid #edf1f6;
+
+    color: #34445c;
+    font-family: 'Inter', sans-serif;
+    font-size: 12.5px;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.short-course-topics p:last-child {
+    border-bottom: none;
+}
+
+.short-course-topics p i {
+    flex-shrink: 0;
+    margin-top: 3px;
+
+    color: #287bff;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   BACK AND ENROL BUTTONS
+========================================= */
+
+.short-course-card .short-course-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+
+    padding: 20px 24px 24px;
+    margin-top: 0;
+
+    background: #ffffff;
+    border-top: 1px solid #edf1f6;
+}
+
+/* Back button */
+
+.short-course-back-button {
+    min-height: 40px;
+    padding: 0 16px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    border: 1px solid #d9e2ee;
+    border-radius: 30px;
+
+    background: #ffffff;
+    color: #102343;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.short-course-back-button:hover {
+    background: #102343;
+    color: #ffffff;
+    border-color: #102343;
+    transform: translateX(-3px);
+}
+
+/* Enrol button */
+
+.short-course-card .short-course-enrol-button {
+    min-height: 40px;
+    padding: 0 20px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: #f4b629;
+    color: #102343;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.short-course-card .short-course-enrol-button:hover {
+    background: #102343;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 14px rgba(16, 35, 67, 0.15);
+}
+
+
+/* =========================================
+   KEYBOARD ACCESSIBILITY
+========================================= */
+
+.short-course-card button:focus-visible,
+.short-course-card a:focus-visible {
+    outline: 3px solid #0a89f1;
+    outline-offset: 4px;
+}
+
+
+/* =========================================
+   TABLET AND MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+
+    .short-course-header {
+        padding: 25px 20px 18px;
+    }
+
+    .short-course-header h3 {
+        font-size: 18px;
+    }
+
+    .short-course-header > p {
+        font-size: 12px;
+    }
+
+    .short-course-topics {
+        padding: 8px 20px 14px;
+    }
+
+    .short-course-topics p {
+        gap: 10px;
+        padding: 12px 0;
+        font-size: 12px;
+    }
+
+    .short-course-bottom {
+        padding: 16px 20px 20px !important;
+        gap: 10px;
+    }
+
+    .short-course-back-button,
+    .short-course-card .short-course-enrol-button {
+        min-height: 42px;
+        padding: 0 14px;
+        font-size: 11px;
+    }
+
+}
+
+
+/* =========================================
+   REDUCED MOTION ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .short-course-card .short-course-view,
+    .short-course-back-button,
+    .short-course-card .short-course-enrol-button {
+        transition: none;
+    }
+
+}
+
+/* =========================================
+   CERTIFICATION COURSES CARD: SLIDE TRANSITION
+========================================= */
+
+.certification-card {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Both certification views */
+
+.certification-card .certification-view {
+    width: 100%;
+    min-width: 0;
+    max-height: 1200px;
+
+    opacity: 1;
+    transform: translateX(0);
+
+    transition:
+        max-height 0.65s ease,
+        opacity 0.4s ease,
+        transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+
+    overflow: hidden;
+}
+
+/* Original certification card */
+
+.certification-card .certification-front {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+/* Hide the certification course list initially */
+
+.certification-card .certification-list-view {
+    max-height: 0;
+    opacity: 0;
+    transform: translateX(45px);
+    pointer-events: none;
+}
+
+/* Slide the original view out */
+
+.certification-card.courses-open .certification-front {
+    max-height: 0;
+    opacity: 0;
+    transform: translateX(-45px);
+    pointer-events: none;
+}
+
+/* Slide the course list in */
+
+.certification-card.courses-open .certification-list-view {
+    max-height: 1200px;
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+}
+
+
+/* =========================================
+   CERTIFICATION COURSE HEADER
+========================================= */
+
+.certification-header {
+    padding: 30px 24px 20px;
+
+    background: linear-gradient(
+        135deg,
+        #f2f7ff,
+        #ffffff
+    );
+
+    border-bottom: 1px solid #e8eef7;
+}
+
+/* Header icon */
+
+.certification-header-icon {
+    width: 46px;
+    height: 46px;
+
+    margin-bottom: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background: #dceaff;
+    color: #1766d1;
+
+    font-size: 21px;
+}
+
+/* Small heading label */
+
+.certification-label {
+    display: block;
+    margin-bottom: 8px;
+
+    color: #287bff;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+}
+
+/* Main heading */
+
+.certification-header h3 {
+    margin: 0 0 10px;
+
+    color: #102343;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+/* Description */
+
+.certification-header > p {
+    margin: 0;
+
+    color: #68758a;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 12.5px;
+    line-height: 1.75;
+}
+
+
+/* =========================================
+   CERTIFICATION TOPICS — SINGLE COLUMN
+========================================= */
+
+.certification-topics {
+    display: flex;
+    flex-direction: column;
+
+    padding: 10px 24px 16px;
+
+    background: #ffffff;
+}
+
+/* Individual topic */
+
+.certification-topics p {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+
+    margin: 0;
+    padding: 13px 0;
+
+    border-bottom: 1px solid #edf1f6;
+
+    color: #34445c;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 12.5px;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+/* Remove the last divider */
+
+.certification-topics p:last-child {
+    border-bottom: none;
+}
+
+/* Check icons */
+
+.certification-topics p i {
+    flex-shrink: 0;
+    margin-top: 3px;
+
+    color: #287bff;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   CERTIFICATION BACK AND ENROL BUTTONS
+========================================= */
+
+.certification-card .certification-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+
+    padding: 20px 24px 24px;
+    margin-top: 0;
+
+    background: #ffffff;
+
+    border-top: 1px solid #edf1f6;
+}
+
+/* Back button */
+
+.certification-back-button {
+    min-height: 40px;
+    padding: 0 16px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    border: 1px solid #d9e2ee;
+    border-radius: 30px;
+
+    background: #ffffff;
+    color: #102343;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+/* Back hover effect */
+
+.certification-back-button:hover {
+    background: #102343;
+    color: #ffffff;
+
+    border-color: #102343;
+
+    transform: translateX(-3px);
+}
+
+/* Enrol button */
+
+.certification-card .certification-enrol-button {
+    min-height: 40px;
+    padding: 0 20px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: #f4b629;
+    color: #102343;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Enrol hover effect */
+
+.certification-card .certification-enrol-button:hover {
+    background: #102343;
+    color: #ffffff;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 14px rgba(16, 35, 67, 0.15);
+}
+
+
+/* =========================================
+   KEYBOARD ACCESSIBILITY
+========================================= */
+
+.certification-card button:focus-visible,
+.certification-card a:focus-visible {
+    outline: 3px solid #0a89f1;
+    outline-offset: 4px;
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVENESS
+========================================= */
+
+@media (max-width: 767px) {
+
+    .certification-header {
+        padding: 25px 20px 18px;
+    }
+
+    .certification-header h3 {
+        font-size: 18px;
+    }
+
+    .certification-header > p {
+        font-size: 12px;
+    }
+
+    .certification-topics {
+        padding: 8px 20px 14px;
+    }
+
+    .certification-topics p {
+        gap: 10px;
+        padding: 12px 0;
+        font-size: 12px;
+    }
+
+    .certification-card .certification-bottom {
+        padding: 16px 20px 20px;
+        gap: 10px;
+    }
+
+    .certification-back-button,
+    .certification-card .certification-enrol-button {
+        min-height: 42px;
+        padding: 0 14px;
+        font-size: 11px;
+    }
+
+}
+
+
+/* =========================================
+   REDUCED MOTION ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .certification-card .certification-view,
+    .certification-back-button,
+    .certification-card .certification-enrol-button {
+        transition: none;
+    }
+
+}
+
+/* =========================================
+   DESKTOP VIEW — VIEW COURSES BUTTONS
+========================================= */
+
+@media (min-width: 1025px) {
+
+    .program-button {
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+        appearance: none;
+
+        background-clip: padding-box;
+    }
+
+    /* Workshop — Yellow */
+    .workshop-card .program-button {
+        background-color: #f4b629;
+        color: #102343;
+    }
+
+    /* Short Courses — Navy Blue */
+    .short-course-card .program-button {
+        background-color: #071d42;
+        color: #ffffff;
+    }
+
+    /* Certification Courses — Green */
+    .certification-card .program-button {
+        background-color: #07965b;
+        color: #ffffff;
+    }
+
+    /* Hover — keep only the button colour */
+    .program-button:hover {
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+        transform: translateY(-2px);
+    }
+
+    /* Remove the default focus outline */
+    .program-button:focus {
+        outline: none !important;
+        box-shadow: none !important;
+    }
+}
+
+/* =========================================
+   TABLET VIEW — VIEW COURSES BUTTONS
+========================================= */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .program-button {
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+        appearance: none;
+
+        background-clip: padding-box;
+    }
+
+    /* Workshop — Yellow */
+    .workshop-card .program-button {
+        background-color: #f4b629;
+        color: #102343;
+    }
+
+    /* Short Courses — Navy Blue */
+    .short-course-card .program-button {
+        background-color: #071d42;
+        color: #ffffff;
+    }
+
+    /* Certification Courses — Green */
+    .certification-card .program-button {
+        background-color: #07965b;
+        color: #ffffff;
+    }
+
+    /* Hover effect */
+    .program-button:hover {
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+        transform: translateY(-2px);
+    }
+
+    /* Focus */
+    .program-button:focus {
+        outline: none !important;
+        box-shadow: none !important;
+    }
+}
+
+/* =========================================
+   MOBILE VIEW — VIEW COURSES BUTTONS
+========================================= */
+
+@media (max-width: 767px) {
+
+    .program-button {
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+        appearance: none;
+
+        background-clip: padding-box;
+    }
+
+    /* Workshop — Yellow */
+    .workshop-card .program-button {
+        background-color: #f4b629;
+        color: #102343;
+    }
+
+    /* Short Courses — Navy Blue */
+    .short-course-card .program-button {
+        background-color: #071d42;
+        color: #ffffff;
+    }
+
+    /* Certification Courses — Green */
+    .certification-card .program-button {
+        background-color: #07965b;
+        color: #ffffff;
+    }
+
+    /* Hover and tap effects */
+    .program-button:hover,
+    .program-button:active {
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+
+    /* Focus */
+    .program-button:focus {
+        outline: none !important;
+        box-shadow: none !important;
+    }
+}

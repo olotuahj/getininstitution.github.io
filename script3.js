@@ -46,3 +46,258 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 });
+
+/* =========================================
+   WORKSHOP CARD: VIEW COURSES AND BACK
+========================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const workshopCard = document.getElementById("workshopCard");
+
+    const viewCoursesButton = document.getElementById(
+        "viewWorkshopCourses"
+    );
+
+    const backButton = document.getElementById(
+        "backToWorkshop"
+    );
+
+    const workshopFront = document.getElementById(
+        "workshopFront"
+    );
+
+    const workshopCourses = document.getElementById(
+        "workshopCourses"
+    );
+
+    // Stop if the workshop card is not present on this page.
+    if (
+        !workshopCard ||
+        !viewCoursesButton ||
+        !backButton ||
+        !workshopFront ||
+        !workshopCourses
+    ) {
+        return;
+    }
+
+    // Open the course list.
+    viewCoursesButton.addEventListener("click", function () {
+
+        workshopCard.classList.add("courses-open");
+
+        viewCoursesButton.setAttribute("aria-expanded", "true");
+
+        workshopFront.setAttribute("aria-hidden", "true");
+        workshopFront.setAttribute("inert", "");
+
+        workshopCourses.setAttribute("aria-hidden", "false");
+        workshopCourses.removeAttribute("inert");
+
+        // Move keyboard focus to the Back button.
+        backButton.focus({ preventScroll: true });
+
+    });
+
+
+    // Return to the original workshop card.
+    backButton.addEventListener("click", function () {
+
+        workshopCard.classList.remove("courses-open");
+
+        viewCoursesButton.setAttribute("aria-expanded", "false");
+
+        workshopCourses.setAttribute("aria-hidden", "true");
+        workshopCourses.setAttribute("inert", "");
+
+        workshopFront.setAttribute("aria-hidden", "false");
+        workshopFront.removeAttribute("inert");
+
+        // Return keyboard focus to View Courses.
+        viewCoursesButton.focus({ preventScroll: true });
+
+    });
+
+});
+
+/* =========================================
+   SHORT COURSES CARD: VIEW COURSES AND BACK
+========================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const shortCoursesCard = document.getElementById("shortCoursesCard");
+
+    const viewCoursesButton = document.getElementById("viewShortCourses");
+
+    const backButton = document.getElementById("backToShortCourses");
+
+    const shortCoursesFront = document.getElementById("shortCoursesFront");
+
+    const shortCoursesList = document.getElementById("shortCoursesList");
+
+
+    // Stop if the Short Courses card is not on this page.
+
+    if (
+        !shortCoursesCard ||
+        !viewCoursesButton ||
+        !backButton ||
+        !shortCoursesFront ||
+        !shortCoursesList
+    ) {
+        return;
+    }
+
+
+    // Open the Short Courses list.
+
+    viewCoursesButton.addEventListener("click", function () {
+
+        shortCoursesCard.classList.add("courses-open");
+
+        viewCoursesButton.setAttribute("aria-expanded", "true");
+
+        shortCoursesFront.setAttribute("aria-hidden", "true");
+        shortCoursesFront.setAttribute("inert", "");
+
+        shortCoursesList.setAttribute("aria-hidden", "false");
+        shortCoursesList.removeAttribute("inert");
+
+        // Move keyboard focus to the Back button.
+
+        backButton.focus({ preventScroll: true });
+
+    });
+
+
+    // Return to the original Short Courses card.
+
+    backButton.addEventListener("click", function () {
+
+        shortCoursesCard.classList.remove("courses-open");
+
+        viewCoursesButton.setAttribute("aria-expanded", "false");
+
+        shortCoursesList.setAttribute("aria-hidden", "true");
+        shortCoursesList.setAttribute("inert", "");
+
+        shortCoursesFront.setAttribute("aria-hidden", "false");
+        shortCoursesFront.removeAttribute("inert");
+
+        // Return keyboard focus to View Courses.
+
+        viewCoursesButton.focus({ preventScroll: true });
+
+    });
+
+});
+
+/* =========================================
+   CERTIFICATION COURSES CARD:
+   VIEW COURSES AND BACK
+========================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const certificationCard = document.getElementById(
+        "certificationCard"
+    );
+
+    const viewCoursesButton = document.getElementById(
+        "viewCertificationCourses"
+    );
+
+    const backButton = document.getElementById(
+        "backToCertification"
+    );
+
+    const certificationFront = document.getElementById(
+        "certificationFront"
+    );
+
+    const certificationList = document.getElementById(
+        "certificationCoursesList"
+    );
+
+
+    // Stop if the Certification Courses card is not on this page.
+
+    if (
+        !certificationCard ||
+        !viewCoursesButton ||
+        !backButton ||
+        !certificationFront ||
+        !certificationList
+    ) {
+        return;
+    }
+
+
+    // Open the Certification Courses list.
+
+    viewCoursesButton.addEventListener("click", function () {
+
+        certificationCard.classList.add("courses-open");
+
+        viewCoursesButton.setAttribute(
+            "aria-expanded",
+            "true"
+        );
+
+        certificationFront.setAttribute(
+            "aria-hidden",
+            "true"
+        );
+
+        certificationFront.setAttribute("inert", "");
+
+        certificationList.setAttribute(
+            "aria-hidden",
+            "false"
+        );
+
+        certificationList.removeAttribute("inert");
+
+
+        // Move keyboard focus to the Back button.
+
+        backButton.focus({ preventScroll: true });
+
+    });
+
+
+    // Return to the original Certification Courses card.
+
+    backButton.addEventListener("click", function () {
+
+        certificationCard.classList.remove("courses-open");
+
+        viewCoursesButton.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+        certificationList.setAttribute(
+            "aria-hidden",
+            "true"
+        );
+
+        certificationList.setAttribute("inert", "");
+
+        certificationFront.setAttribute(
+            "aria-hidden",
+            "false"
+        );
+
+        certificationFront.removeAttribute("inert");
+
+
+        // Return keyboard focus to View Courses.
+
+        viewCoursesButton.focus({ preventScroll: true });
+
+    });
+
+});

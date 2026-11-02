@@ -128,185 +128,559 @@
         <!-- PROGRAM CARDS -->
 
         <div class="program-cards">
+<!-- ================= CARD 1: WORKSHOP ================= -->
 
+<div class="program-card workshop-card fade-left" id="workshopCard">
 
-            <!-- CARD 1: WORKSHOP -->
+    <!-- ========== ORIGINAL WORKSHOP VIEW ========== -->
 
-            <div class="program-card workshop-card fade-left">
+    <div class="workshop-view workshop-front" id="workshopFront">
 
-                <div class="program-image">
-                    <img src="images/workshop.jpg" alt="Students participating in a workshop">
+        <div class="program-image">
+            <img
+                src="images/workshop.jpg"
+                alt="Students participating in a workshop"
+            >
+        </div>
+
+        <div class="program-card-content">
+
+            <div class="program-icon">
+                <i class="fa-solid fa-users"></i>
+            </div>
+
+            <h3>Workshop / Mini Training &amp; Mentorship Program</h3>
+
+            <p class="program-description">
+                Short, focused sessions designed to give you practical
+                skills, real-world insights, and mentorship from industry experts.
+            </p>
+
+            <ul class="program-features">
+
+                <li>
+                    <i class="fa-regular fa-calendar-check"></i>
+                    Flexible Schedule
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-users"></i>
+                    Expert Mentors
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-chart-column"></i>
+                    Practical, Hands-on Learning
+                </li>
+
+            </ul>
+
+            <div class="program-card-bottom">
+
+                <div class="program-price">
+                    <span>From</span>
+                    <h4>₦50,000</h4>
                 </div>
 
-                <div class="program-card-content">
-
-                    <div class="program-icon">
-                        <i class="fa-solid fa-users"></i>
-                    </div>
-
-                    <h3>Workshop / Mini Training &amp; Mentorship Program</h3>
-
-                    <p class="program-description">
-                        Short, focused sessions designed to give you practical
-                        skills, real-world insights, and mentorship from industry experts.
-                    </p>
-
-                    <ul class="program-features">
-
-                        <li>
-                            <i class="fa-regular fa-calendar-check"></i>
-                            Flexible Schedule
-                        </li>
-
-                        <li>
-                            <i class="fa-solid fa-users"></i>
-                            Expert Mentors
-                        </li>
-
-                        <li>
-                            <i class="fa-solid fa-chart-column"></i>
-                            Practical, Hands-on Learning
-                        </li>
-
-                    </ul>
-
-                    <div class="program-card-bottom">
-
-                        <div class="program-price">
-                            <span>From</span>
-                            <h4>₦50,000</h4>
-                        </div>
-
-                        <a href="workshop.html" class="program-button">
-                            View Courses
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-
-                    </div>
-
-                </div>
+                <button
+                    type="button"
+                    class="program-button"
+                    id="viewWorkshopCourses"
+                    aria-controls="workshopCourses"
+                    aria-expanded="false"
+                >
+                    View Courses
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
 
             </div>
 
+        </div>
 
-            <!-- CARD 2: SHORT COURSES -->
+    </div>
 
-            <div class="program-card short-course-card fade-left">
 
-                <div class="program-image">
-                    <img src="images/short-courses.jpg" alt="Student taking an online course">
+    <!-- ========== WORKSHOP COURSE LIST VIEW ========== -->
+
+    <div
+        class="workshop-view workshop-course-view"
+        id="workshopCourses"
+        aria-hidden="true"
+        inert
+    >
+
+        <div class="workshop-course-header">
+
+            <div class="workshop-course-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+
+            <span class="workshop-label">EXPLORE THE PROGRAM</span>
+
+            <h3>Workshop / Mini Training &amp; Mentorship</h3>
+
+            <p>
+                Develop essential life skills through practical learning,
+                ethical leadership and expert mentorship.
+            </p>
+
+        </div>
+
+
+        <div class="workshop-course-list">
+
+            <p>
+                <i class="fa-solid fa-check-circle"></i>
+                Ethical Leadership Development
+            </p>
+
+            <p>
+                <i class="fa-solid fa-check-circle"></i>
+                Character Building Sessions
+            </p>
+
+            <p>
+                <i class="fa-solid fa-check-circle"></i>
+                Moral Values Education
+            </p>
+
+            <p>
+                <i class="fa-solid fa-check-circle"></i>
+                Responsible Decision-Making
+            </p>
+
+            <p>
+                <i class="fa-solid fa-check-circle"></i>
+                Interactive Learning Activities
+            </p>
+
+            <p>
+                <i class="fa-solid fa-check-circle"></i>
+                Mentorship Opportunities
+            </p>
+
+            <p>
+                <i class="fa-solid fa-check-circle"></i>
+                Teamwork and Collaborations
+            </p>
+
+            <p>
+                <i class="fa-solid fa-check-circle"></i>
+                Integrity and Accountability
+            </p>
+
+            <p>
+                <i class="fa-solid fa-check-circle"></i>
+                Personal Growth Development
+            </p>
+
+        </div>
+
+
+        <!-- BACK AND ENROL BUTTONS -->
+
+        <div class="program-card-bottom workshop-course-bottom">
+
+            <button
+                type="button"
+                class="workshop-back-button"
+                id="backToWorkshop"
+                aria-controls="workshopFront"
+            >
+                <i class="fa-solid fa-arrow-left"></i>
+                Back
+            </button>
+
+            <a href="Register.html" class="program-button workshop-enrol-button">
+                Enrol
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= END WORKSHOP CARD ================= -->
+
+<!-- ================= CARD 2: SHORT COURSES ================= -->
+
+<div class="program-card short-course-card fade-left" id="shortCoursesCard">
+
+    <!-- ========== ORIGINAL SHORT COURSES VIEW ========== -->
+
+    <div class="short-course-view short-course-front" id="shortCoursesFront">
+
+        <div class="program-image">
+            <img
+                src="images/short-courses.jpg"
+                alt="Student taking an online course"
+            >
+        </div>
+
+        <div class="program-card-content">
+
+            <div class="program-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+
+            <h3>Short Courses</h3>
+
+            <p class="program-description">
+                Self-paced and instructor-led courses to help you gain
+                specific skills, improve your knowledge, and stay
+                competitive in today's job market.
+            </p>
+
+            <ul class="program-features">
+
+                <li>
+                    <i class="fa-regular fa-calendar-check"></i>
+                    Self-Paced Learning
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-certificate"></i>
+                    Certificate of Completion
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-chart-column"></i>
+                    Lifetime Access
+                </li>
+
+            </ul>
+
+            <!-- PRICE AND VIEW COURSES BUTTON -->
+
+            <div class="program-card-bottom">
+
+                <div class="program-price">
+                    <span>From</span>
+                    <h4>₦30,000</h4>
                 </div>
 
-                <div class="program-card-content">
-
-                    <div class="program-icon">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                    </div>
-
-                    <h3>Short Courses</h3>
-
-                    <p class="program-description">
-                        Self-paced and instructor-led courses to help you gain
-                        specific skills, improve your knowledge, and stay
-                        competitive in today's job market.
-                    </p>
-
-                    <ul class="program-features">
-
-                        <li>
-                            <i class="fa-regular fa-calendar-check"></i>
-                            Self-Paced Learning
-                        </li>
-
-                        <li>
-                            <i class="fa-solid fa-certificate"></i>
-                            Certificate of Completion
-                        </li>
-
-                        <li>
-                            <i class="fa-solid fa-chart-column"></i>
-                            Lifetime Access
-                        </li>
-
-                    </ul>
-
-                    <div class="program-card-bottom">
-
-                        <div class="program-price">
-                            <span>From</span>
-                            <h4>₦30,000</h4>
-                        </div>
-
-                        <a href="short-courses.html" class="program-button">
-                            View Courses
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-
-                    </div>
-
-                </div>
+                <button
+                    type="button"
+                    class="program-button"
+                    id="viewShortCourses"
+                    aria-controls="shortCoursesList"
+                    aria-expanded="false"
+                >
+                    View Courses
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
 
             </div>
 
+        </div>
 
-            <!-- CARD 3: CERTIFICATION -->
+    </div>
 
-            <div class="program-card certification-card fade-left">
 
-                <div class="program-image">
-                    <img src="images/certification.jpg" alt="Graduate holding a certificate">
+    <!-- ========== SHORT COURSES LIST VIEW ========== -->
+
+    <div
+        class="short-course-view short-course-list-view"
+        id="shortCoursesList"
+        aria-hidden="true"
+        inert
+    >
+
+        <!-- COURSE LIST HEADER -->
+
+        <div class="short-course-header">
+
+            <div class="short-course-header-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+
+            <span class="short-course-label">
+                EXPLORE THE COURSES
+            </span>
+
+            <h3>Short Courses</h3>
+
+            <p>
+                Explore our learning opportunities and develop the
+                knowledge, values and skills you need to grow.
+            </p>
+
+        </div>
+
+
+        <!-- COURSE TOPICS IN ONE COLUMN -->
+
+        <div class="short-course-topics">
+
+            <p>
+                <i class="fa-solid fa-check-circle"></i>
+                Ethical Leadership Development
+            </p>
+
+            <p>
+                <i class="fa-solid fa-check-circle"></i>
+                Character Building Sessions
+            </p>
+
+            <p>
+                <i class="fa-solid fa-check-circle"></i>
+                Moral Values Education
+            </p>
+
+            <p>
+                <i class="fa-solid fa-check-circle"></i>
+                Responsible Decision-Making
+            </p>
+
+            <p>
+                <i class="fa-solid fa-check-circle"></i>
+                Interactive Learning Activities
+            </p>
+
+            <p>
+                <i class="fa-solid fa-check-circle"></i>
+                Mentorship Opportunities
+            </p>
+
+            <p>
+                <i class="fa-solid fa-check-circle"></i>
+                Teamwork and Collaborations
+            </p>
+
+            <p>
+                <i class="fa-solid fa-check-circle"></i>
+                Integrity and Accountability
+            </p>
+
+            <p>
+                <i class="fa-solid fa-check-circle"></i>
+                Personal Growth Development
+            </p>
+
+        </div>
+
+
+        <!-- BACK AND ENROL BUTTONS -->
+
+        <div class="program-card-bottom short-course-bottom">
+
+            <button
+                type="button"
+                class="short-course-back-button"
+                id="backToShortCourses"
+                aria-controls="shortCoursesFront"
+            >
+                <i class="fa-solid fa-arrow-left"></i>
+                Back
+            </button>
+
+            <a
+                href="Register.html"
+                class="program-button short-course-enrol-button"
+            >
+                Enrol
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= END SHORT COURSES CARD ================= -->
+
+
+            <!-- ================= CARD 3: CERTIFICATION COURSES ================= -->
+
+<div class="program-card certification-card fade-left" id="certificationCard">
+
+    <!-- ========== ORIGINAL CERTIFICATION VIEW ========== -->
+
+    <div class="certification-view certification-front" id="certificationFront">
+
+        <div class="program-image">
+            <img
+                src="images/certification.jpg"
+                alt="Graduate holding a certificate"
+            >
+        </div>
+
+        <div class="program-card-content">
+
+            <div class="program-icon">
+                <i class="fa-solid fa-award"></i>
+            </div>
+
+            <h3>Certification Courses</h3>
+
+            <p class="program-description">
+                Credible, industry-recognized certification programs
+                to validate your skills, boost your profile, and open
+                more career opportunities.
+            </p>
+
+            <ul class="program-features">
+
+                <li>
+                    <i class="fa-solid fa-award"></i>
+                    Industry-Recognized Certificate
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-user-tie"></i>
+                    Learn from Experts
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-chart-line"></i>
+                    Career Advancement Support
+                </li>
+
+            </ul>
+
+            <!-- PRICE AND VIEW COURSES BUTTON -->
+
+            <div class="program-card-bottom">
+
+                <div class="program-price">
+                    <span>From</span>
+                    <h4>₦100,000</h4>
                 </div>
 
-                <div class="program-card-content">
-
-                    <div class="program-icon">
-                        <i class="fa-solid fa-money-check"></i>
-                    </div>
-
-                    <h3>Certification Courses</h3>
-
-                    <p class="program-description">
-                        Credible, industry-recognized certification programs
-                        to validate your skills, boost your profile, and open
-                        more career opportunities.
-                    </p>
-
-                    <ul class="program-features">
-
-                        <li>
-                            <i class="fa-solid fa-award"></i>
-                            Industry-Recognized Certificate
-                        </li>
-
-                        <li>
-                            <i class="fa-solid fa-user-tie"></i>
-                            Learn from Experts
-                        </li>
-
-                        <li>
-                            <i class="fa-solid fa-chart-line"></i>
-                            Career Advancement Support
-                        </li>
-
-                    </ul>
-
-                    <div class="program-card-bottom">
-
-                        <div class="program-price">
-                            <span>From</span>
-                            <h4>₦100,000</h4>
-                        </div>
-
-                        <a href="certification.html" class="program-button">
-                            View Courses
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-
-                    </div>
-
-                </div>
+                <button
+                    type="button"
+                    class="program-button"
+                    id="viewCertificationCourses"
+                    aria-controls="certificationCoursesList"
+                    aria-expanded="false"
+                >
+                    View Courses
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
 
             </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ========== CERTIFICATION COURSE LIST VIEW ========== -->
+
+    <div
+        class="certification-view certification-list-view"
+        id="certificationCoursesList"
+        aria-hidden="true"
+        inert
+    >
+
+        <!-- COURSE LIST HEADER -->
+
+        <div class="certification-header">
+
+            <div class="certification-header-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+
+            <span class="certification-label">
+                EXPLORE THE PROGRAM
+            </span>
+
+            <h3>Certification Courses</h3>
+
+            <p>
+                Build your knowledge, strengthen your character,
+                and develop the values and leadership skills needed
+                for personal and professional growth.
+            </p>
+
+        </div>
+
+
+        <!-- COURSE TOPICS IN ONE COLUMN -->
+
+        <div class="certification-topics">
+
+            <p>
+                <i class="fa-solid fa-check-circle"></i>
+                Ethical Leadership Development
+            </p>
+
+            <p>
+                <i class="fa-solid fa-check-circle"></i>
+                Character Building Sessions
+            </p>
+
+            <p>
+                <i class="fa-solid fa-check-circle"></i>
+                Moral Values Education
+            </p>
+
+            <p>
+                <i class="fa-solid fa-check-circle"></i>
+                Responsible Decision-Making
+            </p>
+
+            <p>
+                <i class="fa-solid fa-check-circle"></i>
+                Interactive Learning Activities
+            </p>
+
+            <p>
+                <i class="fa-solid fa-check-circle"></i>
+                Mentorship Opportunities
+            </p>
+
+            <p>
+                <i class="fa-solid fa-check-circle"></i>
+                Teamwork and Collaborations
+            </p>
+
+            <p>
+                <i class="fa-solid fa-check-circle"></i>
+                Integrity and Accountability
+            </p>
+
+            <p>
+                <i class="fa-solid fa-check-circle"></i>
+                Personal Growth Development
+            </p>
+
+        </div>
+
+
+        <!-- BACK AND ENROL BUTTONS -->
+
+        <div class="program-card-bottom certification-bottom">
+
+            <button
+                type="button"
+                class="certification-back-button"
+                id="backToCertification"
+                aria-controls="certificationFront"
+            >
+                <i class="fa-solid fa-arrow-left"></i>
+                Back
+            </button>
+
+            <a
+                href="Register.html"
+                class="program-button certification-enrol-button"
+            >
+                Enrol
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= END CERTIFICATION COURSES CARD ================= -->
 
         </div>
 
