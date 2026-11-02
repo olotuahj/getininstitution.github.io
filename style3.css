@@ -2277,3 +2277,1927 @@ footer hr {
         background-color: #28578b;
     }
 }
+
+
+/* ============================================= */
+/* PROGRAMS PAGE - DESKTOP VIEW */
+/* MINIMUM WIDTH: 1025px */
+/* ============================================= */
+
+@media screen and (min-width: 1025px) {
+
+    /* ========================================= */
+    /* MAIN PROGRAMS CONTAINER */
+    /* ========================================= */
+
+    .programs-main {
+        width: 100%;
+        background: #f9fafc;
+        overflow: visible;
+        font-family: 'Inter', sans-serif;
+        color: #0b1d3b;
+    }
+
+
+    /* ========================================= */
+    /* HERO SECTION */
+    /* ========================================= */
+
+    .programs-hero {
+        width: 100%;
+        height: 282px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 0 6.6%;
+        background:
+            linear-gradient(
+                90deg,
+                rgba(3, 19, 34, 0.97) 0%,
+                rgba(3, 19, 34, 0.88) 43%,
+                rgba(3, 19, 34, 0.28) 100%
+            ),
+            url("images/programs-hero.jpg");
+
+        background-size: cover;
+        background-position: center 42%;
+        background-repeat: no-repeat;
+    }
+
+    .programs-hero-content {
+        width: 55%;
+        max-width: 550px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .hero-label {
+        display: block;
+        color: #f5b51b;
+        font-family: 'Poppins', sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        margin-bottom: 8px;
+        letter-spacing: 0.4px;
+    }
+
+    .programs-hero-content h1 {
+        color: #ffffff;
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 1.08;
+        margin: 0 0 14px;
+    }
+
+    .programs-hero-content p {
+        color: #f1f3f7;
+        font-size: 13.5px;
+        line-height: 1.55;
+        max-width: 480px;
+        margin: 0;
+    }
+
+
+    /* ========================================= */
+    /* PROGRAMS SECTION */
+    /* ========================================= */
+
+    .programs-section {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 29px 5.1% 0;
+        box-sizing: border-box;
+    }
+
+    .programs-heading {
+        text-align: center;
+        margin-bottom: 34px;
+    }
+
+    .section-label {
+        display: block;
+        color: #e9a500;
+        font-family: 'Poppins', sans-serif;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.6px;
+        margin-bottom: 7px;
+    }
+
+    .programs-heading h2 {
+        color: #0b1d42;
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: 28px;
+        font-weight: 700;
+        margin: 0 0 8px;
+    }
+
+    .programs-heading p {
+        color: #68758a;
+        font-size: 13.5px;
+        line-height: 1.6;
+        max-width: 550px;
+        margin: 0 auto;
+    }
+
+
+    /* ========================================= */
+    /* PROGRAM CARDS CONTAINER */
+    /* ========================================= */
+
+    .program-cards {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
+        align-items: stretch;
+    }
+
+
+    /* ========================================= */
+    /* INDIVIDUAL PROGRAM CARD */
+    /* ========================================= */
+
+    .program-card {
+        min-width: 0;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        background: #ffffff;
+        border: 1px solid #e9edf2;
+        border-radius: 9px;
+        overflow: visible;
+        box-shadow: 0 3px 12px rgba(12, 30, 58, 0.06);
+    }
+
+    .program-image {
+        width: 100%;
+        height: 145px;
+        overflow: hidden;
+        border-radius: 9px 9px 0 0;
+    }
+
+    .program-image img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        object-position: center;
+        transition: transform 0.4s ease;
+    }
+
+    .program-card:hover .program-image img {
+        transform: scale(1.04);
+    }
+
+
+    /* ========================================= */
+    /* CARD CONTENT */
+    /* ========================================= */
+
+    .program-card-content {
+        position: relative;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 35px 21px 20px;
+        background: #ffffff;
+        border-radius: 9px;
+        margin-top: -5px;
+    }
+
+
+    /* ========================================= */
+    /* PROGRAM ICONS */
+    /* ========================================= */
+
+    .program-icon {
+        width: 49px;
+        height: 49px;
+        position: absolute;
+        top: -26px;
+        left: 19px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 13px;
+        font-size: 23px;
+        z-index: 3;
+    }
+
+    .workshop-card .program-icon {
+        color: #e9a000;
+        background: #ffedbd;
+    }
+
+    .short-course-card .program-icon {
+        color: #174e9c;
+        background: #cfe1ff;
+    }
+
+    .certification-card .program-icon {
+        color: #078a54;
+        background: #c6f0dc;
+    }
+
+
+    /* ========================================= */
+    /* CARD HEADINGS */
+    /* ========================================= */
+
+    .program-card-content h3 {
+        color: #102343;
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.2;
+        margin: 0 0 10px;
+    }
+
+
+    /* ========================================= */
+    /* CARD DESCRIPTIONS */
+    /* ========================================= */
+
+    .program-description {
+        color: #68758a;
+        font-size: 13px;
+        line-height: 1.55;
+        margin: 0 0 16px;
+    }
+
+
+    /* ========================================= */
+    /* PROGRAM FEATURES */
+    /* ========================================= */
+
+    .program-features {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 22px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .program-features li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #45536a;
+        font-size: 11.5px;
+        line-height: 1.4;
+    }
+
+    .program-features li i {
+        width: 14px;
+        flex-shrink: 0;
+        font-size: 14px;
+    }
+
+    .workshop-card .program-features li i {
+        color: #e9a000;
+    }
+
+    .short-course-card .program-features li i {
+        color: #287bff;
+    }
+
+    .certification-card .program-features li i {
+        color: #07965b;
+    }
+
+
+    /* ========================================= */
+    /* CARD PRICE AND BUTTON */
+    /* ========================================= */
+
+    .program-card-bottom {
+        width: 100%;
+        margin-top: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .program-price {
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+    }
+
+    .program-price span {
+        color: #536176;
+        font-size: 11px;
+    }
+
+    .program-price h4 {
+        color: #102343;
+        font-family: 'Poppins', sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        margin: 0;
+        white-space: nowrap;
+    }
+
+    .program-button {
+        min-height: 37px;
+        padding: 0 15px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        border-radius: 30px;
+        text-decoration: none;
+        white-space: nowrap;
+        color: #ffffff;
+        font-family: 'Poppins', sans-serif;
+        font-size: 10.5px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+
+    .workshop-card .program-button {
+        background: #f4b629;
+        color: #102343;
+    }
+
+    .short-course-card .program-button {
+        background: #071d42;
+        color: #ffffff;
+    }
+
+    .certification-card .program-button {
+        background: #07965b;
+        color: #ffffff;
+    }
+
+    .program-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+    }
+
+
+    /* ========================================= */
+    /* CAB CONFERENCE SECTION */
+    /* ========================================= */
+
+    .conference-section {
+        width: 88.6%;
+        max-width: 1200px;
+        min-height: 197px;
+        margin: 45px auto 0;
+        padding: 25px 35px;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: 1.25fr 0.75fr 1fr;
+        align-items: center;
+        gap: 20px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 9px;
+
+        background:
+            linear-gradient(
+                90deg,
+                rgba(5, 25, 59, 0.99) 0%,
+                rgba(5, 25, 59, 0.96) 42%,
+                rgba(5, 25, 59, 0.35) 100%
+            ),
+            url("images/conference.jpg");
+
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .conference-content {
+        position: relative;
+        z-index: 2;
+    }
+
+    .conference-label {
+        display: block;
+        color: #f4b51e;
+        font-family: 'Poppins', sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        margin-bottom: 6px;
+    }
+
+    .conference-content h2 {
+        color: #ffffff;
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: 27px;
+        margin: 0 0 7px;
+    }
+
+    .conference-content p {
+        color: #f1f4fa;
+        font-size: 12.5px;
+        line-height: 1.55;
+        max-width: 330px;
+        margin: 0 0 16px;
+    }
+
+    .conference-button {
+        min-height: 36px;
+        padding: 0 17px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        background: #f4b629;
+        color: #102343;
+        border-radius: 30px;
+        text-decoration: none;
+        font-family: 'Poppins', sans-serif;
+        font-size: 11px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+
+    .conference-button:hover {
+        background: #ffffff;
+        transform: translateY(-3px);
+    }
+
+
+    /* ========================================= */
+    /* CONFERENCE CENTER ICON */
+    /* ========================================= */
+
+    .conference-icon {
+        height: 110px;
+        width: 110px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-self: center;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        border-radius: 50%;
+        position: relative;
+        z-index: 2;
+    }
+
+    .conference-icon i {
+        color: #ffffff;
+        font-size: 43px;
+    }
+
+
+    /* ========================================= */
+    /* CONFERENCE BENEFITS */
+    /* ========================================= */
+
+    .conference-benefits {
+        position: relative;
+        z-index: 2;
+    }
+
+    .conference-benefits ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .conference-benefits li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #ffffff;
+        font-size: 11.5px;
+        font-weight: 500;
+    }
+
+    .conference-benefits li i {
+        color: #f5b51b;
+        font-size: 14px;
+    }
+
+
+    /* ========================================= */
+    /* PROGRAM BENEFITS SECTION */
+    /* ========================================= */
+
+    .program-benefits {
+        width: 88.6%;
+        max-width: 1200px;
+        margin: 34px auto 0;
+        padding: 0 0 28px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: start;
+    }
+
+    .benefit-item {
+        text-align: center;
+        padding: 0 15px;
+        position: relative;
+    }
+
+    .benefit-item:not(:last-child)::after {
+        content: "";
+        width: 1px;
+        height: 75px;
+        background: #edf0f4;
+        position: absolute;
+        right: 0;
+        top: 12px;
+    }
+
+    .benefit-icon {
+        width: 39px;
+        height: 39px;
+        margin: 0 auto 9px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background: #e6effd;
+        color: #102343;
+        font-size: 17px;
+    }
+
+    .benefit-item h3 {
+        color: #102343;
+        font-family: 'Poppins', sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        margin: 0 0 5px;
+    }
+
+    .benefit-item p {
+        color: #68758a;
+        font-size: 11.5px;
+        line-height: 1.5;
+        margin: 0;
+    }
+
+}
+
+
+/* ============================================= */
+/* PROGRAMS PAGE - TABLET VIEW */
+/* MIN-WIDTH: 768px */
+/* MAX-WIDTH: 1024px */
+/* ============================================= */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    /* ========================================= */
+    /* MAIN PROGRAMS CONTAINER */
+    /* ========================================= */
+
+    .programs-main {
+        width: 100%;
+        background: #f9fafc;
+        overflow: visible;
+        font-family: 'Inter', sans-serif;
+        color: #0b1d3b;
+    }
+
+
+    /* ========================================= */
+    /* HERO SECTION */
+    /* ========================================= */
+
+    .programs-hero {
+        width: 100%;
+        height: 260px;
+        display: flex;
+        align-items: center;
+        padding: 0 5%;
+        box-sizing: border-box;
+
+        background:
+            linear-gradient(
+                90deg,
+                rgba(3, 19, 34, 0.97) 0%,
+                rgba(3, 19, 34, 0.88) 45%,
+                rgba(3, 19, 34, 0.28) 100%
+            ),
+            url("images/programs-hero.jpg");
+
+        background-size: cover;
+        background-position: center 42%;
+        background-repeat: no-repeat;
+    }
+
+    .programs-hero-content {
+        width: 60%;
+        max-width: 500px;
+    }
+
+    .hero-label {
+        display: block;
+        color: #f5b51b;
+        font-family: 'Poppins', sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+
+    .programs-hero-content h1 {
+        color: #ffffff;
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: 34px;
+        font-weight: 700;
+        line-height: 1.12;
+        margin: 0 0 12px;
+    }
+
+    .programs-hero-content p {
+        color: #f1f3f7;
+        font-size: 12.5px;
+        line-height: 1.6;
+        max-width: 430px;
+        margin: 0;
+    }
+
+
+    /* ========================================= */
+    /* PROGRAMS SECTION */
+    /* ========================================= */
+
+    .programs-section {
+        width: 100%;
+        padding: 28px 4% 0;
+        box-sizing: border-box;
+        margin: 0 auto;
+    }
+
+    .programs-heading {
+        text-align: center;
+        margin-bottom: 28px;
+    }
+
+    .section-label {
+        display: block;
+        color: #e9a500;
+        font-family: 'Poppins', sans-serif;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        margin-bottom: 7px;
+    }
+
+    .programs-heading h2 {
+        color: #0b1d42;
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: 25px;
+        font-weight: 700;
+        margin: 0 0 8px;
+    }
+
+    .programs-heading p {
+        color: #68758a;
+        font-size: 12.5px;
+        line-height: 1.6;
+        max-width: 520px;
+        margin: 0 auto;
+    }
+
+
+    /* ========================================= */
+    /* PROGRAM CARDS */
+    /* ========================================= */
+
+    .program-cards {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 15px;
+        align-items: stretch;
+    }
+
+    .program-card {
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        background: #ffffff;
+        border: 1px solid #e9edf2;
+        border-radius: 9px;
+        overflow: visible;
+        box-shadow: 0 3px 12px rgba(12, 30, 58, 0.06);
+    }
+
+    .program-image {
+        width: 100%;
+        height: 125px;
+        overflow: hidden;
+        border-radius: 9px 9px 0 0;
+    }
+
+    .program-image img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        object-position: center;
+        transition: transform 0.4s ease;
+    }
+
+    .program-card:hover .program-image img {
+        transform: scale(1.04);
+    }
+
+
+    /* ========================================= */
+    /* CARD CONTENT */
+    /* ========================================= */
+
+    .program-card-content {
+        position: relative;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 33px 13px 17px;
+        margin-top: -4px;
+        background: #ffffff;
+        border-radius: 9px;
+    }
+
+
+    /* ========================================= */
+    /* PROGRAM ICONS */
+    /* ========================================= */
+
+    .program-icon {
+        width: 43px;
+        height: 43px;
+        position: absolute;
+        top: -24px;
+        left: 13px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 12px;
+        font-size: 20px;
+        z-index: 3;
+    }
+
+    .workshop-card .program-icon {
+        color: #e9a000;
+        background: #ffedbd;
+    }
+
+    .short-course-card .program-icon {
+        color: #174e9c;
+        background: #cfe1ff;
+    }
+
+    .certification-card .program-icon {
+        color: #078a54;
+        background: #c6f0dc;
+    }
+
+
+    /* ========================================= */
+    /* CARD HEADINGS */
+    /* ========================================= */
+
+    .program-card-content h3 {
+        color: #102343;
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 1.25;
+        margin: 0 0 9px;
+    }
+
+
+    /* ========================================= */
+    /* CARD DESCRIPTIONS */
+    /* ========================================= */
+
+    .program-description {
+        color: #68758a;
+        font-size: 11.5px;
+        line-height: 1.55;
+        margin: 0 0 14px;
+    }
+
+
+    /* ========================================= */
+    /* PROGRAM FEATURES */
+    /* ========================================= */
+
+    .program-features {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 19px;
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+    }
+
+    .program-features li {
+        display: flex;
+        align-items: flex-start;
+        gap: 7px;
+        color: #45536a;
+        font-size: 10px;
+        line-height: 1.4;
+    }
+
+    .program-features li i {
+        width: 13px;
+        flex-shrink: 0;
+        font-size: 12px;
+        margin-top: 1px;
+    }
+
+    .workshop-card .program-features li i {
+        color: #e9a000;
+    }
+
+    .short-course-card .program-features li i {
+        color: #287bff;
+    }
+
+    .certification-card .program-features li i {
+        color: #07965b;
+    }
+
+
+    /* ========================================= */
+    /* CARD PRICE AND BUTTON */
+    /* ========================================= */
+
+    .program-card-bottom {
+        width: 100%;
+        margin-top: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .program-price {
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+    }
+
+    .program-price span {
+        color: #536176;
+        font-size: 10px;
+    }
+
+    .program-price h4 {
+        color: #102343;
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        margin: 0;
+        white-space: nowrap;
+    }
+
+    .program-button {
+        min-height: 33px;
+        padding: 0 9px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        border-radius: 30px;
+        text-decoration: none;
+        white-space: nowrap;
+        color: #ffffff;
+        font-family: 'Poppins', sans-serif;
+        font-size: 9px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+
+    .workshop-card .program-button {
+        background: #f4b629;
+        color: #102343;
+    }
+
+    .short-course-card .program-button {
+        background: #071d42;
+        color: #ffffff;
+    }
+
+    .certification-card .program-button {
+        background: #07965b;
+        color: #ffffff;
+    }
+
+    .program-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+    }
+
+
+    /* ========================================= */
+    /* CAB CONFERENCE SECTION */
+    /* ========================================= */
+
+    .conference-section {
+        width: 92%;
+        min-height: 185px;
+        margin: 38px auto 0;
+        padding: 22px 25px;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: 1.2fr 0.6fr 1fr;
+        align-items: center;
+        gap: 12px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 9px;
+
+        background:
+            linear-gradient(
+                90deg,
+                rgba(5, 25, 59, 0.99) 0%,
+                rgba(5, 25, 59, 0.94) 45%,
+                rgba(5, 25, 59, 0.4) 100%
+            ),
+            url("images/conference.jpg");
+
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .conference-content {
+        position: relative;
+        z-index: 2;
+    }
+
+    .conference-label {
+        display: block;
+        color: #f4b51e;
+        font-family: 'Poppins', sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        margin-bottom: 6px;
+    }
+
+    .conference-content h2 {
+        color: #ffffff;
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: 23px;
+        margin: 0 0 7px;
+    }
+
+    .conference-content p {
+        color: #f1f4fa;
+        font-size: 11px;
+        line-height: 1.55;
+        max-width: 280px;
+        margin: 0 0 13px;
+    }
+
+    .conference-button {
+        min-height: 33px;
+        padding: 0 14px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
+        background: #f4b629;
+        color: #102343;
+        border-radius: 30px;
+        text-decoration: none;
+        font-family: 'Poppins', sans-serif;
+        font-size: 10px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+
+    .conference-button:hover {
+        background: #ffffff;
+        transform: translateY(-3px);
+    }
+
+
+    /* ========================================= */
+    /* CONFERENCE ICON */
+    /* ========================================= */
+
+    .conference-icon {
+        width: 85px;
+        height: 85px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-self: center;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        border-radius: 50%;
+        position: relative;
+        z-index: 2;
+    }
+
+    .conference-icon i {
+        color: #ffffff;
+        font-size: 34px;
+    }
+
+
+    /* ========================================= */
+    /* CONFERENCE BENEFITS */
+    /* ========================================= */
+
+    .conference-benefits {
+        position: relative;
+        z-index: 2;
+    }
+
+    .conference-benefits ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 11px;
+    }
+
+    .conference-benefits li {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        color: #ffffff;
+        font-size: 10px;
+        font-weight: 500;
+    }
+
+    .conference-benefits li i {
+        color: #f5b51b;
+        font-size: 12px;
+        flex-shrink: 0;
+    }
+
+
+    /* ========================================= */
+    /* PROGRAM BENEFITS SECTION */
+    /* ========================================= */
+
+    .program-benefits {
+        width: 92%;
+        margin: 30px auto 0;
+        padding: 0 0 25px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: start;
+    }
+
+    .benefit-item {
+        text-align: center;
+        padding: 0 8px;
+        position: relative;
+    }
+
+    .benefit-item:not(:last-child)::after {
+        content: "";
+        width: 1px;
+        height: 70px;
+        background: #edf0f4;
+        position: absolute;
+        right: 0;
+        top: 10px;
+    }
+
+    .benefit-icon {
+        width: 36px;
+        height: 36px;
+        margin: 0 auto 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background: #e6effd;
+        color: #102343;
+        font-size: 15px;
+    }
+
+    .benefit-item h3 {
+        color: #102343;
+        font-family: 'Poppins', sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        margin: 0 0 5px;
+    }
+
+    .benefit-item p {
+        color: #68758a;
+        font-size: 10px;
+        line-height: 1.5;
+        margin: 0;
+    }
+
+}
+
+
+/* ============================================= */
+/* PROGRAMS PAGE - MOBILE VIEW */
+/* MAX-WIDTH: 767px */
+/* ============================================= */
+
+@media screen and (max-width: 767px) {
+
+    /* ========================================= */
+    /* MAIN PROGRAMS CONTAINER */
+    /* ========================================= */
+
+    .programs-main {
+        width: 100%;
+        background: #f9fafc;
+        overflow: visible;
+        font-family: 'Inter', sans-serif;
+        color: #0b1d3b;
+    }
+
+
+    /* ========================================= */
+    /* HERO SECTION */
+    /* ========================================= */
+
+    .programs-hero {
+        width: 100%;
+        min-height: 270px;
+        height: auto;
+        padding: 45px 6%;
+        box-sizing: border-box;
+
+        display: flex;
+        align-items: center;
+
+        background:
+            linear-gradient(
+                90deg,
+                rgba(3, 19, 34, 0.97) 0%,
+                rgba(3, 19, 34, 0.88) 55%,
+                rgba(3, 19, 34, 0.55) 100%
+            ),
+            url("images/programs-hero.jpg");
+
+        background-size: cover;
+        background-position: 65% center;
+        background-repeat: no-repeat;
+    }
+
+    .programs-hero-content {
+        width: 100%;
+        max-width: 450px;
+    }
+
+    .hero-label {
+        display: block;
+        color: #f5b51b;
+        font-family: 'Poppins', sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        margin-bottom: 9px;
+    }
+
+    .programs-hero-content h1 {
+        color: #ffffff;
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: clamp(27px, 6vw, 35px);
+        font-weight: 700;
+        line-height: 1.15;
+        margin: 0 0 13px;
+    }
+
+    .programs-hero-content p {
+        color: #f1f3f7;
+        font-size: 12px;
+        line-height: 1.7;
+        max-width: 400px;
+        margin: 0;
+    }
+
+
+    /* ========================================= */
+    /* PROGRAMS SECTION */
+    /* ========================================= */
+
+    .programs-section {
+        width: 100%;
+        padding: 35px 6% 0;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+
+    .programs-heading {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .section-label {
+        display: block;
+        color: #e9a500;
+        font-family: 'Poppins', sans-serif;
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 0.4px;
+        margin-bottom: 9px;
+    }
+
+    .programs-heading h2 {
+        color: #0b1d42;
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1.25;
+        margin: 0 0 10px;
+    }
+
+    .programs-heading p {
+        color: #68758a;
+        font-size: 12px;
+        line-height: 1.7;
+        max-width: 450px;
+        margin: 0 auto;
+    }
+
+
+    /* ========================================= */
+    /* PROGRAM CARDS CONTAINER */
+    /* ========================================= */
+
+    .program-cards {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 25px;
+        align-items: stretch;
+    }
+
+
+    /* ========================================= */
+    /* INDIVIDUAL PROGRAM CARD */
+    /* ========================================= */
+
+    .program-card {
+        width: 100%;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        background: #ffffff;
+        border: 1px solid #e9edf2;
+        border-radius: 10px;
+        overflow: visible;
+        box-shadow: 0 3px 12px rgba(12, 30, 58, 0.06);
+    }
+
+    .program-image {
+        width: 100%;
+        height: 190px;
+        overflow: hidden;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .program-image img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        object-position: center;
+        transition: transform 0.4s ease;
+    }
+
+    .program-card:hover .program-image img {
+        transform: scale(1.03);
+    }
+
+
+    /* ========================================= */
+    /* CARD CONTENT */
+    /* ========================================= */
+
+    .program-card-content {
+        position: relative;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 38px 19px 20px;
+        margin-top: -4px;
+        background: #ffffff;
+        border-radius: 10px;
+    }
+
+
+    /* ========================================= */
+    /* PROGRAM ICONS */
+    /* ========================================= */
+
+    .program-icon {
+        width: 48px;
+        height: 48px;
+        position: absolute;
+        top: -26px;
+        left: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 13px;
+        font-size: 22px;
+        z-index: 3;
+    }
+
+    .workshop-card .program-icon {
+        color: #e9a000;
+        background: #ffedbd;
+    }
+
+    .short-course-card .program-icon {
+        color: #174e9c;
+        background: #cfe1ff;
+    }
+
+    .certification-card .program-icon {
+        color: #078a54;
+        background: #c6f0dc;
+    }
+
+
+    /* ========================================= */
+    /* CARD HEADINGS */
+    /* ========================================= */
+
+    .program-card-content h3 {
+        color: #102343;
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: 19px;
+        font-weight: 700;
+        line-height: 1.3;
+        margin: 0 0 10px;
+    }
+
+
+    /* ========================================= */
+    /* CARD DESCRIPTIONS */
+    /* ========================================= */
+
+    .program-description {
+        color: #68758a;
+        font-size: 12.5px;
+        line-height: 1.7;
+        margin: 0 0 19px;
+    }
+
+
+    /* ========================================= */
+    /* PROGRAM FEATURES */
+    /* ========================================= */
+
+    .program-features {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 23px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .program-features li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #45536a;
+        font-size: 11.5px;
+        line-height: 1.5;
+    }
+
+    .program-features li i {
+        width: 15px;
+        flex-shrink: 0;
+        font-size: 14px;
+    }
+
+    .workshop-card .program-features li i {
+        color: #e9a000;
+    }
+
+    .short-course-card .program-features li i {
+        color: #287bff;
+    }
+
+    .certification-card .program-features li i {
+        color: #07965b;
+    }
+
+
+    /* ========================================= */
+    /* CARD PRICE AND BUTTON */
+    /* ========================================= */
+
+    .program-card-bottom {
+        width: 100%;
+        margin-top: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .program-price {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    .program-price span {
+        color: #536176;
+        font-size: 11px;
+    }
+
+    .program-price h4 {
+        color: #102343;
+        font-family: 'Poppins', sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        margin: 0;
+        white-space: nowrap;
+    }
+
+    .program-button {
+        min-height: 39px;
+        padding: 0 15px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        border-radius: 30px;
+        text-decoration: none;
+        white-space: nowrap;
+        color: #ffffff;
+        font-family: 'Poppins', sans-serif;
+        font-size: 10.5px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+
+    .workshop-card .program-button {
+        background: #f4b629;
+        color: #102343;
+    }
+
+    .short-course-card .program-button {
+        background: #071d42;
+        color: #ffffff;
+    }
+
+    .certification-card .program-button {
+        background: #07965b;
+        color: #ffffff;
+    }
+
+    .program-button:hover {
+        transform: translateY(-2px);
+    }
+
+
+    /* ========================================= */
+    /* CAB CONFERENCE SECTION */
+    /* ========================================= */
+
+    .conference-section {
+        width: 88%;
+        min-height: auto;
+        margin: 40px auto 0;
+        padding: 27px 23px;
+        box-sizing: border-box;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 23px;
+
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+
+        background:
+            linear-gradient(
+                90deg,
+                rgba(5, 25, 59, 0.97),
+                rgba(5, 25, 59, 0.82)
+            ),
+            url("images/conference.jpg");
+
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .conference-content {
+        width: 100%;
+        position: relative;
+        z-index: 2;
+    }
+
+    .conference-label {
+        display: block;
+        color: #f4b51e;
+        font-family: 'Poppins', sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        margin-bottom: 7px;
+    }
+
+    .conference-content h2 {
+        color: #ffffff;
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: 25px;
+        margin: 0 0 9px;
+    }
+
+    .conference-content p {
+        color: #f1f4fa;
+        font-size: 12px;
+        line-height: 1.7;
+        max-width: 350px;
+        margin: 0 0 16px;
+    }
+
+    .conference-button {
+        min-height: 38px;
+        padding: 0 17px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        background: #f4b629;
+        color: #102343;
+        border-radius: 30px;
+        text-decoration: none;
+        font-family: 'Poppins', sans-serif;
+        font-size: 10.5px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+
+    .conference-button:hover {
+        background: #ffffff;
+        transform: translateY(-2px);
+    }
+
+
+    /* ========================================= */
+    /* CONFERENCE CENTER ICON */
+    /* ========================================= */
+
+    .conference-icon {
+        width: 75px;
+        height: 75px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        border-radius: 50%;
+        position: relative;
+        z-index: 2;
+        align-self: center;
+    }
+
+    .conference-icon i {
+        color: #ffffff;
+        font-size: 32px;
+    }
+
+
+    /* ========================================= */
+    /* CONFERENCE BENEFITS */
+    /* ========================================= */
+
+    .conference-benefits {
+        width: 100%;
+        position: relative;
+        z-index: 2;
+    }
+
+    .conference-benefits ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .conference-benefits li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #ffffff;
+        font-size: 11.5px;
+        font-weight: 500;
+    }
+
+    .conference-benefits li i {
+        color: #f5b51b;
+        font-size: 14px;
+    }
+
+
+    /* ========================================= */
+    /* PROGRAM BENEFITS SECTION */
+    /* ========================================= */
+
+    .program-benefits {
+        width: 88%;
+        margin: 35px auto 0;
+        padding: 0 0 30px;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 12px;
+        row-gap: 28px;
+        align-items: start;
+    }
+
+    .benefit-item {
+        text-align: center;
+        padding: 5px 8px;
+        position: relative;
+    }
+
+    .benefit-item:not(:last-child)::after {
+        display: none;
+    }
+
+    .benefit-icon {
+        width: 39px;
+        height: 39px;
+        margin: 0 auto 9px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background: #e6effd;
+        color: #102343;
+        font-size: 17px;
+    }
+
+    .benefit-item h3 {
+        color: #102343;
+        font-family: 'Poppins', sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        margin: 0 0 6px;
+    }
+
+    .benefit-item p {
+        color: #68758a;
+        font-size: 10.5px;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+}
+
+
+/* ============================================= */
+/* PROGRAMS PAGE - SMALL MOBILE DEVICES */
+/* MAX-WIDTH: 400px */
+/* ============================================= */
+
+@media screen and (max-width: 400px) {
+
+    /* ========================================= */
+    /* HERO SECTION */
+    /* ========================================= */
+
+    .programs-hero {
+        min-height: 250px;
+        padding: 35px 6%;
+        background-position: 67% center;
+    }
+
+    .programs-hero-content {
+        width: 100%;
+    }
+
+    .hero-label {
+        font-size: 10px;
+        margin-bottom: 8px;
+    }
+
+    .programs-hero-content h1 {
+        font-size: 27px;
+        line-height: 1.18;
+        margin-bottom: 11px;
+    }
+
+    .programs-hero-content p {
+        font-size: 11px;
+        line-height: 1.65;
+    }
+
+
+    /* ========================================= */
+    /* PROGRAMS SECTION */
+    /* ========================================= */
+
+    .programs-section {
+        padding: 30px 5% 0;
+    }
+
+    .programs-heading {
+        margin-bottom: 25px;
+    }
+
+    .section-label {
+        font-size: 9px;
+    }
+
+    .programs-heading h2 {
+        font-size: 21px;
+        line-height: 1.3;
+    }
+
+    .programs-heading p {
+        font-size: 11px;
+        line-height: 1.65;
+    }
+
+
+    /* ========================================= */
+    /* PROGRAM CARDS */
+    /* ========================================= */
+
+    .program-cards {
+        gap: 21px;
+    }
+
+    .program-card {
+        width: 100%;
+    }
+
+    .program-image {
+        height: 165px;
+    }
+
+    .program-card-content {
+        padding: 35px 15px 18px;
+    }
+
+
+    /* ========================================= */
+    /* PROGRAM ICONS */
+    /* ========================================= */
+
+    .program-icon {
+        width: 44px;
+        height: 44px;
+        top: -24px;
+        left: 15px;
+        font-size: 20px;
+    }
+
+
+    /* ========================================= */
+    /* CARD TEXT */
+    /* ========================================= */
+
+    .program-card-content h3 {
+        font-size: 17px;
+        line-height: 1.3;
+    }
+
+    .program-description {
+        font-size: 11.5px;
+        line-height: 1.65;
+        margin-bottom: 16px;
+    }
+
+
+    /* ========================================= */
+    /* PROGRAM FEATURES */
+    /* ========================================= */
+
+    .program-features {
+        gap: 10px;
+        margin-bottom: 19px;
+    }
+
+    .program-features li {
+        font-size: 10.5px;
+        gap: 8px;
+    }
+
+    .program-features li i {
+        font-size: 13px;
+    }
+
+
+    /* ========================================= */
+    /* PRICE AND BUTTON */
+    /* ========================================= */
+
+    .program-card-bottom {
+        gap: 5px;
+    }
+
+    .program-price span {
+        font-size: 10px;
+    }
+
+    .program-price h4 {
+        font-size: 18px;
+    }
+
+    .program-button {
+        min-height: 35px;
+        padding: 0 10px;
+        gap: 5px;
+        font-size: 9px;
+    }
+
+
+    /* ========================================= */
+    /* CONFERENCE SECTION */
+    /* ========================================= */
+
+    .conference-section {
+        width: 90%;
+        margin-top: 32px;
+        padding: 23px 17px;
+        gap: 20px;
+    }
+
+    .conference-label {
+        font-size: 10px;
+    }
+
+    .conference-content h2 {
+        font-size: 22px;
+    }
+
+    .conference-content p {
+        font-size: 11px;
+        line-height: 1.65;
+    }
+
+    .conference-button {
+        min-height: 35px;
+        padding: 0 14px;
+        font-size: 9.5px;
+    }
+
+    .conference-icon {
+        width: 65px;
+        height: 65px;
+    }
+
+    .conference-icon i {
+        font-size: 27px;
+    }
+
+    .conference-benefits li {
+        font-size: 10.5px;
+        gap: 8px;
+    }
+
+    .conference-benefits li i {
+        font-size: 12px;
+    }
+
+
+    /* ========================================= */
+    /* PROGRAM BENEFITS */
+    /* ========================================= */
+
+    .program-benefits {
+        width: 90%;
+        margin-top: 30px;
+        column-gap: 8px;
+        row-gap: 24px;
+        padding-bottom: 25px;
+    }
+
+    .benefit-item {
+        padding: 5px 4px;
+    }
+
+    .benefit-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 15px;
+    }
+
+    .benefit-item h3 {
+        font-size: 10.5px;
+    }
+
+    .benefit-item p {
+        font-size: 9.5px;
+    }
+
+}
