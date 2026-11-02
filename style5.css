@@ -4444,3 +4444,180 @@ footer hr {
         border-color: #0785ff;
     }
 }
+
+/* ================= TEAM MEMBER CARDS ================= */
+
+.team .members {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 35px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    align-items: stretch;
+}
+
+/* Individual member card */
+.team .member-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 550px;
+    background: #ffffff;
+    border: 1px solid #dce8f5;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(0, 40, 100, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team .member-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 40, 100, 0.13);
+}
+
+/* Large photo at the top */
+.team .member-image {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.team .member-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Member information underneath */
+.team .member-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px 20px;
+    flex: 1;
+}
+
+.team .member-info .meet {
+    display: inline-block;
+    background: #dceeff;
+    color: #007bff;
+    padding: 9px 25px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.team .member-info h3 {
+    color: #071d70;
+    font-size: 28px;
+    font-weight: 800;
+    margin: 0 0 15px;
+}
+
+.team .member-info .blue-line {
+    width: 65px;
+    height: 5px;
+    background: #0785ff;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.team .member-info .role {
+    color: #071d70;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 5px;
+    margin: 0;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .team .members {
+        gap: 20px;
+    }
+
+    .team .member-image {
+        height: 300px;
+    }
+
+    .team .member-card {
+        min-height: 500px;
+    }
+
+    .team .member-info h3 {
+        font-size: 23px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .team .members {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+        gap: 30px;
+        padding: 0 15px;
+    }
+
+    .team .member-card {
+        min-height: auto;
+    }
+
+    .team .member-image {
+        height: 320px;
+    }
+
+    .team .member-info {
+        padding: 25px 15px;
+    }
+
+    .team .member-info h3 {
+        font-size: 24px;
+    }
+}
+
+
+/* TEAM MEMBER CARD BACKGROUND */
+.team .member-card {
+    background: linear-gradient(145deg, #eaf4ff, #d6eaff);
+    border: 1px solid #b8d9ff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 65, 140, 0.12);
+}
+
+/* TEXT AREA */
+.team .member-info {
+    background: #eaf4ff;
+    padding: 30px 20px;
+}
+
+/* MEMBER NAME */
+.team .member-info h3 {
+    color: #071d70;
+    font-weight: 800;
+}
+
+/* MEMBER POSITION */
+.team .member-info .role {
+    color: #003b80;
+    font-weight: 800;
+}
+
+/* MEET LABEL */
+.team .member-info .meet {
+    background: #007bff;
+    color: #ffffff;
+}
+
+/* BLUE DECORATIVE LINE */
+.team .member-info .blue-line {
+    background: #007bff;
+}
