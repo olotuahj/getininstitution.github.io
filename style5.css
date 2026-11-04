@@ -4651,8 +4651,133 @@ footer hr {
 /* TABLET VIEW - MOBILE MENU WIDTH */
 @media (min-width: 768px) and (max-width: 1024px) {
     .mobile-menu {
-        width: 50vw;
+        width: 70vw;
         min-width: 0;
-        max-width: 50vw;
+        max-width: 70vw;
     }
+}
+
+/* =========================================
+HORIZONTAL OVERFLOW - TABLET & MOBILE
+========================================= */
+
+@media (max-width: 1024px) {
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: clip;
+    }
+
+    /* Keep the page within the viewport */
+    .about-page,
+    .team-page,
+    .footer {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Prevent flex children from forcing extra width */
+    .top-bar,
+    .topbar-left,
+    .topbar-right {
+        min-width: 0;
+    }
+
+    .brand-name {
+        min-width: 0;
+    }
+
+    /* Correct the mobile menu positioning */
+    .mobile-menu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: auto;
+
+        width: 80vw;
+        min-width: 0;
+        max-width: 320px;
+
+        height: 100vh;
+        height: 100dvh;
+
+        box-sizing: border-box;
+        z-index: 2000;
+
+        transform: translateX(100%);
+    }
+
+    .mobile-menu.active {
+        transform: translateX(0);
+    }
+
+    /* Prevent the outreach video link from pushing outward */
+    .team-page .outreach-video-link {
+        margin-right: 0;
+    }
+
+    /* Keep page sections within the viewport */
+    .team-page .team-hero,
+    .team-page .team-outreach,
+    .team-page .team,
+    .team-page .getiin-connect {
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .team-page img {
+        max-width: 100%;
+    }
+}
+
+
+/* =========================================
+   TABLET MENU WIDTH
+========================================= */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .mobile-menu {
+        width: 70vw;
+        max-width: 70vw;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE MENU WIDTH
+========================================= */
+
+@media (max-width: 767px) {
+
+    .mobile-menu {
+        width: min(80vw, 320px);
+        max-width: 100vw;
+    }
+
+    .team-page .outreach-video-link {
+        margin: 0;
+    }
+
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 400px) {
+
+    .team-page .member-card {
+        min-width: 0;
+    }
+
+    .team-page .member-info {
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+
 }
