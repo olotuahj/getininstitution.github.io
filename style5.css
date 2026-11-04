@@ -4621,3 +4621,38 @@ footer hr {
 .team .member-info .blue-line {
     background: #007bff;
 }
+
+    /* SLOW MOBILE MENU SLIDE ANIMATION */
+.mobile-menu {
+    display: flex !important;
+    transform: translateX(100%);
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+
+    transition:
+        transform 0.5s ease-in-out,
+        opacity 0.5s ease-in-out,
+        visibility 0s linear 0.5s;
+}
+
+.mobile-menu.active {
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+
+    transition:
+        transform 0.5s ease-in-out,
+        opacity 0.5s ease-in-out,
+        visibility 0s;
+}
+
+/* TABLET VIEW - MOBILE MENU WIDTH */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .mobile-menu {
+        width: 50vw;
+        min-width: 0;
+        max-width: 50vw;
+    }
+}

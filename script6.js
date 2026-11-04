@@ -22,6 +22,11 @@ document.addEventListener('DOMContentLoaded', () => {
         closeMenu.addEventListener('click', () => {
             mobileMenu.classList.remove('active');
         });
+
+         // close menu
+    window.addEventListener('scroll', () => {
+        mobileMenu.classList.remove('active');
+    });
     }
 
     // =========================================

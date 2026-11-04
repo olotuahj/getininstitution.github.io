@@ -4112,3 +4112,53 @@ footer hr {
         opacity 0.5s ease-in-out,
         visibility 0s;
 }
+
+/* ================= TABLET FULL-WIDTH FIX ================= */
+@media (min-width: 767px) and (max-width: 1024px) {
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    #mainContent,
+    .main-page,
+    .top-bar,
+    .image1-content,
+    .image1,
+    .WhyChooseUs-content,
+    .events-content,
+    .About-CAB,
+    .footer {
+        width: 100%;
+        max-width: none;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .image1 {
+        height: 400px;
+        overflow: hidden;
+    }
+
+    .image1 img {
+        width: 100%;
+        max-width: none;
+    }
+
+    .About-CAB {
+        box-sizing: border-box;
+    }
+}
+
+/* TABLET VIEW - MOBILE MENU WIDTH */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .mobile-menu {
+        width: 50vw;
+        min-width: 0;
+        max-width: 50vw;
+    }
+}

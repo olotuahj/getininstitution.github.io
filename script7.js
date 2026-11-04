@@ -12,6 +12,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // close menu
     closeMenu.addEventListener('click', () => {
         mobileMenu.classList.remove('active');
+
+         // close menu
+    window.addEventListener('scroll', () => {
+        mobileMenu.classList.remove('active');
+    })
     });
 
        // Fade-up AND Fade-left animations
