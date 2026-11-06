@@ -159,6 +159,7 @@
     border: none;
      transform: scale(1.1);
      background-color: #fff;
+     width: 140px;
 }
 
 /* close button */
