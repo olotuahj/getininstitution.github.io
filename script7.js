@@ -4,32 +4,49 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileMenu = document.getElementById('MobileMenu');
     const closeMenu = document.getElementById('closeMenu');
 
-    // open menu
+    // Open menu
     hamburger.addEventListener('click', () => {
         mobileMenu.classList.add('active');
     });
 
-    // close menu
+    // Close menu
     closeMenu.addEventListener('click', () => {
         mobileMenu.classList.remove('active');
-
-         // close menu
-    window.addEventListener('scroll', () => {
-        mobileMenu.classList.remove('active');
-    })
     });
 
-       // Fade-up AND Fade-left animations
+    // Close menu when user scrolls
+    window.addEventListener('scroll', () => {
+        mobileMenu.classList.remove('active');
+    });
+
+
+    // ================================
+    // FADE-UP AND FADE-LEFT ANIMATIONS
+    // ================================
+
     const faders = document.querySelectorAll('.fade-up, .fade-left');
 
     const appearOnScroll = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('show'); 
-                observer.unobserve(entry.target);  
-            }
-        });
-    }, { threshold: 0.3 });
 
-    faders.forEach(fader => appearOnScroll.observe(fader));
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add('show');
+
+                observer.unobserve(entry.target);
+
+            }
+
+        });
+
+    }, {
+        threshold: 0.15
+    });
+
+
+    faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+    });
+
 });

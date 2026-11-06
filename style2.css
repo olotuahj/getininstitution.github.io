@@ -3072,3 +3072,513 @@ footer hr {
     }
 
 }
+
+
+@media (max-width: 1024px){
+    .main-nav {
+        display: none;
+    }
+}
+
+/* =========================================
+ DESKTOP NAVIGATION
+========================================= */
+
+@media (min-width: 1025px) {
+
+    /* white navigation */
+    .link-box {
+        display: none;
+    }
+
+    /* Check CAB */
+    .desktop-actions {
+        display: none;
+    }
+
+    /* Navigation container */
+    .topbar-right {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+    }
+
+    .topbar-right .main-nav {
+        display: flex;
+        align-items: center;
+    }
+
+    /* Navigation links container */
+    .topbar-right .link {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    /* Individual links */
+    .topbar-right .link a {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        color: #ffffff;
+        text-decoration: none;
+
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.95rem;
+        font-weight: 500;
+
+        text-transform: uppercase;
+        letter-spacing: 0.7px;
+
+        padding: 0.7rem 1rem;
+        border-radius: 8px;
+
+        transition:
+            color 0.3s ease,
+            background-color 0.3s ease,
+            transform 0.3s ease;
+    }
+
+    /* underline */
+    .topbar-right .link a::after {
+        content: "";
+        position: absolute;
+
+        left: 50%;
+        bottom: 5px;
+
+        width: 0;
+        height: 3px;
+
+        background-color: #ffd400;
+        border-radius: 10px;
+
+        transform: translateX(-50%);
+        transition: width 0.3s ease;
+    }
+
+    /* Hover */
+    .topbar-right .link a:hover {
+        color: #ffffff;
+        background-color: rgba(255, 255, 255, 0.12);
+        transform: translateY(-2px);
+    }
+
+    .topbar-right .link a:hover::after {
+        width: 55%;
+    }
+
+    /* Active Contact Us */
+    .topbar-right .link a#contactlink {
+        background: linear-gradient(
+            135deg,
+            #0a89f1,
+            #2467d8
+        );
+
+        color: #ffffff;
+
+        box-shadow:
+            0 5px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Contact Us underline */
+    .topbar-right .link a#contactlink::after {
+        display: none;
+    }
+
+    /* Contact Us hover */
+    .topbar-right .link a#contactlink:hover {
+        background: #ffffff;
+        color: #062750;
+
+        transform: translateY(-2px);
+
+        box-shadow:
+            0 6px 18px rgba(0, 0, 0, 0.18);
+    }
+
+    /* contact bar on desktop */
+    .contactus-bar {
+        display: none;
+    }
+}
+
+/* =========================================
+    DESKTOP TOP BAR
+========================================= */
+
+@media (min-width: 1025px) {
+
+    .top-bar {
+        background:
+            linear-gradient(
+                135deg,
+                #061a33 0%,
+                #082b52 55%,
+                #031525 100%
+            );
+
+        box-shadow:
+            0 4px 18px rgba(0, 0, 0, 0.18);
+    }
+
+    /*  brand name */
+    .brand-name {
+        color: #ffffff;
+    }
+
+    .brand-name h1,
+    .brand-name h2 {
+        color: #ffffff;
+    }
+
+    /* Navigation */
+    .topbar-right .link a {
+        color: #ffffff;
+    }
+
+    /* Navigation hover */
+    .topbar-right .link a:hover {
+        color: #ffffff;
+        background-color: rgba(255, 255, 255, 0.10);
+    }
+
+    /* Yellow hover underline */
+    .topbar-right .link a::after {
+        background-color: #ffd400;
+    }
+
+    /* Contact Us */
+    .topbar-right .link a#contactlink {
+        background: linear-gradient(
+            135deg,
+            #0a89f1,
+            #2467d8
+        );
+
+        color: #ffffff;
+
+        box-shadow:
+            0 5px 15px rgba(0, 0, 0, 0.25);
+    }
+
+    .topbar-right .link a#contactlink:hover {
+        background: #ffffff;
+        color: #062750;
+    }
+}
+
+/* =========================================
+   DESKTOP LOGO 
+========================================= */
+
+@media (min-width: 1025px) {
+
+    /* White logo container */
+    .logo {
+        width: 150px;
+        height: 72px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: #ffffff;
+
+        padding: 5px 8px;
+
+        border-radius: 10px;
+
+        overflow: hidden;
+
+        box-sizing: border-box;
+
+        margin-left: 50px;
+
+        box-shadow:
+            0 3px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    /*  logo white box */
+    #logo {
+        width: 100%;
+        height: 100%;
+
+        object-fit: contain;
+
+        display: block;
+    }
+}
+
+@media (max-width: 1024px){
+    .main-nav {
+        display: none;
+    }
+}
+
+/* =========================================
+ DESKTOP NAVIGATION
+========================================= */
+
+@media (min-width: 1025px) {
+
+    /* white navigation */
+    .link-box {
+        display: none;
+    }
+
+    /* Check CAB */
+    .desktop-actions {
+        display: none;
+    }
+
+    /* Navigation container */
+    .topbar-right {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+    }
+
+    .topbar-right .main-nav {
+        display: flex;
+        align-items: center;
+    }
+
+    /* Navigation links container */
+    .topbar-right .link {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    /* Individual links */
+    .topbar-right .link a {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        color: #ffffff;
+        text-decoration: none;
+
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.95rem;
+        font-weight: 500;
+
+        text-transform: uppercase;
+        letter-spacing: 0.7px;
+
+        padding: 0.7rem 1rem;
+        border-radius: 8px;
+
+        transition:
+            color 0.3s ease,
+            background-color 0.3s ease,
+            transform 0.3s ease;
+    }
+
+    /* underline */
+    .topbar-right .link a::after {
+        content: "";
+        position: absolute;
+
+        left: 50%;
+        bottom: 5px;
+
+        width: 0;
+        height: 3px;
+
+        background-color: #ffd400;
+        border-radius: 10px;
+
+        transform: translateX(-50%);
+        transition: width 0.3s ease;
+    }
+
+    /* Hover */
+    .topbar-right .link a:hover {
+        color: #ffffff;
+        background-color: rgba(255, 255, 255, 0.12);
+        transform: translateY(-2px);
+    }
+
+    .topbar-right .link a:hover::after {
+        width: 55%;
+    }
+
+    /* Active About Us */
+    .topbar-right .link a#about-us {
+        background: linear-gradient(
+            135deg,
+            #0a89f1,
+            #2467d8
+        );
+
+        color: #ffffff;
+
+        box-shadow:
+            0 5px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    /* about-us underline */
+    .topbar-right .link a#about-us::after {
+        display: none;
+    }
+
+    /* about-us hover */
+    .topbar-right .link a#about-us:hover {
+        background: #ffffff;
+        color: #062750;
+
+        transform: translateY(-2px);
+
+        box-shadow:
+            0 6px 18px rgba(0, 0, 0, 0.18);
+    }
+
+    /* about-bar on desktop */
+    .about-bar {
+        display: none;
+    }
+}
+
+/* =========================================
+    DESKTOP TOP BAR
+========================================= */
+
+@media (min-width: 1025px) {
+
+    .top-bar {
+        background:
+            linear-gradient(
+                135deg,
+                #061a33 0%,
+                #082b52 55%,
+                #031525 100%
+            );
+
+        box-shadow:
+            0 4px 18px rgba(0, 0, 0, 0.18);
+    }
+
+    /*  brand name */
+    .brand-name {
+        color: #ffffff;
+    }
+
+    .brand-name h1,
+    .brand-name h2 {
+        color: #ffffff;
+    }
+
+    /* Navigation */
+    .topbar-right .link a {
+        color: #ffffff;
+    }
+
+    /* Navigation hover */
+    .topbar-right .link a:hover {
+        color: #ffffff;
+        background-color: rgba(255, 255, 255, 0.10);
+    }
+
+    /* Yellow hover underline */
+    .topbar-right .link a::after {
+        background-color: #ffd400;
+    }
+
+    /* About Us */
+    .topbar-right .link a#about-us {
+        background: linear-gradient(
+            135deg,
+            #0a89f1,
+            #2467d8
+        );
+
+        color: #ffffff;
+
+        box-shadow:
+            0 5px 15px rgba(0, 0, 0, 0.25);
+    }
+
+    .topbar-right .link a#about-us:hover {
+        background: #ffffff;
+        color: #062750;
+    }
+}
+
+/* =========================================
+   DESKTOP LOGO 
+========================================= */
+
+@media (min-width: 1025px) {
+
+    /* White logo container */
+    .logo {
+        width: 150px;
+        height: 72px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: #ffffff;
+
+        padding: 5px 8px;
+
+        border-radius: 10px;
+
+        overflow: hidden;
+
+        box-sizing: border-box;
+
+        margin-left: 50px;
+
+        box-shadow:
+            0 3px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    /*  logo white box */
+    #logo {
+        width: 100%;
+        height: 100%;
+
+        object-fit: contain;
+
+        display: block;
+    }
+}
+
+/* =========================================
+    DESKTOP NAV 
+========================================= */
+
+@media screen and (min-width: 1025px) {
+
+    .topbar-right .link a,
+    .topbar-right .link a:hover,
+    .topbar-right .link a:focus {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        letter-spacing: 0.7px;
+        transform: none;
+    }
+
+    .topbar-right .link a#about-us:hover,
+    .topbar-right .link a#about-us:focus {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        letter-spacing: 0.7px;
+        transform: none;
+    }
+
+}

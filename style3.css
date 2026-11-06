@@ -11,6 +11,7 @@
     max-width: 1200px;
     height: 2000px;
     margin: 0 auto;
+    overflow: scroll;
     box-shadow: 0px 2px 8px rgba(0,0,0,0.05);
     background-color: #f5f4ea;
 }
@@ -5555,10 +5556,10 @@ footer hr {
 
 
 /* =========================================
-   PROGRAMS PAGE - FULL WIDTH TABLET & MOBILE
+   TABLET AND MOBILE
 ========================================= */
 
-@media (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
 
     html,
     body {
@@ -5571,25 +5572,415 @@ footer hr {
 
     .about-page {
         width: 100%;
-        max-width: none;
+        max-width: 100%;
         height: auto;
         min-height: 100vh;
         margin: 0;
         overflow-x: hidden;
         overflow-y: visible;
+        box-sizing: border-box;
     }
 
     .top-bar,
+    .link-box,
     .programs-bar,
     .programs-main,
     .programs-hero,
     .programs-section,
-    .conference-section,
+    .programs-courses,
     .program-benefits,
     .footer {
         width: 100%;
-        max-width: none;
+        max-width: 100%;
         box-sizing: border-box;
+    }
+
+    .programs-main {
+        min-width: 0;
+        overflow-x: hidden;
+    }
+
+    .programs-hero {
+        min-width: 0;
+    }
+
+    .programs-section {
+        min-width: 0;
+    }
+
+    .program-cards {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    .program-card {
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    .program-image {
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .program-image img {
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    .program-card-content {
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    .program-description,
+    .program-features,
+    .program-card-bottom {
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    .conference-content,
+    .conference-benefits {
+        min-width: 0;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .conference-content p,
+    .conference-benefits li {
+        max-width: 100%;
+        overflow-wrap: break-word;
+    }
+
+    .program-benefits {
+        min-width: 0;
+    }
+
+    .benefit-item {
+        min-width: 0;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .mobile-menu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: auto;
+
+        width: min(80vw, 320px);
+        max-width: 100vw;
+        min-width: 0;
+
+        height: 100vh;
+        height: 100dvh;
+
+        box-sizing: border-box;
+        z-index: 2000;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE SCREENS
+========================================= */
+
+@media screen and (max-width: 400px) {
+
+    .top-bar {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .hamburger {
+        margin-left: 0;
+        font-size: 1.8rem;
+    }
+
+    .programs-hero,
+    .programs-section {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .program-benefits {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 1024px){
+    .main-nav {
+        display: none;
+    }
+}
+
+/* =========================================
+ DESKTOP NAVIGATION
+========================================= */
+
+@media (min-width: 1025px) {
+
+    /* white navigation */
+    .link-box {
+        display: none;
+    }
+
+    /* Check CAB */
+    .desktop-actions {
+        display: none;
+    }
+
+    /* Navigation container */
+    .topbar-right {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+    }
+
+    .topbar-right .main-nav {
+        display: flex;
+        align-items: center;
+    }
+
+    /* Navigation links container */
+    .topbar-right .link {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    /* Individual links */
+    .topbar-right .link a {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        color: #ffffff;
+        text-decoration: none;
+
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.95rem;
+        font-weight: 500;
+
+        text-transform: uppercase;
+        letter-spacing: 0.7px;
+
+        padding: 0.7rem 1rem;
+        border-radius: 8px;
+
+        transition:
+            color 0.3s ease,
+            background-color 0.3s ease,
+            transform 0.3s ease;
+    }
+
+    /* underline */
+    .topbar-right .link a::after {
+        content: "";
+        position: absolute;
+
+        left: 50%;
+        bottom: 5px;
+
+        width: 0;
+        height: 3px;
+
+        background-color: #ffd400;
+        border-radius: 10px;
+
+        transform: translateX(-50%);
+        transition: width 0.3s ease;
+    }
+
+    /* Hover */
+    .topbar-right .link a:hover {
+        color: #ffffff;
+        background-color: rgba(255, 255, 255, 0.12);
+        transform: translateY(-2px);
+    }
+
+    .topbar-right .link a:hover::after {
+        width: 55%;
+    }
+
+    /* Active programslink */
+    .topbar-right .link a#programslink {
+        background: linear-gradient(
+            135deg,
+            #0a89f1,
+            #2467d8
+        );
+
+        color: #ffffff;
+
+        box-shadow:
+            0 5px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    /* programslink underline */
+    .topbar-right .link a#programslink::after {
+        display: none;
+    }
+
+    /* programslink hover */
+    .topbar-right .link a#programslink:hover {
+        background: #ffffff;
+        color: #062750;
+
+        transform: translateY(-2px);
+
+        box-shadow:
+            0 6px 18px rgba(0, 0, 0, 0.18);
+    }
+
+    /* programs-bar on desktop */
+    .programs-bar {
+        display: none;
+    }
+}
+
+/* =========================================
+    DESKTOP TOP BAR
+========================================= */
+
+@media (min-width: 1025px) {
+
+    .top-bar {
+        background:
+            linear-gradient(
+                135deg,
+                #061a33 0%,
+                #082b52 55%,
+                #031525 100%
+            );
+
+        box-shadow:
+            0 4px 18px rgba(0, 0, 0, 0.18);
+    }
+
+    /*  brand name */
+    .brand-name {
+        color: #ffffff;
+    }
+
+    .brand-name h1,
+    .brand-name h2 {
+        color: #ffffff;
+    }
+
+    /* Navigation */
+    .topbar-right .link a {
+        color: #ffffff;
+    }
+
+    /* Navigation hover */
+    .topbar-right .link a:hover {
+        color: #ffffff;
+        background-color: rgba(255, 255, 255, 0.10);
+    }
+
+    /* Yellow hover underline */
+    .topbar-right .link a::after {
+        background-color: #ffd400;
+    }
+
+    /* programslink */
+    .topbar-right .link a#programslink {
+        background: linear-gradient(
+            135deg,
+            #0a89f1,
+            #2467d8
+        );
+
+        color: #ffffff;
+
+        box-shadow:
+            0 5px 15px rgba(0, 0, 0, 0.25);
+    }
+
+    .topbar-right .link a#programslink:hover {
+        background: #ffffff;
+        color: #062750;
+    }
+}
+
+/* =========================================
+   DESKTOP LOGO 
+========================================= */
+
+@media (min-width: 1025px) {
+
+    /* White logo container */
+    .logo {
+        width: 150px;
+        height: 72px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: #ffffff;
+
+        padding: 5px 8px;
+
+        border-radius: 10px;
+
+        overflow: hidden;
+
+        box-sizing: border-box;
+
+        margin-left: 50px;
+
+        box-shadow:
+            0 3px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    /*  logo white box */
+    #logo {
+        width: 100%;
+        height: 100%;
+
+        object-fit: contain;
+
+        display: block;
+    }
+}
+
+/* =========================================
+    DESKTOP NAV 
+========================================= */
+
+@media screen and (min-width: 1025px) {
+
+    .topbar-right .link a,
+    .topbar-right .link a:hover,
+    .topbar-right .link a:focus {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        letter-spacing: 0.7px;
+        transform: none;
+    }
+
+    .topbar-right .link a#programslink:hover,
+    .topbar-right .link a#programslink:focus {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        letter-spacing: 0.7px;
+        transform: none;
     }
 
 }
