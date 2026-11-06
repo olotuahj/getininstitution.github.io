@@ -11,7 +11,6 @@
     max-width: 1200px;
     height: 2000px;
     margin: 0 auto;
-    overflow: scroll;
     box-shadow: 0px 2px 8px rgba(0,0,0,0.05);
     background-color: #f5f4ea;
 }
@@ -2734,7 +2733,7 @@ footer hr {
                 rgba(5, 25, 59, 0.96) 42%,
                 rgba(5, 25, 59, 0.35) 100%
             ),
-            url("images/conference.jpg");
+            url("images/pexels-divinetechygirl-1181357.jpg");
 
         background-size: cover;
         background-position: center;
@@ -3291,7 +3290,7 @@ footer hr {
                 rgba(5, 25, 59, 0.94) 45%,
                 rgba(5, 25, 59, 0.4) 100%
             ),
-            url("images/conference.jpg");
+             url("images/pexels-divinetechygirl-1181357.jpg");
 
         background-size: cover;
         background-position: center;
@@ -3857,7 +3856,7 @@ footer hr {
                 rgba(5, 25, 59, 0.97),
                 rgba(5, 25, 59, 0.82)
             ),
-            url("images/conference.jpg");
+            url("images/pexels-divinetechygirl-1181357.jpg");
 
         background-size: cover;
         background-position: center;
@@ -5552,4 +5551,45 @@ footer hr {
 
     .brand-name{
     color: #03005B;
+}
+
+
+/* =========================================
+   PROGRAMS PAGE - FULL WIDTH TABLET & MOBILE
+========================================= */
+
+@media (max-width: 1024px) {
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    .about-page {
+        width: 100%;
+        max-width: none;
+        height: auto;
+        min-height: 100vh;
+        margin: 0;
+        overflow-x: hidden;
+        overflow-y: visible;
+    }
+
+    .top-bar,
+    .programs-bar,
+    .programs-main,
+    .programs-hero,
+    .programs-section,
+    .conference-section,
+    .program-benefits,
+    .footer {
+        width: 100%;
+        max-width: none;
+        box-sizing: border-box;
+    }
+
 }
