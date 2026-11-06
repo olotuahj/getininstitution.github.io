@@ -5984,3 +5984,23 @@ footer hr {
     }
 
 }
+
+/* ================= (mobile ONLY) ================= */
+@media (max-width: 767px) {
+           #logo {
+        width: 160px;
+        height: auto;
+        object-fit: contain;
+        display: block;
+        
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+
+        .brand-name {
+    color: #03005B;
+}
+}
