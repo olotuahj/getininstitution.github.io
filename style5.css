@@ -553,6 +553,7 @@ footer hr {
 
         .brand-name {
     color: #03005B;
+    display: none;
 }
 
          /* about-bar  */
