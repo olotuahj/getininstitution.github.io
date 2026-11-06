@@ -5048,3 +5048,9 @@ HORIZONTAL OVERFLOW - TABLET & MOBILE
     }
 
 }
+
+@media (max-width: 665px) {
+    .brand-name {
+        display: none;
+    }
+}
