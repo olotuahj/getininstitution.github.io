@@ -161,6 +161,7 @@
     border: none;
      transform: scale(1.1);
      background-color: #fff;
+     width: 110px;
 }
 
 /* close button */
@@ -1450,10 +1451,6 @@ footer hr {
 
     .hamburger{
         margin-left: 9rem;
-    }
-    
-     .footer{
-        height: 980px;
     }
 }
 

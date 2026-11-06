@@ -159,6 +159,7 @@
     border: none;
      transform: scale(1.1);
      background-color: #fff;
+     width: 120px;
 }
 
 /* close button */
@@ -2384,7 +2385,7 @@ footer hr {
                 rgba(3, 19, 34, 0.88) 43%,
                 rgba(3, 19, 34, 0.28) 100%
             ),
-            url("images/Hopeful\ Campus\ Daydream.png");
+            url("images/Confident\ Student\ at\ a\ Modern\ Campus.png");
        background-size: 100% 100%, 115% auto;
     background-position: center, 15% 45%;
     background-repeat: no-repeat;
@@ -3635,6 +3636,7 @@ footer hr {
         object-fit: cover;
         object-position: center;
         transition: transform 0.4s ease;
+        object-position: 20% 1%;
     }
 
     .program-card:hover .program-image img {
@@ -5443,4 +5445,111 @@ footer hr {
         min-width: 0;
         max-width: 70vw;
     }
+}
+
+@media (max-width: 400px) {
+     #logo {
+        width: 140px;
+        height: auto;
+        object-fit: contain;
+        display: block;
+        
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .hamburger{
+        margin-left: 9rem;
+    }
+}
+
+/* ================= TABLET ONLY ================= */
+@media (min-width:768px) and (max-width:1024px) {
+      .top-bar{
+        height: 8.5rem;
+    }
+    
+       #logo {
+        width: 150px;
+        height: auto;
+        object-fit: contain;
+        display: block;
+        
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+         margin-left: 50px;
+    }
+
+        .brand-name h1 {
+            font-family: Georgia, serif;
+            line-height: 1;
+            font-size: 32px;
+    }
+
+        .brand-name h2{
+            font-size: 20px;
+        }
+    }
+
+    @media (max-width: 665px) {
+    .brand-name h1{
+        font-size: 26px;
+    }
+
+    .brand-name h2{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 665px) {
+    .brand-name {
+        display: none;
+    }
+}
+
+/* ================= DESKTOP ONLY ================= */
+@media (min-width:1025px) {
+     .top-bar{
+        height: 8.5rem;
+    }
+
+    #MobileMenu{
+        display: none;
+    }
+
+     #logo {
+        width: 150px;
+        height: auto;
+        object-fit: contain;
+        display: block;
+        
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+         margin-left: 50px;
+    }
+
+      .brand-name h1 {
+            font-family: Georgia, serif;
+            line-height: 1;
+            font-size: 42px;
+        }
+
+        .brand-name h2 {
+            font-family: Georgia, serif;
+            font-weight: normal;
+            font-size: 30px;
+        }
+    }
+
+    .brand-name{
+    color: #03005B;
 }
