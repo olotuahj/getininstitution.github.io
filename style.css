@@ -4475,3 +4475,14 @@ body {
     }
 
 }
+
+/* ================= HIDE IMAGES UNTIL FULLY LOADED ================= */
+
+img.image-loading {
+    visibility: hidden;
+}
+
+/* Reveal image only after successful loading */
+img.image-loading.image-loaded {
+    visibility: visible;
+}

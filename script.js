@@ -1,3 +1,59 @@
+/* ================= IMAGE LOADING CONTROL ================= */
+
+document.querySelectorAll("img").forEach((img) => {
+
+    // Hide image immediately
+    img.classList.add("image-loading");
+
+    // Reveal image only after it has loaded and decoded
+    function revealImage() {
+
+        if (img.naturalWidth > 0) {
+
+            const reveal = () => {
+
+                img.classList.add("image-loaded");
+
+                // If this image has a fade animation,
+                // allow it to animate only after loading.
+                if (img.dataset.pendingFade === "true") {
+                    img.classList.add("show");
+                    delete img.dataset.pendingFade;
+                }
+
+            };
+
+            if (typeof img.decode === "function") {
+
+                img.decode()
+                    .then(reveal)
+                    .catch(() => {
+                        if (img.naturalWidth > 0) {
+                            reveal();
+                        }
+                    });
+
+            } else {
+                reveal();
+            }
+        }
+    }
+
+    // Handle successful loading
+    img.addEventListener("load", revealImage, { once: true });
+
+    // Handle failed images
+    img.addEventListener("error", () => {
+        console.warn("Image failed to load:", img.src);
+    }, { once: true });
+
+    // Handle images already loaded from cache
+    if (img.complete) {
+        revealImage();
+    }
+
+});
+
 document.addEventListener('DOMContentLoaded', () => {
 
     const hamburger = document.getElementById('hamburger');
@@ -21,19 +77,43 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     });
 
-    // Fade-up AND Fade-left animations
-    const faders = document.querySelectorAll('.fade-up, .fade-left');
+    // ================= FADE-UP AND FADE-LEFT ANIMATIONS =================
 
-    const appearOnScroll = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('show'); 
-                observer.unobserve(entry.target);  
+const faders = document.querySelectorAll('.fade-up, .fade-left');
+
+const appearOnScroll = new IntersectionObserver((entries, observer) => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            const target = entry.target;
+
+            // If the animated element is an image,
+            // wait until it has completely loaded.
+            if (
+                target.tagName === "IMG" &&
+                !target.classList.contains("image-loaded")
+            ) {
+
+                target.dataset.pendingFade = "true";
+
+                observer.unobserve(target);
+
+                return;
             }
-        });
-    }, { threshold: 0.1 });
 
-    faders.forEach(fader => appearOnScroll.observe(fader));
+            target.classList.add('show');
+
+            observer.unobserve(target);
+
+        }
+
+    });
+
+}, { threshold: 0.1 });
+
+faders.forEach(fader => appearOnScroll.observe(fader));
 
 // ================= SLIDER =================
 
