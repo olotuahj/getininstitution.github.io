@@ -5,6 +5,51 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeMenu = document.getElementById('closeMenu');
     const aboutPage = document.getElementById('aboutpage'); 
 
+// ================= IMAGE LOADING =================
+
+const images = document.querySelectorAll('img');
+
+images.forEach(img => {
+
+    function revealImage() {
+
+        if (img.naturalWidth > 0) {
+
+            const showImage = () => {
+                img.classList.add('image-loaded');
+            };
+
+            if (typeof img.decode === 'function') {
+
+                img.decode()
+                    .then(showImage)
+                    .catch(() => {
+                        if (img.naturalWidth > 0) {
+                            showImage();
+                        }
+                    });
+
+            } else {
+                showImage();
+            }
+        }
+    }
+
+    // Wait for the image to finish loading.
+    img.addEventListener('load', revealImage, { once: true });
+
+    // Keep failed images hidden.
+    img.addEventListener('error', () => {
+        console.warn('Image failed to load:', img.src);
+    }, { once: true });
+
+    // Handle images that have already loaded.
+    if (img.complete && img.naturalWidth > 0) {
+        revealImage();
+    }
+
+});
+
     // open menu
     hamburger.addEventListener('click', () => {
         mobileMenu.classList.add('active');

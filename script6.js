@@ -5,6 +5,50 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeMenu = document.getElementById('closeMenu');
 
     // =========================================
+    // HIDE IMAGES UNTIL FULLY LOADED
+    // =========================================
+
+    const images = document.querySelectorAll('img');
+
+    images.forEach(img => {
+
+        function revealImage() {
+
+            if (img.naturalWidth > 0) {
+
+                const showImage = () => {
+                    img.classList.add('image-loaded');
+                };
+
+                if (typeof img.decode === 'function') {
+
+                    img.decode()
+                        .then(showImage)
+                        .catch(() => {
+                            if (img.naturalWidth > 0) {
+                                showImage();
+                            }
+                        });
+
+                } else {
+                    showImage();
+                }
+            }
+        }
+
+        img.addEventListener('load', revealImage, { once: true });
+
+        img.addEventListener('error', () => {
+            console.warn('Image failed to load:', img.src);
+        }, { once: true });
+
+        if (img.complete && img.naturalWidth > 0) {
+            revealImage();
+        }
+
+    });
+
+    // =========================================
     // OPEN MOBILE MENU
     // =========================================
 
@@ -151,23 +195,35 @@ document.addEventListener('DOMContentLoaded', () => {
                 const nextImage = new Image();
 
 
-                nextImage.onload = () => {
+               nextImage.onload = async () => {
 
-                    outreachImage.src = nextImage.src;
+    try {
 
-                    // Apply individual desktop image position
+        // Wait until the next image is fully decoded.
+        if (typeof nextImage.decode === 'function') {
+            await nextImage.decode();
+        }
 
-                    updateOutreachPosition();
+        outreachImage.src = nextImage.src;
 
-                    requestAnimationFrame(() => {
+        // Apply individual desktop image position.
+        updateOutreachPosition();
 
-                        outreachImage.classList.remove('image-fade');
+        requestAnimationFrame(() => {
+            outreachImage.classList.remove('image-fade');
+        });
 
-                    });
+    } catch (error) {
 
-                    isChangingImage = false;
+        console.error('Image decoding failed:', error);
 
-                };
+        outreachImage.classList.remove('image-fade');
+
+    }
+
+    isChangingImage = false;
+
+};
 
 
                 nextImage.onerror = () => {

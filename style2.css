@@ -3582,3 +3582,13 @@ footer hr {
     }
 
 }
+
+/* ================= HIDE IMAGES UNTIL FULLY LOADED ================= */
+
+img.image-loading {
+    visibility: hidden;
+}
+
+img.image-loading.image-loaded {
+    visibility: visible;
+}

@@ -4208,9 +4208,9 @@ body {
     }
 
     .mobile-menu {
-        width: 70vw;
+        width: 40vw;
         min-width: 0;
-        max-width: 70vw;
+        max-width: 40vw;
     }
 }
 
