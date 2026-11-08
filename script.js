@@ -111,7 +111,7 @@ const appearOnScroll = new IntersectionObserver((entries, observer) => {
 
     });
 
-}, { threshold: 0.1 });
+}, { threshold: 0.05 });
 
 faders.forEach(fader => appearOnScroll.observe(fader));
 
