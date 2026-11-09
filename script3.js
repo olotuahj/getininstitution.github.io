@@ -437,7 +437,7 @@ proceedToPayment.addEventListener("click", async function () {
         proceedToPayment.textContent = "Processing...";
 
         const response = await fetch(
-            "http://localhost:5000/api/payments/initialize",
+           "https://getin-payment-api.onrender.com/api/payments/initialize",
             {
                 method: "POST",
                 headers: {
