@@ -28,7 +28,12 @@ if (!PAYSTACK_SECRET_KEY) {
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+    origin: [
+        "https://globalethosinternational.com",
+        "https://www.globalethosinternational.com"
+    ]
+}));
 app.use(express.json());
 
 // Test route
@@ -158,7 +163,13 @@ app.post(
                 }
             );
 
-     const payment = response.data.data;
+    const payment = response.data?.data;
+
+if (response.data?.status !== true || !payment) {
+    return res.status(400).json({
+        message: "Unable to retrieve payment details from Paystack."
+    });
+}
 
 const programId = payment.metadata?.programId;
 const program = programs[programId];
