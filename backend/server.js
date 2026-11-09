@@ -202,9 +202,11 @@ const result = await db.runTransaction(async (transaction) => {
   if (existingEnrollment.exists) {
     const existingData = existingEnrollment.data();
 
-    if (existingData.userId !== req.user.uid) {
-        throw new Error("Payment reference belongs to another user.");
-    }
+  if (existingData.userId !== req.user.uid) {
+    const error = new Error("Payment reference belongs to another user.");
+    error.statusCode = 403;
+    throw error;
+}
 
     return "exists";
 }
@@ -239,15 +241,19 @@ res.json({
 });
 
         } catch (error) {
-            console.error(
-                "Payment verification error:",
-                error.response?.data || error.message
-            );
+    console.error(
+        "Payment verification error:",
+        error.response?.data || error.message
+    );
 
-            res.status(500).json({
-                message: "Unable to verify payment."
-            });
-        }
+    const statusCode = error.statusCode || 500;
+
+    res.status(statusCode).json({
+        message: statusCode === 403
+            ? "Payment reference belongs to another user."
+            : "Unable to verify payment."
+    });
+}
     }
 );
 
