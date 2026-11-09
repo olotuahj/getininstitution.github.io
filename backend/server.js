@@ -101,7 +101,7 @@ const email = req.user.email;
                 email: email,
                 amount: program.amount,
                 currency: "NGN",
-                callback_url: "https://getininstitution.github.io/payment-success.html",
+               callback_url: "https://globalethosinternational.com/payment-success.html",
               metadata: {
     userId: req.user.uid,
     programId: programId,
