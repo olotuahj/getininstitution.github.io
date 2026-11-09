@@ -346,3 +346,135 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+// Enrolment Modal Functionality
+document.addEventListener("DOMContentLoaded", function () {
+
+    const enrolmentModal = document.getElementById("enrolmentModal");
+    const closeEnrolmentModal = document.getElementById("closeEnrolmentModal");
+    const selectedProgram = document.getElementById("selectedProgram");
+    const programPrice = document.getElementById("programPrice");
+
+    const proceedToPayment = document.getElementById("proceedToPayment");
+
+    if (!enrolmentModal || !closeEnrolmentModal || !selectedProgram || !programPrice) {
+    return;
+}
+
+    const enrolButtons = document.querySelectorAll(
+        ".workshop-enrol-button, .short-course-enrol-button, .certification-enrol-button"
+    );
+
+    let selectedProgramId = null;
+
+    const programDetails = {
+        "workshop": {
+            name: "Workshop / Mini Training & Mentorship",
+            price: "₦50,000"
+        },
+        "short-courses": {
+            name: "Short Courses",
+            price: "₦30,000"
+        },
+        "certification": {
+            name: "Certification Courses",
+            price: "₦100,000"
+        }
+    };
+
+    enrolButtons.forEach(function (button) {
+
+        button.addEventListener("click", async function (event) {
+
+            event.preventDefault();
+
+            if (!window.firebaseAuthReady) {
+    alert("Authentication is not ready. Please refresh and try again.");
+    return;
+}
+
+            // Wait for Firebase to check the login status
+            const user = await window.firebaseAuthReady;
+
+            // If the visitor is not logged in, redirect to login
+            if (!user) {
+                alert("Please log in before enrolling in a program.");
+                window.location.href = "login.html";
+                return;
+            }
+
+            // Get selected program
+            const programType = button.dataset.program;
+            const program = programDetails[programType];
+
+            selectedProgramId = programType;
+
+            if (!program) return;
+
+            selectedProgram.textContent = "You selected: " + program.name;
+            programPrice.textContent = "Program Fee: " + program.price;
+
+            enrolmentModal.style.display = "flex";
+        });
+
+    });
+
+    // Proceed to Paystack Payment
+proceedToPayment.addEventListener("click", async function () {
+
+    try {
+        const user = window.firebaseAuth.currentUser;
+
+        if (!user) {
+            alert("Please log in before making payment.");
+            window.location.href = "login.html";
+            return;
+        }
+
+        const idToken = await user.getIdToken();
+
+        proceedToPayment.disabled = true;
+        proceedToPayment.textContent = "Processing...";
+
+        const response = await fetch(
+            "http://localhost:5000/api/payments/initialize",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${idToken}`
+                },
+                body: JSON.stringify({
+                    programId: selectedProgramId
+                })
+            }
+        );
+
+        const data = await response.json();
+
+        if (!response.ok) {
+            throw new Error(data.message || "Unable to start payment.");
+        }
+
+        window.location.href = data.authorization_url;
+
+    } catch (error) {
+        alert(error.message);
+
+        proceedToPayment.disabled = false;
+        proceedToPayment.textContent = "Proceed to Payment";
+    }
+
+});
+
+    closeEnrolmentModal.addEventListener("click", function () {
+        enrolmentModal.style.display = "none";
+    });
+
+    enrolmentModal.addEventListener("click", function (event) {
+        if (event.target === enrolmentModal) {
+            enrolmentModal.style.display = "none";
+        }
+    });
+
+});

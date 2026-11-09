@@ -259,10 +259,12 @@
                 Back
             </button>
 
-            <a href="Register.html" class="program-button workshop-enrol-button">
-                Enrol
-                <i class="fa-solid fa-arrow-right"></i>
-            </a>
+          <a href="#" 
+   class="program-button workshop-enrol-button"
+   data-program="workshop">
+    Enrol
+    <i class="fa-solid fa-arrow-right"></i>
+</a>
 
         </div>
 
@@ -431,13 +433,14 @@
                 Back
             </button>
 
-            <a
-                href="Register.html"
-                class="program-button short-course-enrol-button"
-            >
-                Enrol
-                <i class="fa-solid fa-arrow-right"></i>
-            </a>
+          <a
+    href="#"
+    class="program-button short-course-enrol-button"
+    data-program="short-courses"
+>
+    Enrol
+    <i class="fa-solid fa-arrow-right"></i>
+</a>
 
         </div>
 
@@ -603,13 +606,14 @@
                 Back
             </button>
 
-            <a
-                href="Register.html"
-                class="program-button certification-enrol-button"
-            >
-                Enrol
-                <i class="fa-solid fa-arrow-right"></i>
-            </a>
+       <a
+    href="#"
+    class="program-button certification-enrol-button"
+    data-program="certification"
+>
+    Enrol
+    <i class="fa-solid fa-arrow-right"></i>
+</a>
 
         </div>
 
@@ -884,6 +888,59 @@
 
 </footer>
 </header>
+
+<!-- Enrolment Modal -->
+<div id="enrolmentModal" class="enrolment-modal">
+    <div class="enrolment-modal-content">
+
+        <button type="button" id="closeEnrolmentModal" class="close-modal">
+            &times;
+        </button>
+
+        <h2>Enrol in a Program</h2>
+
+        <p id="selectedProgram">
+            You are enrolling in a program.
+        </p>
+
+        <p id="programPrice"></p>
+
+        <button type="button" id="proceedToPayment">
+            Proceed to Payment
+        </button>
+
+    </div>
+</div>
+
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
+
+    import {
+        getAuth,
+        onAuthStateChanged
+    } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-auth.js";
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyAjZAC1P1m-cErMXQhjbNz3VcHXi1sR1M8",
+        authDomain: "getin-ef910.firebaseapp.com",
+        projectId: "getin-ef910",
+        storageBucket: "getin-ef910.firebasestorage.app",
+        messagingSenderId: "458508268395",
+        appId: "1:458508268395:web:cd1fef3ac1d37321e3d22e",
+        measurementId: "G-R9R39FT5QE"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    window.firebaseAuth = auth;
+
+    window.firebaseAuthReady = new Promise((resolve) => {
+        onAuthStateChanged(auth, (user) => {
+            resolve(user);
+        });
+    });
+</script>
     <script src="script3.js"></script>
 </body>
 </html>

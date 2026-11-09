@@ -6016,3 +6016,64 @@ img:not(.image-loaded) {
 img.image-loaded {
     visibility: visible;
 }
+
+/* Enrolment Modal */
+.enrolment-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.enrolment-modal-content {
+    background: #fff;
+    width: 100%;
+    max-width: 450px;
+    padding: 35px;
+    border-radius: 12px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    border: none;
+    background: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #333;
+}
+
+.enrolment-modal-content h2 {
+    margin-bottom: 15px;
+}
+
+.enrolment-modal-content p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+#proceedToPayment {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    background: #1b5e20;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#proceedToPayment:hover {
+    background: #144a19;
+}

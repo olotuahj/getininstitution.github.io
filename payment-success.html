@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Verification - GET IN Institution</title>
+</head>
+<body>
+
+    <h2 id="paymentMessage">Verifying your payment...</h2>
+    <p id="paymentDetails">Please wait while we confirm your transaction.</p>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
+        import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-auth.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyAjZAC1P1m-cErMXQhjbNz3VcHXi1sR1M8",
+            authDomain: "getin-ef910.firebaseapp.com",
+            projectId: "getin-ef910",
+            storageBucket: "getin-ef910.firebasestorage.app",
+            messagingSenderId: "458508268395",
+            appId: "1:458508268395:web:cd1fef3ac1d37321e3d22e",
+            measurementId: "G-R9R39FT5QE"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        const message = document.getElementById("paymentMessage");
+        const details = document.getElementById("paymentDetails");
+
+        const reference = new URLSearchParams(window.location.search).get("reference");
+
+        if (!reference) {
+            message.textContent = "Payment reference not found.";
+            details.textContent = "Please contact support if you were charged.";
+        } else {
+            onAuthStateChanged(auth, async (user) => {
+                if (!user) {
+                    message.textContent = "Please log in to verify your payment.";
+                    details.textContent = "Log in with the account used for this payment.";
+                    return;
+                }
+
+                try {
+                    const idToken = await user.getIdToken();
+
+                    const response = await fetch(
+                        "http://localhost:5000/api/payments/verify",
+                        {
+                            method: "POST",
+                            headers: {
+                                "Content-Type": "application/json",
+                                "Authorization": `Bearer ${idToken}`
+                            },
+                            body: JSON.stringify({ reference })
+                        }
+                    );
+
+                    const data = await response.json();
+
+                    if (!response.ok) {
+                        throw new Error(data.message || "Payment verification failed.");
+                    }
+
+                    message.textContent = "Payment successful!";
+                    details.textContent = "Your enrolment for " + data.programName + " has been confirmed.";
+
+                } catch (error) {
+                    message.textContent = "Payment verification failed.";
+                    details.textContent = error.message;
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
