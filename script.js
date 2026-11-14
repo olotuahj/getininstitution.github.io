@@ -295,3 +295,67 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 });
+
+
+
+/* =========================================
+   FULL PAGE RESOURCE LOADING CONTROL
+========================================= */
+
+async function finishPageLoading() {
+
+    const loader = document.getElementById("pageLoader");
+
+    if (!loader) return;
+
+    // Capture every image on the page
+    const images = Array.from(document.images);
+
+    // Force lazy-loaded images to load as well
+    images.forEach(img => {
+        img.loading = "eager";
+    });
+
+    // Wait until the browser finishes loading page resources
+    const pageLoaded = new Promise(resolve => {
+
+        if (document.readyState === "complete") {
+            resolve();
+        } else {
+            window.addEventListener("load", resolve, {
+                once: true
+            });
+        }
+
+    });
+
+    // Wait for all page resources
+    await pageLoaded;
+
+    // Wait for web fonts to finish loading
+    if (document.fonts) {
+        await document.fonts.ready;
+    }
+
+    // Wait for all images to finish decoding
+    await Promise.allSettled(
+        images.map(img => {
+
+            if (typeof img.decode === "function") {
+                return img.decode();
+            }
+
+            return Promise.resolve();
+        })
+    );
+
+    // Reveal the entire website
+    document.body.classList.remove("page-loading");
+
+    // Hide the loading screen
+    loader.classList.add("is-hidden");
+
+}
+
+// Start the loading process
+finishPageLoading();
