@@ -2318,7 +2318,7 @@ footer hr {
 .fade-up {
     opacity: 0;             
     transform: translateY(50px); 
-    transition: all 0.8s ease-out; 
+    transition: all 0.4s ease-out; 
 }
 
 .fade-up.show {
@@ -5054,16 +5054,4 @@ HORIZONTAL OVERFLOW - TABLET & MOBILE
     .brand-name {
         display: none;
     }
-}
-
-/* =========================================
-   HIDE IMAGES UNTIL FULLY LOADED
-========================================= */
-
-img:not(.image-loaded) {
-    visibility: hidden;
-}
-
-img.image-loaded {
-    visibility: visible;
 }
