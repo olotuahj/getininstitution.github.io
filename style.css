@@ -3848,7 +3848,7 @@ footer hr {
 .fade-up {
     opacity: 0;
     transform: translateY(40px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
+    transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
 .fade-left {

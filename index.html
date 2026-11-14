@@ -704,7 +704,7 @@
             }
         }
 
-        /* =====================================
+/* =====================================
    HIDE IMAGES UNTIL FULLY LOADED
 ===================================== */
 
@@ -717,6 +717,40 @@ img:not(.image-loaded) {
 img.image-loaded {
     visibility: visible;
 }
+
+/* LOADING SPINNER */
+
+.spinner {
+    width: 19px;
+    height: 19px;
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    border-top-color: #ffffff;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+    display: none;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* LOADING BUTTON STATE */
+
+.create-button.loading .spinner {
+    display: inline-block;
+}
+
+.create-button.loading .button-arrow {
+    display: none;
+}
+
+.create-button:disabled {
+    opacity: 0.8;
+    cursor: not-allowed;
+}
+
 
     </style>
 
@@ -1148,17 +1182,16 @@ img.image-loaded {
                     </div>
 
                     <button
-                        type="submit"
-                        class="create-button"
-                    >
+    type="submit"
+    class="create-button"
+    id="createAccountBtn"
+>
+    <span class="button-text">Create Account</span>
 
-                        Create Account
+    <span class="button-arrow">→</span>
 
-                        <span class="button-arrow">
-                            →
-                        </span>
-
-                    </button>
+    <span class="spinner"></span>
+</button>
 
                 </form>
 
@@ -1410,172 +1443,112 @@ images.forEach(img => {
        EMAIL REGISTRATION
        ========================= */
 
-    const registerForm =
-        document.getElementById("registerForm");
+    
+const registerForm = document.getElementById("registerForm");
 
+const createAccountBtn = document.getElementById("createAccountBtn");
+const buttonText = createAccountBtn.querySelector(".button-text");
 
-    registerForm.addEventListener(
-        "submit",
-        async function (event) {
+registerForm.addEventListener("submit", async function (event) {
 
-            event.preventDefault();
+    event.preventDefault();
 
+    const fullName = document.getElementById("fullName").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
 
-            const fullName =
-                document
-                    .getElementById("fullName")
-                    .value
-                    .trim();
+    const passwordValue = document.getElementById("password").value;
+    const confirmPasswordValue = document.getElementById("confirmPassword").value;
 
+    // Password length
+    if (passwordValue.length < 8) {
+        alert("Password must be at least 8 characters long.");
+        return;
+    }
 
-            const email =
-                document
-                    .getElementById("email")
-                    .value
-                    .trim();
+    // Password match
+    if (passwordValue !== confirmPasswordValue) {
+        alert("Passwords do not match.");
+        return;
+    }
 
+    // Terms and Conditions
+    const terms = document.getElementById("terms");
 
-            const phone =
-                document
-                    .getElementById("phone")
-                    .value
-                    .trim();
+    if (!terms.checked) {
+        alert("Please agree to the Terms and Conditions and Privacy Policy.");
+        return;
+    }
 
+    // Selected role
+    const selectedRole = document.querySelector(
+        'input[name="role"]:checked'
+    ).value;
 
-            const passwordValue =
-                document
-                    .getElementById("password")
-                    .value;
+    // Show loading spinner
+createAccountBtn.disabled = true;
+createAccountBtn.classList.add("loading");
+buttonText.textContent = "Creating Account...";
 
+    try {
 
-            const confirmPasswordValue =
-                document
-                    .getElementById("confirmPassword")
-                    .value;
+        // Create Firebase account
+        const userCredential = await createUserWithEmailAndPassword(
+            auth,
+            email,
+            passwordValue
+        );
 
+        const user = userCredential.user;
 
-            /* Password length */
-
-            if (passwordValue.length < 8) {
-
-                alert(
-                    "Password must be at least 8 characters long."
-                );
-
-                return;
-
+        // Save profile to Firestore
+        await setDoc(
+            doc(db, "users", user.uid),
+            {
+                fullName: fullName,
+                email: email,
+                phone: phone,
+                role: selectedRole
             }
+        );
 
+        alert("Account created successfully!");
 
-            /* Password match */
+        window.location.href = "login.html";
 
-            if (
-                passwordValue !==
-                confirmPasswordValue
-            ) {
+    } catch (error) {
 
-                alert(
-                    "Passwords do not match."
-                );
+        console.error("Registration error:", error);
 
-                return;
+        if (error.code === "auth/email-already-in-use") {
 
-            }
+            alert("An account already exists with this email.");
 
+        } else if (error.code === "auth/invalid-email") {
 
-            /* Terms and Conditions */
+            alert("Please enter a valid email address.");
 
-            const terms =
-                document.getElementById("terms");
+        } else if (error.code === "auth/weak-password") {
 
+            alert("Your password is too weak. Please use a stronger password.");
 
-            if (!terms.checked) {
+        } else {
 
-                alert(
-                    "Please agree to the Terms and Conditions and Privacy Policy."
-                );
-
-                return;
-
-            }
-
-
-            /* Selected role */
-
-            const selectedRole =
-                document.querySelector(
-                    'input[name="role"]:checked'
-                ).value;
-
-
-            console.log(
-                "Registration submitted:",
-                {
-                    fullName: fullName,
-                    email: email,
-                    phone: phone,
-                    role: selectedRole
-                }
-            );
-
-
-            /* Create Firebase account */
-
-            const userCredential =
-                await createUserWithEmailAndPassword(
-                    auth,
-                    email,
-                    passwordValue
-                );
-
-
-            const user =
-                userCredential.user;
-
-
-            console.log(
-                "Firebase account created successfully!"
-            );
-
-
-            console.log(
-                "User UID:",
-                user.uid
-            );
-
-
-            /* Save profile to Firestore */
-
-            await setDoc(
-                doc(
-                    db,
-                    "users",
-                    user.uid
-                ),
-                {
-                    fullName: fullName,
-                    email: email,
-                    phone: phone,
-                    role: selectedRole
-                }
-            );
-
-
-            console.log(
-                "User profile saved to Firestore successfully!"
-            );
-
-
-            alert(
-                "Account created successfully!"
-            );
-
-
-            window.location.href =
-                "login.html";
+            alert("Something went wrong. Please try again.");
 
         }
-    );
+
+   } finally {
+
+        // Restore button if registration fails
+        createAccountBtn.disabled = false;
+        createAccountBtn.classList.remove("loading");
+        buttonText.textContent = "Create Account";
+
+    }
+
+});
+
 
 
     /* =========================
