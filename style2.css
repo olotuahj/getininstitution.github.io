@@ -3592,3 +3592,46 @@ img.image-loading {
 img.image-loading.image-loaded {
     visibility: visible;
 }
+
+
+/* =================================
+   DESKTOP FULL-WIDTH FIX
+================================= */
+
+@media (min-width: 1025px) {
+
+    html,
+    body {
+        width: 100%;
+        margin: 0;
+    }
+
+    #mainContent,
+    .about-page {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+    }
+
+    .top-bar {
+        width: 100%;
+        max-width: none;
+    }
+
+    /* Programs section */
+    .Programs {
+        width: 100%;
+        max-width: none;
+    }
+
+    .programs-imgcontent {
+        width: 100%;
+        max-width: none;
+    }
+
+    /* Remove mobile menu from desktop layout */
+    .mobile-menu {
+        display: none !important;
+    }
+
+}

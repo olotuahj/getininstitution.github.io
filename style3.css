@@ -2511,7 +2511,7 @@ footer hr {
         height: 100%;
         display: block;
         object-fit: cover;
-        object-position: center;
+        object-position: center 30%;
         transition: transform 0.4s ease;
     }
 
@@ -6076,4 +6076,23 @@ img.image-loaded {
 
 #proceedToPayment:hover {
     background: #144a19;
+}
+
+
+/* =================================
+   REMOVE DESKTOP HORIZONTAL SCROLL
+================================= */
+
+@media (min-width: 1025px) {
+
+    html,
+    body {
+        overflow-x: hidden;
+        max-width: 100%;
+    }
+
+    .about-page {
+        overflow-x: hidden;
+    }
+
 }

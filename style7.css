@@ -4030,3 +4030,22 @@ img:not(.image-loaded) {
 img.image-loaded {
     visibility: visible;
 }
+
+
+/* =================================
+   REMOVE DESKTOP HORIZONTAL SCROLL
+================================= */
+
+@media (min-width: 1025px) {
+
+    html,
+    body {
+        overflow-x: hidden;
+        max-width: 100%;
+    }
+
+    .about-page {
+        overflow-x: hidden;
+    }
+
+}
